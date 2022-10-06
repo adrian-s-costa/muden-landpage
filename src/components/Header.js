@@ -62,8 +62,12 @@ const Head = styled.header`
         }
         
         .icon{
+            z-index: 1;
+            right: 10px;
+            top: 25px;
+            position: fixed;
             display: flex;
-            font-size: 25px;
+            font-size: 30px;
             color: #38bc94;
         }
     }
