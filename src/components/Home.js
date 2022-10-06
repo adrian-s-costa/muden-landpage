@@ -28,7 +28,6 @@ const ArticleDiv = styled.article`
     display: flex;
     width: 100%;
     max-width: 975px;
-    height: 350px;
     margin: 20px 0px 0px 0px;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +63,6 @@ const SectionDiv = styled.section`
     display: flex;
     flex-direction: column;
     width: 340px;
-    
     font-weight: 400;
     line-height: 42px;
     font-size: 32px;
