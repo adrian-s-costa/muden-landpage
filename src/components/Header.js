@@ -49,8 +49,8 @@ const Head = styled.div`
     box-shadow: 0 0 3px 0 silver;
     display: flex;
     align-items: center;
-    padding: 0px 14vw;
-    justify-content: space-between;
+    
+    justify-content: center;
     position: relative;
 
     .icon{
@@ -69,16 +69,16 @@ const Head = styled.div`
         }
     }
 
-    @media (max-width: 1021px) {
-        padding: 0px 10vw;
+    @media (max-width: 900px) {
         
+        justify-content: space-between;
+        padding: 0px 10px;
         .header{
             display: none;
         }
         
         .icon{
             display: flex;
-            
             font-size: 25px;
             color: #38bc94;
         }
