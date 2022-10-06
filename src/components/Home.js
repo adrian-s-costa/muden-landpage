@@ -54,7 +54,7 @@ const ArticleDiv = styled.article`
         }
 
         h2{
-            width: 100%;
+            width: 100% !important;
         }
     }
 
