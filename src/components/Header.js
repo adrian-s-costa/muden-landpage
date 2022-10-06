@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "./Button";
 
 export default function Header(){
     return(
@@ -10,7 +11,7 @@ export default function Header(){
                 <div className="link">Contatos</div>
                 <div className="link">Carreiras</div>
                 <div className="link">Blog</div>
-                <div><Btn>Eu quero</Btn></div>
+                <div><Button>Eu quero</Button></div>
             </LinkHead>
             <div className="icon"><ion-icon name="menu-outline"></ion-icon></div>
         </Head>
@@ -25,25 +26,8 @@ const LinkHead = styled.div`
     gap: 40px;
 
 `
-const Btn = styled.button`
-    border-radius: 40px;
-    width: 100px;
-    height: 38px;
-    background-color: #38bc94;
-    border-width: 0px;
-    color: white;
 
-    :hover{
-        cursor: pointer;
-        transition: 0.5s;
-        color: #38bc94;
-        background-color: white;
-        border-width: 1px;
-        border-color: #38bc94;
-    }
-`
-
-const Head = styled.div`
+const Head = styled.header`
     width: 100%;
     height: 80px;
     box-shadow: 0 0 3px 0 silver;
@@ -69,7 +53,7 @@ const Head = styled.div`
         }
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 975px) {
         
         justify-content: space-between;
         padding: 0px 10px;
@@ -86,5 +70,5 @@ const Head = styled.div`
 
 `
 const ImgLogo = styled.img`
-    margin-right: 110px;
+    margin-right: 200px;
 `
