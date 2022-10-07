@@ -24,18 +24,20 @@ const LinkHead = styled.div`
     font-weight: 300;
     font-size: 15px;
     gap: 40px;
+    position: relative;
 
 `
 
 const Head = styled.header`
+    position: fixed;
     width: 100%;
     height: 80px;
     box-shadow: 0 0 3px 0 silver;
     display: flex;
     align-items: center;
+    background-color: white;
     
     justify-content: center;
-    position: relative;
 
     .icon{
         display: none;
@@ -65,7 +67,7 @@ const Head = styled.header`
             z-index: 1;
             right: 10px;
             top: 25px;
-            position: fixed;
+            position: absolute;
             display: flex;
             font-size: 30px;
             color: #38bc94;
