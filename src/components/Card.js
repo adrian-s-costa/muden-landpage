@@ -61,9 +61,10 @@ const CardDiv = styled.div`
     
     @media (max-width: 975px) {
         
-        .card{
-            width: 100%;
-        }
-
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        height: auto;
+        
     }
 `
