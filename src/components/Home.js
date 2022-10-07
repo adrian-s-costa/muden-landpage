@@ -82,11 +82,11 @@ const ArticleDiv = styled.article`
         }
 
         .section2{
-            width: 70%;
+            width: 80%;
         }
 
         .section3{
-            width: 70%;
+            width: 80%;
             flex-direction: column;
             align-items: center;
             gap: 20px;

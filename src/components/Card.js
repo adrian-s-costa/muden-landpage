@@ -63,7 +63,7 @@ const CardDiv = styled.div`
         
         flex-direction: column;
         align-items: center;
-        width: 80%;
+        width: 90%;
         height: auto;
         
     }
