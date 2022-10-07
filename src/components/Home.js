@@ -27,12 +27,6 @@ export default function Home(){
                     <Card cardTitle={" Especialistas"} cardDesc={"Nós da Muden queremos o melhor sempre etc etc etc"} img={"https://uploads-ssl.webflow.com/62c2f32bb1aa5ddb4a4f925a/632cac5599ab4a22bdc707f7_IMG_5686.png"}></Card>
                 </SectionDiv>
             </ArticleDiv>
-            <ArticleDiv className="article2">
-                <SectionDiv className="section2">
-                    <h3>A empresa de mudanças que <span className="bold">cuida de tudo</span></h3>
-                    <h2>Viemos para revolucionar o setor de mudanças e serviços com o uso da tecnologia. Oferecemos aos nossos clientes comodidade e otimização de tempo, realizando todo o processo de mudança.  Temos uma equipe especializada e experiente que cuida de todo o planejamento estratégico para que você não precise se preocupar com absolutamente nada. Recomece do seu jeito</h2>
-                </SectionDiv>
-            </ArticleDiv>
         </MainDiv>
     )
 }
@@ -70,8 +64,9 @@ const ArticleDiv = styled.article`
             margin: 10px 0px 0px 0px;
         }
     }
-    
+
     .section3{
+        margin-top: 20px;
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
