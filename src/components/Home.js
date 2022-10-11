@@ -7,9 +7,9 @@ export default function Home(){
         <MainDiv>
             <ArticleDiv>
                 <SectionDiv className="sectionDiv">
-                    <h1 className="bold">Oi, nós somos a muden</h1>
-                    <h2>Feita para pessoas que entendem que o tempo é precioso! Que precisamos investi-lo com o que importa. <br/> Com quem realmente importa!</h2>
-                    <Button>Cadastre-se</Button>
+                    <h1 className="bold">Olá, nós somos a <span className="greenMuden">Muden</span></h1>
+                    <h2>Feita para pessoas que entendem que o tempo é precioso! Que precisamos investi-lo com o que importa. <br/> <span className="bold">Com quem realmente importa!</span></h2>
+                    <Button width={"250px"} color={"#38bc94"} colorFont={"white"}>Solicitar orçamento</Button>
                 </SectionDiv>
                 <AsideDiv className="asideDiv">
                     <Img className="imgAside"></Img>
@@ -17,7 +17,7 @@ export default function Home(){
             </ArticleDiv>
             <ArticleDiv className="article2">
                 <SectionDiv className="section2">
-                    <h3>A empresa de mudanças que <span className="bold">cuida de tudo</span></h3>
+                    <h3 className="bold">A empresa de mudanças que <span className="greenMuden">cuida de tudo</span></h3>
                     <h2>Viemos para revolucionar o setor de mudanças e serviços com o uso da tecnologia. Oferecemos aos nossos clientes comodidade e otimização de tempo, realizando todo o processo de mudança.  Temos uma equipe especializada e experiente que cuida de todo o planejamento estratégico para que você não precise se preocupar com absolutamente nada. Recomece do seu jeito</h2>
                 </SectionDiv>
             </ArticleDiv>
@@ -36,9 +36,15 @@ const MainDiv = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 120px;
 
     .bold{
+        font-weight: bold;
+        color: #1f2928;
+    }
+
+    .greenMuden{
+        color: #38bc94;
         font-weight: bold;
     }
 `
@@ -51,12 +57,19 @@ const ArticleDiv = styled.article`
     justify-content: space-between;
     align-items: center;
 
+    .sectionDiv{
+        font-size: 40px;
+    }
+
     .section2{
         width: 100%;
-        margin: 80px 0px 0px 0px !important;
+        margin-top: 20px;
 
         h3{
-            font-size: 24px;
+            width: 100%;
+            max-width: 550px;
+            font-size: 40px;
+            font-weight: 400;
         }
 
         h2{
@@ -101,7 +114,7 @@ const ArticleDiv = styled.article`
         }
 
         .imgAside{
-            width: 100%;
+            display: none;
         }
 
         h2{

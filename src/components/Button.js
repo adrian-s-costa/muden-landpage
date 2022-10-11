@@ -2,25 +2,26 @@ import styled from "styled-components";
 
 export default function Button(props){
     return(
-        <Btn>{props.children}</Btn>
+        <Btn width={props.width} color={props.color} colorFont={props.colorFont}>{props.children}</Btn>
     )
 }
 
 const Btn = styled.button`
     border-radius: 40px;
-    width: 100px;
-    height: 38px;
-    background-color: #38bc94;
+    width: ${(props) => props.width};
+    padding: 0px 10px;
+    height: auto;
+    min-height: 38px;
+    background-color: ${(props) => props.color};
     border-width: 0px;
-    color: white;
+    color: ${(props) => props.colorFont};
     font-weight: bold;
+    font-size: 20px;
 
     :hover{
         cursor: pointer;
         transition: 0.5s;
-        color: #38bc94;
-        background-color: white;
-        border-width: 1px;
-        border-color: #38bc94;
+        color: ${(props) => props.colorFont};
+        background-color: #1f2928;
     }
 `

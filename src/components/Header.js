@@ -4,14 +4,11 @@ import Button from "./Button";
 export default function Header(){
     return(
         <Head>
-            <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060568/muden/muden-logo-principal-branco_tfl6st.png" width={170} height={41}></ImgLogo>
+            <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41}></ImgLogo>
             <LinkHead className="header">
-                <div className="link">Central</div>
-                <div className="link">Aplicativo</div>
-                <div className="link">Contatos</div>
-                <div className="link">Carreiras</div>
-                <div className="link">Blog</div>
-                <div><Button>Eu quero</Button></div>
+                <div className="link">Contato</div>
+                <div className="link">Dúvidas</div>
+                <div className="btn"><Button width={"auto"} color={"white"} colorFont={"#38bc94"}>Agende sua mudança</Button></div>
             </LinkHead>
             <div className="icon"><ion-icon name="menu-outline"></ion-icon></div>
         </Head>
@@ -23,9 +20,8 @@ const LinkHead = styled.div`
     display: flex;
     font-weight: 300;
     font-size: 15px;
-    gap: 40px;
     position: relative;
-
+    height: 100%;
 `
 
 const Head = styled.header`
@@ -35,23 +31,36 @@ const Head = styled.header`
     box-shadow: 0 0 3px 0 silver;
     display: flex;
     align-items: center;
-    background-color: white;
-    
+    background-color: #38bc94;
     justify-content: center;
 
     .icon{
         display: none;
     }
 
+    .btn{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        font-size: 20px !important;
+        margin-left: 10px;
+    }
+
     .link{
         display: flex;
         align-items: center;
         cursor: pointer;
+        height: 100%;
+        padding: 0px 15px;
+        width: auto;
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
         
         :hover{
-            cursor: pointer;
             transition: 0.5s;
-            color: #38bc94;
+            background-image: linear-gradient(#1f2928, #38bc94);
+            cursor: pointer;
         }
     }
 
@@ -76,5 +85,5 @@ const Head = styled.header`
 
 `
 const ImgLogo = styled.img`
-    margin-right: 200px;
+    margin-right: 345px;
 `
