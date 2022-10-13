@@ -186,7 +186,7 @@ const ArticleDiv = styled.article`
                 max-width: 440px;
                 line-height: 25px;
                 font-style: italic;
-                min-height: 100px;
+                //min-height: 100px;
             }
 
             .invComma{
@@ -220,8 +220,15 @@ const ArticleDiv = styled.article`
             bottom: 0px;
         }
 
+        .depo{
+            height: auto !important;
+            box-sizing: content-box !important;
+            padding: 10px 25px !important;
+        }
+
         .text{
             width: auto !important;
+            line-height: 2.5vw !important;
         }
 
         .sectionDiv{
