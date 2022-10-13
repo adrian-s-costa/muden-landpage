@@ -182,7 +182,7 @@ const ArticleDiv = styled.article`
             }
 
             .text{
-                font-size: min(2.5vw, 20px);
+                font-size: min(3vw, 20px);
                 max-width: 440px;
                 line-height: 25px;
                 font-style: italic;
@@ -191,6 +191,10 @@ const ArticleDiv = styled.article`
 
             .invComma{
                 position: absolute;
+                width: 5vw;
+                height: 4vw;
+                max-height: 46px;
+                max-width: 62px;
             }
             
             .up{
@@ -205,7 +209,8 @@ const ArticleDiv = styled.article`
 
             .invCommaDiv{
                 position: relative;
-                padding: 45px 0px 45px 0px;
+                padding: min(5vw, 45px) 0px min(5vw, 45px) 0px;
+                
             }
 
         }
@@ -228,7 +233,7 @@ const ArticleDiv = styled.article`
 
         .text{
             width: auto !important;
-            line-height: 2.5vw !important;
+            line-height: 3vw !important;
         }
 
         .sectionDiv{
