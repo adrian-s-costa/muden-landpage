@@ -12,19 +12,41 @@ export default function Home(){
                     <Button width={"250px"} color={"#38bc94"} colorFont={"white"}>Solicitar orçamento</Button>
                 </SectionDiv>
                 <AsideDiv className="asideDiv">
-                    <Img className="imgAside"></Img>
+                    <Img className="imgAside" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665678577/muden/drilldown_1_cvdv2w.png"></Img>
                 </AsideDiv>
             </ArticleDiv>
             <ArticleDiv className="article2">
                 <SectionDiv className="section2">
                     <h3 className="bold">A empresa de mudanças que <span className="greenMuden">cuida de tudo</span></h3>
-                    <h2>Viemos para revolucionar o setor de mudanças e serviços com o uso da tecnologia. Oferecemos aos nossos clientes comodidade e otimização de tempo, realizando todo o processo de mudança.  Temos uma equipe especializada e experiente que cuida de todo o planejamento estratégico para que você não precise se preocupar com absolutamente nada. Recomece do seu jeito</h2>
+                    <h2>Viemos para <span className="bold">revolucionar</span> o setor de mudanças e serviços com o uso da <span className="bold">tecnologia</span>. Oferecemos aos nossos clientes <span className="bold">comodidade e otimização</span> de tempo, realizando todo o processo de mudança.  Temos uma equipe <span className="bold">especializada e experiente</span> que cuida de todo o <span className="bold">planejamento estratégico</span> para que você não precise se preocupar com absolutamente nada. <span className="bold greenMuden">Recomece do seu jeito</span></h2>
                 </SectionDiv>
             </ArticleDiv>
             <ArticleDiv className="article2">
                 <SectionDiv className="section3">
-                    <Card cardTitle={" Especialistas"} cardDesc={"Nós da Muden queremos o melhor sempre etc etc etc"} img={"https://uploads-ssl.webflow.com/62c2f32bb1aa5ddb4a4f925a/632cac5599ab4a22bdc707f7_IMG_5686.png"}></Card>
-                    <Card cardTitle={" Especialistas"} cardDesc={"Nós da Muden queremos o melhor sempre etc etc etc"} img={"https://uploads-ssl.webflow.com/62c2f32bb1aa5ddb4a4f925a/632cac5599ab4a22bdc707f7_IMG_5686.png"}></Card>
+                    <Card color1={"#04b891"} color2={"#079a83"} cardTitle={"Carreto"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676717/muden/3d-render-fleet-delivery-vehicles_ucpkll.jpg"}></Card>
+                    <Card color1={"#3fc966"} color2={"#3fb866"} cardTitle={"Montagem"} cardDesc={"Com os profissionais treinados e capacitados, montamos e desmontamos os seus móveis com o padrão de qualidade Muden, preservando a vida útil dos produtos."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676863/muden/foreman-in-yellow-hardhat-holding-hammer-on-shoulder-and-toolbox-in-hand-dreamily-looking-in-camera-in-workshop_1_mrqleu.jpg"}></Card>
+                    <Card color1={"#04ca8d"} color2={"#04ca8d"} cardTitle={"Organizer"} cardDesc={"Temos parceria com a melhor equipe de organizer que vão cuidar de cada detalhe da sua casa nova, deixando tudo muito bem arrumado para você e sua família"} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676868/muden/full-shot-woman-checking-wardrobe_1_l0ko8i.jpg"}></Card>
+                    <Card color1={"#1f2928"} color2={"#1f3628"} cardTitle={"Limpeza"} cardDesc={"No final do dia da mudança a casa vira uma baderna. Nós temos uma equipe de limpeza especializada pronta para te atender e limpar cada detalhe de sua nova casa"} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677273/muden/drilldown_w8guml.jpg"}></Card>
+                </SectionDiv>
+            </ArticleDiv>
+            <ArticleDiv className="article3 green">
+                <SectionDiv className="section4">
+                    <div className="title">
+                        <h5>Veja alguns <span className="bold white">depoimentos</span> dos nossos clientes</h5>
+                    </div>
+                    <div className="depoDiv">
+                        <div className="depo">
+                            <div className="divBackNPic">
+                                <div className="picBack"/>
+                                <div className="picDiv"/>
+                            </div>    
+                            <div className="invCommaDiv">
+                                <img className="invComma up" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677679/muden/2022-10-13_12-14_g9nxzj.png"/>
+                                <h6 className="text"> Jamais imaginei que uma mudança podia ser tão tranquila. Eu não precisei fazer absolutamente nada, eles cuidaram. Melhor empresa de mudanças que já vi!</h6>
+                                <img className="invComma down" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677749/muden/template_primary_hr8owj.png"/>
+                            </div>
+                        </div>
+                    </div>
                 </SectionDiv>
             </ArticleDiv>
         </MainDiv>
@@ -43,9 +65,22 @@ const MainDiv = styled.main`
         color: #1f2928;
     }
 
+    .white{
+        color: white;
+    }
+
     .greenMuden{
         color: #38bc94;
         font-weight: bold;
+    }
+
+    .article3{
+        width: 100%;
+        max-width: none;
+        background-color: #2db88f;
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(to right, #04b891 , #079a83);
     }
 `
 
@@ -82,27 +117,131 @@ const ArticleDiv = styled.article`
         margin-top: 20px;
         width: 100%;
         flex-direction: row;
-        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .section4{
+        width: 100%;
+        max-width: 975px;
+        height: 500px;
+
+        .title{
+            color: white;
+            width: 100%;
+            max-width: 700px;
+            font-size: 40px;
+        }
+
+        .depoDiv{
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .depo{
+            border-radius: 60px;
+            width: 680px;
+            height: 250px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 0px 30px;
+            position: relative;
+
+            .divBackNPic{
+                position: relative;
+            }
+
+            .picDiv{
+                background-size: cover;
+                background-position: center;
+                background-image: url(https://res.cloudinary.com/dmo7nzytn/image/upload/v1665679203/muden/portrait-of-young-latin-man-taking-a-selfie-while-standing-outdoors-on-the-street_1_rok4wf.jpg);
+                width: 15vw;
+                height: 15vw;
+                max-height: 150px;
+                max-width: 150px;
+                border-radius: 100px;
+                z-index: 4;
+                position: inherit;
+            }
+
+            .picBack{
+                background-color: #6e7473;
+                width: 15vw;
+                height: 15vw;
+                max-height: 150px;
+                max-width: 150px;
+                border-radius: 100px;
+                position: absolute;
+                top: 0px;
+                z-index: 3;
+                top: 3px;
+                left: 5px;
+            }
+
+            .text{
+                font-size: min(2.5vw, 20px);
+                max-width: 440px;
+                line-height: 25px;
+                font-style: italic;
+                min-height: 100px;
+            }
+
+            .invComma{
+                position: absolute;
+            }
+            
+            .up{
+                left: 0px;
+                top: 0px;
+            }
+
+            .down{
+                right: 0px;
+                bottom: 0px;
+            }
+
+            .invCommaDiv{
+                position: relative;
+                padding: 45px 0px 45px 0px;
+            }
+
+        }
     }
     
     @media (max-width: 975px) {
         
         flex-direction: column;
-        
+
+        .down{
+            right: 30px !important;
+            bottom: 0px;
+        }
+
+        .text{
+            width: auto !important;
+        }
+
         .sectionDiv{
             width: 90%;
             margin-bottom: 25px;
         }
 
         .section2{
-            width: 80%;
+            width: 90%;
         }
 
         .section3{
-            width: 80%;
-            flex-direction: column;
+            width: 90%;
             align-items: center;
             gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .section4{
+            width: 90%;
         }
 
         .asideDiv{
@@ -143,11 +282,7 @@ const AsideDiv = styled.aside`
     display: flex;
     align-items: center;
 `
-const Img = styled.div`
-    width: 418px;
-    height: 350px;
-    border-radius: 20px;
-    background-size: cover;
-    background-position: center;
-    background-image: url(https://res.cloudinary.com/dmo7nzytn/image/upload/v1665158471/muden/42de01_9858efe0349f4feea0873ffd2f738c2b_mv2_d0in2u.webp);
+const Img = styled.img`
+    width: 450px;
+    height: 450px;
 `

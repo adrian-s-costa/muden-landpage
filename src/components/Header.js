@@ -79,11 +79,12 @@ const Head = styled.header`
             position: absolute;
             display: flex;
             font-size: 30px;
-            color: #38bc94;
+            color: white;
         }
     }
 
 `
 const ImgLogo = styled.img`
     margin-right: 345px;
+    cursor: pointer;
 `

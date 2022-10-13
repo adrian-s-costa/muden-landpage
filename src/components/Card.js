@@ -2,10 +2,8 @@ import styled from "styled-components";
 
 export default function Card(props){
     return(
-        <CardDiv>
-            <div className="cardImgDiv">
-                <img src={props.img} className="imgCard"/>
-            </div>
+        <CardDiv color1={props.color1} color2={props.color2} img={props.img}>
+            <div className="cardImgDiv"/>
             <div className="cardTextDiv">
                 <h5 className="cardTitle">{props.cardTitle}</h5>
                 <h6 className="cardDesc">{props.cardDesc}</h6>
@@ -15,55 +13,53 @@ export default function Card(props){
 }
 
 const CardDiv = styled.div`
-    
-    padding: 18px 20px;
-    border-radius: 15px;
-    box-shadow: 0 -1px 9px 0 #f0f0f0;
-    width: 380px;
-    height: 132px;
+    padding: 6px 6px;
+    border-radius: 30px;
+    width: 216px;
+    height: 320px;
     display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, ${(props) => props.color1}, ${(props) => props.color2});
     box-sizing: content-box;
-    
-
-    .imgCard{
-        width: 120px;
-        height: 70px;
-        margin-right: 15px;
-    }
 
     .cardTitle{
-        font-size: 20px;
+        font-size: 18px;
         line-height: 24px;
         margin-top: 10px;
-        color: #38bc94;
+        color: white;
         font-weight: bold;
         display: flex;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .cardImgDiv{
-        height: 100%;
+        height: 450px;
+        background-image: url(${(props) => props.img});
+        background-size: cover;
+        background-position: center;
         display: flex;
         align-items: center;
+        background-color: #f0f0f0;
+        border-radius: 25px 25px 0px 0px;
     }
 
     .cardTextDiv{
         height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        align-items: center;
     }
 
     .cardDesc{
-        margin-top: 12px;
-        font-size: 16px;
-        line-height: 24px;
-    }
-    
-    @media (max-width: 975px) {
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-        height: auto;
-        
+        width: 95%;
+        margin-top: 5px;
+        font-size: 12px;
+        line-height: 12px;
+        color: #f0f0f0;
+        text-align: center;
     }
 `
