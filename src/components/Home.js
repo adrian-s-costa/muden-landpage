@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Button from "./Button";
 import Card from "./Card";
+import Input from "./Input";
 
 export default function Home(){
     return(
@@ -29,7 +30,7 @@ export default function Home(){
                     <Card color1={"#1f2928"} color2={"#1f3628"} cardTitle={"Limpeza"} cardDesc={"No final do dia da mudança a casa vira uma baderna. Nós temos uma equipe de limpeza especializada pronta para te atender e limpar cada detalhe de sua nova casa"} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677273/muden/drilldown_w8guml.jpg"}></Card>
                 </SectionDiv>
             </ArticleDiv>
-            <ArticleDiv className="article3 green">
+            <ArticleDiv className="article3">
                 <SectionDiv className="section4">
                     <div className="title">
                         <h5>Veja alguns <span className="bold white">depoimentos</span> dos nossos clientes</h5>
@@ -47,6 +48,27 @@ export default function Home(){
                             </div>
                         </div>
                     </div>
+                </SectionDiv>
+            </ArticleDiv>
+            <ArticleDiv className="article4">
+                <SectionDiv className="section5">
+                    <h3>Vamos fazer um <span className="bold">orçamento</span>?</h3>
+                    <h6 className="budgetDesc">Preencha o formulário abaixo, nossa equipe já <span className="bold">entrará em contato</span> com você.</h6>
+                    <form className="form">
+                        <div className="formDiv">
+                            <Input label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"}></Input>
+                            <Input label={"Telefone (WhatsApp)"} placeholder={"(xx) XXXXX-XXXX"} type={"number"}></Input>
+                            <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"}></Input>
+                            <Input label={"Quando pretende se mudar"} placeholder={"xx/xx/xxxx"} type={"date"}></Input>
+                        </div>
+                        <div className="formDiv">
+                            <Input label={"Cidade (origem)"} placeholder={"Exemplo: São Paulo"} type={"text"}></Input>
+                            <Input label={"Estado (origem)"} placeholder={"Exemplo: São Paulo"} type={"text"}></Input>
+                            <Input label={"Cidade (destino)"} placeholder={"Exemplo: Campinas"} type={"text"}></Input>
+                            <Input label={"Estado (destino)"} placeholder={"Exemplo: São Paulo"} type={"text"}></Input>
+                            <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"text"} marginTop={"20px"}>Enviar</Button>
+                        </div>
+                    </form>
                 </SectionDiv>
             </ArticleDiv>
         </MainDiv>
@@ -74,13 +96,19 @@ const MainDiv = styled.main`
         font-weight: bold;
     }
 
-    .article3{
+    .article3, .article4{
         width: 100%;
         max-width: none;
         background-color: #2db88f;
         display: flex;
         justify-content: center;
         background-image: linear-gradient(to right, #04b891 , #079a83);
+    }
+
+    .article4{
+        margin-top: 0px;
+        width: 100%;
+        background-image: linear-gradient(to right, #e2e2e2, #e2e2e2) !important;
     }
 `
 
@@ -111,6 +139,7 @@ const ArticleDiv = styled.article`
             width: 100%;
             margin: 10px 0px 0px 0px;
         }
+        
     }
 
     .section3{
@@ -186,7 +215,6 @@ const ArticleDiv = styled.article`
                 max-width: 440px;
                 line-height: 25px;
                 font-style: italic;
-                //min-height: 100px;
             }
 
             .invComma{
@@ -215,6 +243,41 @@ const ArticleDiv = styled.article`
 
         }
     }
+
+    .section5{
+        height: auto;
+        margin: 0px;
+        width: 100%;
+        max-width: 975px;
+        justify-content: flex-start;
+
+        .budgetDesc{
+            font-size: 22px;
+            max-width: 500px;
+            line-height: normal;
+            margin-top: 5px;
+        }
+
+        h3{
+            margin-top: 40px;
+            width: 100%;
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        h2{
+            width: 100%;
+            margin: 10px 0px 0px 0px;
+        }
+
+        .form{
+            width: 100%;
+            padding-bottom: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+    }
     
     @media (max-width: 975px) {
         
@@ -241,7 +304,7 @@ const ArticleDiv = styled.article`
             margin-bottom: 25px;
         }
 
-        .section2{
+        .section2, .section4, .section5, .asideDiv{
             width: 90%;
         }
 
@@ -250,14 +313,6 @@ const ArticleDiv = styled.article`
             align-items: center;
             gap: 20px;
             flex-wrap: wrap;
-        }
-
-        .section4{
-            width: 90%;
-        }
-
-        .asideDiv{
-            width: 90%;
         }
         
         h1{
@@ -270,6 +325,10 @@ const ArticleDiv = styled.article`
 
         h2{
             width: 100% !important;
+        }
+
+        .form{
+            flex-direction: column;
         }
     }
 

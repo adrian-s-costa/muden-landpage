@@ -33,6 +33,7 @@ const Head = styled.header`
     align-items: center;
     background-color: #38bc94;
     justify-content: center;
+    z-index: 10;
 
     .icon{
         display: none;
