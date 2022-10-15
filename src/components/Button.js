@@ -17,7 +17,10 @@ const Btn = styled.button`
     color: ${(props) => props.colorFont};
     font-weight: bold;
     font-size: 20px;
-    margin-top: ${(props) => props.marginTop};;
+    margin-top: ${(props) => props.marginTop};
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     :hover{
         cursor: pointer;

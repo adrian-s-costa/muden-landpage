@@ -1,12 +1,22 @@
 import styled from "styled-components";
 
 export default function Input(props){
-    return(
-        <InputDiv>
-            <Label>{props.label}</Label>
-            <InputForm type={props.type} placeholder={props.placeholder} required={true}></InputForm>
-        </InputDiv>
-    )
+
+    if(props.textarea){
+        return(
+            <InputDiv>
+                <Label>{props.label}</Label>
+                <TextArea type={props.type} placeholder={props.placeholder} required={true} height={props.height} width={props.width}></TextArea>
+            </InputDiv>
+        )
+    }else{
+        return(
+            <InputDiv>
+                <Label>{props.label}</Label>
+                <InputForm type={props.type} placeholder={props.placeholder} required={true} height={props.height} width={props.width}></InputForm>
+            </InputDiv>
+        )
+    }
 }
 
 const InputDiv = styled.div`
@@ -16,13 +26,29 @@ const InputDiv = styled.div`
 `
 
 const InputForm = styled.input`
-    width: 400px;
+    width: ${(props) => props.width};
     border-radius: 20px;
     border: none;
-    height: 35px;
+    height: ${(props) => props.height};
     padding: 0px 15px;
     font-size: 15px;
     font-style: italic;
+    font-family: 'Poppins';
+
+    @media (max-width: 975px) {
+        width: 100%;
+    }
+`
+
+const TextArea = styled.textarea`
+    width: ${(props) => props.width};
+    border-radius: 20px;
+    border: none;
+    height: ${(props) => props.height};
+    padding: 10px 15px;
+    font-size: 15px;
+    font-style: italic;
+    font-family: 'Poppins';
 
     @media (max-width: 975px) {
         width: 100%;

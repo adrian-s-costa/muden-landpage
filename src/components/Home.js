@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Button from "./Button";
 import Card from "./Card";
 import Input from "./Input";
+import { FaFacebookF, FaTiktok, FaLinkedinIn, FaInstagram, FaWhatsapp, FaLinkedin} from "react-icons/fa";
 
 export default function Home(){
     return(
@@ -56,21 +57,57 @@ export default function Home(){
                     <h6 className="budgetDesc">Preencha o formulário abaixo, nossa equipe já <span className="bold">entrará em contato</span> com você.</h6>
                     <form className="form">
                         <div className="formDiv">
-                            <Input label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"}></Input>
-                            <Input label={"Telefone (WhatsApp)"} placeholder={"(xx) XXXXX-XXXX"} type={"number"}></Input>
-                            <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"}></Input>
-                            <Input label={"Quando pretende se mudar"} placeholder={"xx/xx/xxxx"} type={"date"}></Input>
+                            <Input label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"} height={"35px"} width={"400px"}></Input>
+                            <Input label={"Telefone (WhatsApp)"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"}></Input>
+                            <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"}></Input>
+                            <Input label={"Quando pretende se mudar"} placeholder={"xx/xx/xxxx"} type={"date"} height={"35px"} width={"400px"}></Input>
                         </div>
                         <div className="formDiv">
-                            <Input label={"Cidade (origem)"} placeholder={"Exemplo: São Paulo"} type={"text"}></Input>
-                            <Input label={"Estado (origem)"} placeholder={"Exemplo: São Paulo"} type={"text"}></Input>
-                            <Input label={"Cidade (destino)"} placeholder={"Exemplo: Campinas"} type={"text"}></Input>
-                            <Input label={"Estado (destino)"} placeholder={"Exemplo: São Paulo"} type={"text"}></Input>
+                            <Input label={"Cidade (origem)"} placeholder={"Exemplo: São Paulo"} type={"text"} height={"35px"} width={"400px"}></Input>
+                            <Input label={"Estado (origem)"} placeholder={"Exemplo: São Paulo"} type={"text"} height={"35px"} width={"400px"}></Input>
+                            <Input label={"Cidade (destino)"} placeholder={"Exemplo: Campinas"} type={"text"} height={"35px"} width={"400px"}></Input>
+                            <Input label={"Estado (destino)"} placeholder={"Exemplo: São Paulo"} type={"text"} height={"35px"} width={"400px"}></Input>
                             <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"text"} marginTop={"20px"}>Enviar</Button>
                         </div>
                     </form>
                 </SectionDiv>
             </ArticleDiv>
+            <ArticleDiv className="article5">
+                <SectionDiv className="section6">
+                    <div className="formEmail">
+                        <h4 className="talkDirectTitle">Fale diretamente conosco</h4>
+                        <h6 className="talkDirectTitle white">Vamos conversar!</h6>
+                        <h6 className="talkDirectDesc white">Deixe aqui suas dúvidas, faça sugestões ou nos chame no WhatsApp e nos conte do que você precisa!</h6>
+                    </div>
+                    <div className="formEmail flex">
+                        <form>
+                            <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"}></Input>
+                            <Input label={"Mensagem"} placeholder={"Escreva aqui a sua mensagem"} type={"text"} height={"250px"} width={"400px"} textarea={true}></Input>
+                            <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"text"} marginTop={"20px"}>Enviar</Button>
+                        </form>
+                        <div className="arm">
+                            <ImgArm src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676721/muden/braco_balao_h9i2ld.png" className="arm"></ImgArm>
+                            <div className="whatsappBtn">
+                                <Button width={"260px"} color={"#38bc94"} colorFont={"white"} type={"text"} marginTop={"20px"}> Envie sua mensagem &nbsp; <ion-icon name="logo-whatsapp"></ion-icon></Button>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676723/muden/Ativo_1_dpdkc1.png" className="backMuden"></img>
+                </SectionDiv>
+            </ArticleDiv>
+            <Footer className="footer">
+                <div className="footerDiv">
+                    <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41}></ImgLogo>
+                    <div className="footerIconsDiv">
+                        <FaFacebookF className="footerIcon"/>
+                        <FaTiktok className="footerIcon"/>
+                        <FaInstagram className="footerIcon"/>
+                        <FaWhatsapp className="footerIcon"/>
+                        <FaLinkedinIn className="footerIcon"/>
+                    </div> 
+                </div>  
+                             
+            </Footer>
         </MainDiv>
     )
 }
@@ -88,7 +125,7 @@ const MainDiv = styled.main`
     }
 
     .white{
-        color: white;
+        color: white !important;
     }
 
     .greenMuden{
@@ -96,7 +133,7 @@ const MainDiv = styled.main`
         font-weight: bold;
     }
 
-    .article3, .article4{
+    .article3, .article4, .article5{
         width: 100%;
         max-width: none;
         background-color: #2db88f;
@@ -109,6 +146,15 @@ const MainDiv = styled.main`
         margin-top: 0px;
         width: 100%;
         background-image: linear-gradient(to right, #e2e2e2, #e2e2e2) !important;
+    }
+
+    .article5{
+        margin-top: 0px;
+        height: auto;
+        background-image: linear-gradient(to right, #1f2928, #1f2928) !important;
+        padding-bottom: 60px;
+        display: flex;
+        justify-content: center !important;
     }
 `
 
@@ -278,6 +324,49 @@ const ArticleDiv = styled.article`
         }
 
     }
+
+    .section6{
+        width: 100%;
+        max-width: 975px;
+        padding-top: 50px;
+        position: relative;
+        z-index: 1;
+
+        .talkDirectTitle{
+            color: #38bc94;
+            width: auto;
+            font-weight: bold;
+            font-size: 40px;
+        }
+        
+        .talkDirectDesc{
+            margin-top: -10px;
+            font-size: 12px;
+        }
+        
+        .backMuden{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            right: 0px;
+            z-index: 0;
+        }
+
+        .formEmail{
+            z-index: 1;
+            position: inherit;
+        }
+
+        .flex{
+            display: flex;
+        }
+
+        .whatsappBtn{
+            position: absolute;
+            right: 110px;
+            top: 120px;
+        }
+    }
     
     @media (max-width: 975px) {
         
@@ -330,6 +419,35 @@ const ArticleDiv = styled.article`
         .form{
             flex-direction: column;
         }
+
+        .article5{
+            width: 100% !important;
+            align-items: center !important;
+        }
+
+        .section6{
+            width: 90%;
+        }
+
+        .backMuden{
+            width: 400px !important;
+            height: 400px !important;
+            position: absolute;
+            right: 0px;
+        }
+
+        .arm{
+           display: none;
+        }
+
+        .flex{
+            flex-direction: column;
+        }
+
+        .talkDirectDesc{
+            margin-top: 10px !important;
+            line-height: normal;
+        }
     }
 
 `
@@ -356,4 +474,56 @@ const AsideDiv = styled.aside`
 const Img = styled.img`
     width: 450px;
     height: 450px;
+`
+const ImgArm = styled.img`
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    bottom: -60px;
+    right: 30px;
+`
+const Footer = styled.footer`
+    width: 100%;
+    height: 80px;
+    background-color: #38bc94;
+    display: flex;
+    justify-content: center;
+
+    .footerDiv{
+        height: 100%;
+        width: 100%;
+        max-width: 975px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footerIconsDiv{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footerIcon{
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 975px) {
+        .footer{
+            width: 100% !important;
+        }
+
+        .footerDiv{
+            width: 90% !important;
+        }
+
+        .footerIcon{
+            font-size: 5vw;
+        }
+    }
+`
+const ImgLogo = styled.img`
+    cursor: pointer;
 `
