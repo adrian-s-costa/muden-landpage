@@ -5,8 +5,11 @@ import Input from "./Input";
 import { FaFacebookF, FaTiktok, FaLinkedinIn, FaInstagram, FaWhatsapp} from "react-icons/fa";
 import axios from "axios";
 import { useState } from "react";
+import { Element, Link } from 'react-scroll'
 
 export default function Home(){
+
+    const [sent, setSent] = useState(false);
 
     const [contactData, setContactData] = useState({ 
         name: "",
@@ -21,12 +24,34 @@ export default function Home(){
         type: ""
     });
 
+    function whatsappMessage(){
+        const cel = "5567992214009"
+        const text = `Olá, gostaria de tirar algumas dúvidas`
+        text = window.encodeURIComponent(text)
+        window.open("https://api.whatsapp.com/send?phone=" + cel + "&text=" + text, "_blank")  
+    }
+
     function setData(event){
         event.preventDefault();
         console.log(contactData);
-        axios.post("http://localhost:5000/sendemail", contactData);
+        axios.post("http://localhost:5000/sendemail", contactData)
+        .then((response)=>{
+            console.log(response.data)
+            showPopUp();
+        })
+        .catch((response)=>{
+            console.log(response)
+        })
     }
-    
+
+    function showPopUp(){
+        setSent(true);
+        setTimeout(closePopUp, 5000);
+    }
+
+    function closePopUp(){
+        setSent(false);
+    }    
 
     return(
         <MainDiv>
@@ -34,7 +59,9 @@ export default function Home(){
                 <SectionDiv className="sectionDiv">
                     <h1 className="bold">Olá, nós somos a <span className="greenMuden">Muden</span></h1>
                     <h2>Feita para pessoas que entendem que o tempo é precioso! Que precisamos investi-lo com o que importa. <br/> <span className="bold">Com quem realmente importa!</span></h2>
-                    <Button width={"250px"} color={"#38bc94"} colorFont={"white"}>Solicitar orçamento</Button>
+                    <Link activeClass="active" className="test2" to="test2" spy={true} smooth={true} duration={500} offset={-50}>
+                        <Button width={"250px"} color={"#38bc94"} colorFont={"white"}>Solicitar orçamento</Button>
+                    </Link>
                 </SectionDiv>
                 <AsideDiv className="asideDiv">
                     <Img className="imgAside" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665678577/muden/drilldown_1_cvdv2w.png"></Img>
@@ -46,14 +73,16 @@ export default function Home(){
                     <h2>Viemos para <span className="bold">revolucionar</span> o setor de mudanças e serviços com o uso da <span className="bold">tecnologia</span>. Oferecemos aos nossos clientes <span className="bold">comodidade e otimização</span> de tempo, realizando todo o processo de mudança.  Temos uma equipe <span className="bold">especializada e experiente</span> que cuida de todo o <span className="bold">planejamento estratégico</span> para que você não precise se preocupar com absolutamente nada. <span className="bold greenMuden">Recomece do seu jeito</span></h2>
                 </SectionDiv>
             </ArticleDiv>
-            <ArticleDiv className="article2">
-                <SectionDiv className="section3">
-                    <Card color1={"#04b891"} color2={"#079a83"} cardTitle={"Carreto"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676717/muden/3d-render-fleet-delivery-vehicles_ucpkll.jpg"}></Card>
-                    <Card color1={"#3fc966"} color2={"#3fb866"} cardTitle={"Montagem"} cardDesc={"Com os profissionais treinados e capacitados, montamos e desmontamos os seus móveis com o padrão de qualidade Muden, preservando a vida útil dos produtos."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676863/muden/foreman-in-yellow-hardhat-holding-hammer-on-shoulder-and-toolbox-in-hand-dreamily-looking-in-camera-in-workshop_1_mrqleu.jpg"}></Card>
-                    <Card color1={"#04ca8d"} color2={"#04ca8d"} cardTitle={"Organizer"} cardDesc={"Temos parceria com a melhor equipe de organizer que vão cuidar de cada detalhe da sua casa nova, deixando tudo muito bem arrumado para você e sua família"} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676868/muden/full-shot-woman-checking-wardrobe_1_l0ko8i.jpg"}></Card>
-                    <Card color1={"#1f2928"} color2={"#1f3628"} cardTitle={"Limpeza"} cardDesc={"No final do dia da mudança a casa vira uma baderna. Nós temos uma equipe de limpeza especializada pronta para te atender e limpar cada detalhe de sua nova casa"} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677273/muden/drilldown_w8guml.jpg"}></Card>
-                </SectionDiv>
-            </ArticleDiv>
+            <Element name="test1">
+                <ArticleDiv className="article2">
+                    <SectionDiv className="section3">
+                        <Card color1={"#04b891"} color2={"#079a83"} cardTitle={"Carreto"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676717/muden/3d-render-fleet-delivery-vehicles_ucpkll.jpg"}></Card>
+                        <Card color1={"#3fc966"} color2={"#3fb866"} cardTitle={"Montagem"} cardDesc={"Com os profissionais treinados e capacitados, montamos e desmontamos os seus móveis com o padrão de qualidade Muden, preservando a vida útil dos produtos."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676863/muden/foreman-in-yellow-hardhat-holding-hammer-on-shoulder-and-toolbox-in-hand-dreamily-looking-in-camera-in-workshop_1_mrqleu.jpg"}></Card>
+                        <Card color1={"#04ca8d"} color2={"#04ca8d"} cardTitle={"Organizer"} cardDesc={"Temos parceria com a melhor equipe de organizer que vão cuidar de cada detalhe da sua casa nova, deixando tudo muito bem arrumado para você e sua família"} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676868/muden/full-shot-woman-checking-wardrobe_1_l0ko8i.jpg"}></Card>
+                        <Card color1={"#1f2928"} color2={"#1f3628"} cardTitle={"Limpeza"} cardDesc={"No final do dia da mudança a casa vira uma baderna. Nós temos uma equipe de limpeza especializada pronta para te atender e limpar cada detalhe de sua nova casa"} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677273/muden/drilldown_w8guml.jpg"}></Card>
+                    </SectionDiv>
+                </ArticleDiv>
+            </Element>
             <ArticleDiv className="article3">
                 <SectionDiv className="section4">
                     <div className="title">
@@ -75,7 +104,7 @@ export default function Home(){
                 </SectionDiv>
             </ArticleDiv>
             <ArticleDiv className="article4">
-                <SectionDiv className="section5">
+                <Element className="section5" name="test2">
                     <h3>Vamos fazer um <span className="bold">orçamento</span>?</h3>
                     <h6 className="budgetDesc">Preencha o formulário abaixo, nossa equipe já <span className="bold">entrará em contato</span> com você.</h6>
                     <form className="form" onSubmit={setData}>
@@ -93,10 +122,10 @@ export default function Home(){
                             <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "budget"})}>Enviar</Button>
                         </div>
                     </form>
-                </SectionDiv>
+                </Element>
             </ArticleDiv>
             <ArticleDiv className="article5">
-                <SectionDiv className="section6">
+                <Element className="section6" name="test3">
                     <div className="formEmail">
                         <h4 className="talkDirectTitle">Fale diretamente conosco</h4>
                         <h6 className="talkDirectTitle white">Vamos conversar!</h6>
@@ -111,12 +140,12 @@ export default function Home(){
                         <div className="arm">
                             <ImgArm src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676721/muden/braco_balao_h9i2ld.png" className="arm"></ImgArm>
                             <div className="whatsappBtn">
-                                <Button width={"260px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"}> Envie sua mensagem &nbsp; <ion-icon name="logo-whatsapp"></ion-icon></Button>
+                                <Button width={"260px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={()=>{whatsappMessage()}}> Envie sua mensagem &nbsp; <ion-icon name="logo-whatsapp"></ion-icon></Button>
                             </div>
                         </div>
                     </div>
                     <img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676723/muden/Ativo_1_dpdkc1.png" className="backMuden"></img>
-                </SectionDiv>
+                </Element>
             </ArticleDiv>
             <Footer className="footer">
                 <div className="footerDiv">
@@ -131,9 +160,46 @@ export default function Home(){
                 </div>  
                              
             </Footer>
+
+            <PopUp className={`${sent ? "" : "displayNone"}`}> 
+                Mensagem enviada com sucesso! ✅
+                <button className="popUpBtn" width={"10px"} height={"0px"} onClick={()=>{closePopUp()}}>x</button>
+            </PopUp>
+
         </MainDiv>
     )
 }
+
+const PopUp = styled.div`
+    width: 280px;
+    height: 140px;
+    position: fixed;
+    background-color: #38bc94;
+    left: 10px;
+    bottom: 10px;
+    color: white;
+    padding: 10px;
+    border: 3px;
+    border-color: white;
+    border-radius: 10px;
+    border-style: solid;
+
+    .popUpBtn{
+        position: absolute;
+        right: 10px;
+        top: 7px;
+        border-radius: 50px;
+        border: none;
+        background-color: white;
+        color: black;
+
+        :hover{
+            transition: 1s;
+            color:white;
+            background-color: black;
+        }
+    }
+`
 
 const MainDiv = styled.main`
     width: 100%;
@@ -141,6 +207,11 @@ const MainDiv = styled.main`
     flex-direction: column;
     align-items: center;
     padding-top: 120px;
+    position: relative;
+
+    .displayNone{
+        display: none !important;
+    }
 
     .bold{
         font-weight: bold;
@@ -319,6 +390,16 @@ const ArticleDiv = styled.article`
         width: 100%;
         max-width: 975px;
         justify-content: flex-start;
+        font-weight: 400;
+        line-height: 42px;
+        font-size: 32px;
+
+        h2{
+            margin: 30px 0px 25px 0px;
+            font-size: 16px;
+            line-height: 26px;
+            width: 451px;
+        }
 
         .budgetDesc{
             font-size: 22px;
@@ -354,6 +435,12 @@ const ArticleDiv = styled.article`
         padding-top: 50px;
         position: relative;
         z-index: 1;
+        display: flex;
+        flex-direction: column;
+        font-weight: 400;
+        line-height: 42px;
+        font-size: 32px;
+        justify-content: center;
 
         .talkDirectTitle{
             color: #38bc94;

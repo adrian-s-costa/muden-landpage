@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import Button from "./Button";
 import Scroll from "react-scroll";
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default function Header(){
+
+    var scroll = Scroll.animateScroll;
     
     // var scroller = Scroll.scroller;
 
@@ -18,10 +21,14 @@ export default function Header(){
 
     return(
         <Head>
-            <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41}></ImgLogo>
+            <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41} onClick={()=>{scroll.scrollToTop()}}></ImgLogo>
             <LinkHead className="header">
-                <div className="link">Nossos serviços</div>
-                <div className="link">Fale conosco</div>
+                <Link activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-280}>
+                    <div className="link">Nossos serviços</div>
+                </Link>
+                <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
+                    <div className="link">Fale conosco</div>
+                </Link>
                 <div className="btn"><Button width={"auto"} color={"white"} colorFont={"#38bc94"}>Agende sua mudança</Button></div>
             </LinkHead>
             <div className="icon"><ion-icon name="menu-outline"></ion-icon></div>
