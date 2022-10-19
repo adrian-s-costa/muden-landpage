@@ -2,9 +2,32 @@ import styled from "styled-components";
 import Button from "./Button";
 import Card from "./Card";
 import Input from "./Input";
-import { FaFacebookF, FaTiktok, FaLinkedinIn, FaInstagram, FaWhatsapp, FaLinkedin} from "react-icons/fa";
+import { FaFacebookF, FaTiktok, FaLinkedinIn, FaInstagram, FaWhatsapp} from "react-icons/fa";
+import axios from "axios";
+import { useState } from "react";
 
 export default function Home(){
+
+    const [contactData, setContactData] = useState({ 
+        name: "",
+        tel: "",
+        email: "",
+        date: "",
+        originCity: "",
+        originState: "",
+        destinationCity: "",
+        destinationState: "",
+        message: "",
+        type: ""
+    });
+
+    function setData(event){
+        event.preventDefault();
+        console.log(contactData);
+        axios.post("http://localhost:5000/sendemail", contactData);
+    }
+    
+
     return(
         <MainDiv>
             <ArticleDiv>
@@ -55,19 +78,19 @@ export default function Home(){
                 <SectionDiv className="section5">
                     <h3>Vamos fazer um <span className="bold">orçamento</span>?</h3>
                     <h6 className="budgetDesc">Preencha o formulário abaixo, nossa equipe já <span className="bold">entrará em contato</span> com você.</h6>
-                    <form className="form">
+                    <form className="form" onSubmit={setData}>
                         <div className="formDiv">
-                            <Input label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"} height={"35px"} width={"400px"}></Input>
-                            <Input label={"Telefone (WhatsApp)"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"}></Input>
-                            <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"}></Input>
-                            <Input label={"Quando pretende se mudar"} placeholder={"xx/xx/xxxx"} type={"date"} height={"35px"} width={"400px"}></Input>
+                            <Input label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, name: e.target.value})} value={contactData.name}></Input>
+                            <Input label={"Telefone (WhatsApp)"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, tel: e.target.value})} value={contactData.tel}></Input>
+                            <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
+                            <Input label={"Quando pretende se mudar"} placeholder={"xx/xx/xxxx"} type={"date"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, date: e.target.value})} value={contactData.date}></Input>
                         </div>
                         <div className="formDiv">
-                            <Input label={"Cidade (origem)"} placeholder={"Exemplo: São Paulo"} type={"text"} height={"35px"} width={"400px"}></Input>
-                            <Input label={"Estado (origem)"} placeholder={"Exemplo: São Paulo"} type={"text"} height={"35px"} width={"400px"}></Input>
-                            <Input label={"Cidade (destino)"} placeholder={"Exemplo: Campinas"} type={"text"} height={"35px"} width={"400px"}></Input>
-                            <Input label={"Estado (destino)"} placeholder={"Exemplo: São Paulo"} type={"text"} height={"35px"} width={"400px"}></Input>
-                            <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"text"} marginTop={"20px"}>Enviar</Button>
+                            <Input label={"Cidade (origem)"} placeholder={"Exemplo: São Paulo"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, originCity: e.target.value})} value={contactData.originCity}></Input>
+                            <Input label={"Estado (origem)"} placeholder={"Exemplo: São Paulo"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, originState: e.target.value})} value={contactData.originState}></Input>
+                            <Input label={"Cidade (destino)"} placeholder={"Exemplo: Campinas"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, destinationCity: e.target.value})} value={contactData.destinationCity}></Input>
+                            <Input label={"Estado (destino)"} placeholder={"Exemplo: São Paulo"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, destinationState: e.target.value})} value={contactData.destinationState}></Input>
+                            <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "budget"})}>Enviar</Button>
                         </div>
                     </form>
                 </SectionDiv>
@@ -79,16 +102,16 @@ export default function Home(){
                         <h6 className="talkDirectTitle white">Vamos conversar!</h6>
                         <h6 className="talkDirectDesc white">Deixe aqui suas dúvidas, faça sugestões ou nos chame no WhatsApp e nos conte do que você precisa!</h6>
                     </div>
-                    <div className="formEmail flex">
+                    <div className="formEmail flex" onSubmit={setData}>
                         <form>
-                            <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"}></Input>
-                            <Input label={"Mensagem"} placeholder={"Escreva aqui a sua mensagem"} type={"text"} height={"250px"} width={"400px"} textarea={true}></Input>
-                            <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"text"} marginTop={"20px"}>Enviar</Button>
+                            <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
+                            <Input label={"Mensagem"} placeholder={"Escreva aqui a sua mensagem"} type={"text"} height={"250px"} width={"400px"} textarea={true} set={(e) => setContactData({ ...contactData, message: e.target.value})} value={contactData.message}></Input>
+                            <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"text"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "contact"})}>Enviar</Button>
                         </form>
                         <div className="arm">
                             <ImgArm src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676721/muden/braco_balao_h9i2ld.png" className="arm"></ImgArm>
                             <div className="whatsappBtn">
-                                <Button width={"260px"} color={"#38bc94"} colorFont={"white"} type={"text"} marginTop={"20px"}> Envie sua mensagem &nbsp; <ion-icon name="logo-whatsapp"></ion-icon></Button>
+                                <Button width={"260px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"}> Envie sua mensagem &nbsp; <ion-icon name="logo-whatsapp"></ion-icon></Button>
                             </div>
                         </div>
                     </div>

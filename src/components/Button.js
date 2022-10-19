@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function Button(props){
     return(
-        <Btn width={props.width} color={props.color} colorFont={props.colorFont} type={props.type} marginTop={props.marginTop}>{props.children}</Btn>
+        <Btn width={props.width} color={props.color} colorFont={props.colorFont} type={props.type} marginTop={props.marginTop} onClick={props.set}>{props.children}</Btn>
     )
 }
 

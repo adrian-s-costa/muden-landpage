@@ -6,14 +6,14 @@ export default function Input(props){
         return(
             <InputDiv>
                 <Label>{props.label}</Label>
-                <TextArea type={props.type} placeholder={props.placeholder} required={true} height={props.height} width={props.width}></TextArea>
+                <TextArea type={props.type} placeholder={props.placeholder} required={true} height={props.height} width={props.width} onChange={props.set} value={props.value}></TextArea>
             </InputDiv>
         )
     }else{
         return(
             <InputDiv>
                 <Label>{props.label}</Label>
-                <InputForm type={props.type} placeholder={props.placeholder} required={true} height={props.height} width={props.width}></InputForm>
+                <InputForm type={props.type} placeholder={props.placeholder} required={true} height={props.height} width={props.width} onChange={props.set} value={props.value}></InputForm>
             </InputDiv>
         )
     }

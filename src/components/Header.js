@@ -1,19 +1,32 @@
 import styled from "styled-components";
 import Button from "./Button";
+import Scroll from "react-scroll";
 
 export default function Header(){
+    
+    // var scroller = Scroll.scroller;
+
+    // const a = ()=>{
+    //     scroller.scrollTo('myScrollToElement', {
+    //         duration: 1500,
+    //         delay: 100,
+    //         smooth: true,
+    //         containerId: 'teste',
+    //         offset: 50
+    //     })
+    // }
+
     return(
         <Head>
             <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41}></ImgLogo>
             <LinkHead className="header">
-                <div className="link">Contato</div>
-                <div className="link">Dúvidas</div>
+                <div className="link">Nossos serviços</div>
+                <div className="link">Fale conosco</div>
                 <div className="btn"><Button width={"auto"} color={"white"} colorFont={"#38bc94"}>Agende sua mudança</Button></div>
             </LinkHead>
             <div className="icon"><ion-icon name="menu-outline"></ion-icon></div>
         </Head>
     ) 
-    
 }
 
 const LinkHead = styled.div`
