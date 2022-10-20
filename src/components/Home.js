@@ -9,7 +9,7 @@ import { Element, Link } from 'react-scroll'
 
 export default function Home(){
 
-    const [sent, setSent] = useState(false);
+    let [sent, setSent] = useState(false);
 
     const [contactData, setContactData] = useState({ 
         name: "",
@@ -26,7 +26,7 @@ export default function Home(){
 
     function whatsappMessage(){
         const cel = "5567992214009"
-        const text = `Olá, gostaria de tirar algumas dúvidas`
+        let text = `Olá, gostaria de tirar algumas dúvidas`
         text = window.encodeURIComponent(text)
         window.open("https://api.whatsapp.com/send?phone=" + cel + "&text=" + text, "_blank")  
     }
