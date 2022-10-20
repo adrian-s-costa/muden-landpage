@@ -28,7 +28,7 @@ export default function Home(){
         const cel = "5567992214009"
         let text = `Olá, gostaria de tirar algumas dúvidas`
         text = window.encodeURIComponent(text)
-        window.open("https://api.whatsapp.com/send?phone=" + cel + "&text=" + text, "_blank")  
+        window.open("https://api.whatsapp.com/send?phone=" + cel + "&text=" + text, "_blank");
     }
 
     function setData(event){

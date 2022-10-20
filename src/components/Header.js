@@ -8,7 +8,7 @@ export default function Header(){
 
     let [visu, setVisu] = useState(1);
 
-    function teste(){
+    function toggle(){
         setVisu(visu * -1)
     }
 
@@ -28,34 +28,38 @@ export default function Header(){
 
     return(
         <Head>
-            <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41} onClick={()=>{scroll.scrollToTop()}}></ImgLogo>
-            <LinkHead className="header">
-                <Link activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-280}>
-                    <div className="link">Nossos serviços</div>
-                </Link>
-                <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
-                    <div className="link">Fale conosco</div>
-                </Link>
-                <div className="btn"><Button width={"auto"} color={"white"} colorFont={"#38bc94"}>Agende sua mudança</Button></div>
-            </LinkHead>
-            <div className="icon" onClick={()=>{teste()}}><ion-icon name="menu-outline"></ion-icon></div>
-            <div className={`teste ${visu == 1 ? "displayNone" : "displayShow"}`}>
-                <div className="displayNone linksList">
-                    <Link className="divLink" activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-360} onClick={()=>{teste()}}>
-                        <ion-icon name="storefront-outline"></ion-icon>
-                        <span className="linkSide">Nossos serviços</span>
+            <div className="headerDiv">
+                <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41} onClick={()=>{scroll.scrollToTop()}}></ImgLogo>
+                <LinkHead className="header">
+                    <Link activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-280}>
+                        <div className="link">Nossos serviços</div>
                     </Link>
-                    <Link className="divLink" activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
-                        <ion-icon name="people-outline"></ion-icon>
-                        <span className="linkSide">Fale conosco</span>
+                    <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
+                        <div className="link">Fale conosco</div>
                     </Link>
-                    <div>
-                        <ion-icon name="calendar-number-outline"></ion-icon>
-                        <span className="linkSide">Agende sua mudança</span>
+                    <div className="btn"><Button width={"auto"} color={"white"} colorFont={"#38bc94"}>Agende sua mudança</Button></div>
+                </LinkHead>
+                <div className="icon" onClick={()=>{toggle()}}>
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <div className={`teste ${visu == 1 ? "displayNone" : "displayShow"}`}>
+                    <div className="displayNone linksList">
+                        <Link className="divLink" activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-360} onClick={()=>{toggle()}}>
+                            <ion-icon name="storefront-outline"></ion-icon>
+                            <span className="linkSide">Nossos serviços</span>
+                        </Link>
+                        <Link className="divLink" activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70} onClick={()=>{toggle()}}>
+                            <ion-icon name="people-outline"></ion-icon>
+                            <span className="linkSide">Fale conosco</span>
+                        </Link>
+                        <div>
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                            <span className="linkSide">Agende sua mudança</span>
+                        </div>
                     </div>
                 </div>
+                <div className={`teste2 ${visu == 1 ? "displayNone" : "displayShow"}`} onClick={()=>{toggle()}}></div>
             </div>
-            <div className={`teste2 ${visu == 1 ? "displayNone" : "displayShow"}`} onClick={()=>{teste()}}></div>
         </Head>
     ) 
 }
@@ -66,6 +70,7 @@ const LinkHead = styled.div`
     font-size: 15px;
     position: relative;
     height: 100%;
+    width: auto;
 `
 
 const Head = styled.header`
@@ -78,6 +83,15 @@ const Head = styled.header`
     background-color: #38bc94;
     justify-content: center;
     z-index: 10;
+
+    .headerDiv{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        width: 100%;
+        max-width: 975px;
+        justify-content: space-between;
+    }
 
     @media (max-width: 975px) {
 
@@ -128,6 +142,11 @@ const Head = styled.header`
         font-size: 20px;
         color: white;
         font-weight: bold;
+        :hover{
+            transition: 0.5s;
+            background-image: linear-gradient(#1f2928, #38bc94);
+            cursor: pointer;
+        }
     }
 
     @media (max-width: 975px) {
@@ -184,6 +203,5 @@ const Head = styled.header`
 
 `
 const ImgLogo = styled.img`
-    margin-right: 345px;
     cursor: pointer;
 `
