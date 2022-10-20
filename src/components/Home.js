@@ -34,7 +34,7 @@ export default function Home(){
     function setData(event){
         event.preventDefault();
         console.log(contactData);
-        axios.post("http://localhost:5000/sendemail", contactData)
+        axios.post("https://muden-backend.vercel.app/sendemail", contactData)
         .then((response)=>{
             console.log(response.data)
             showPopUp();
