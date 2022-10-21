@@ -34,7 +34,7 @@ export default function Home(){
     function setData(event){
         event.preventDefault();
         console.log(contactData);
-        axios.post("https://muden-backend.vercel.app/sendemail", contactData)
+        axios.post("http://54.207.77.153:5000/sendemail", contactData)
         .then((response)=>{
             console.log(response.data)
             showPopUp();
@@ -183,7 +183,6 @@ const PopUp = styled.div`
     border-color: white;
     border-radius: 10px;
     border-style: solid;
-
     .popUpBtn{
         position: absolute;
         right: 10px;
@@ -192,7 +191,6 @@ const PopUp = styled.div`
         border: none;
         background-color: white;
         color: black;
-
         :hover{
             transition: 1s;
             color:white;
@@ -208,25 +206,20 @@ const MainDiv = styled.main`
     align-items: center;
     padding-top: 120px;
     position: relative;
-
     .displayNone{
         display: none !important;
     }
-
     .bold{
         font-weight: bold;
         color: #1f2928;
     }
-
     .white{
         color: white !important;
     }
-
     .greenMuden{
         color: #38bc94;
         font-weight: bold;
     }
-
     .article3, .article4, .article5{
         width: 100%;
         max-width: none;
@@ -235,13 +228,11 @@ const MainDiv = styled.main`
         justify-content: center;
         background-image: linear-gradient(to right, #04b891 , #079a83);
     }
-
     .article4{
         margin-top: 0px;
         width: 100%;
         background-image: linear-gradient(to right, #e2e2e2, #e2e2e2) !important;
     }
-
     .article5{
         margin-top: 0px;
         height: auto;
@@ -259,55 +250,46 @@ const ArticleDiv = styled.article`
     margin: 20px 0px 0px 0px;
     justify-content: space-between;
     align-items: center;
-
     .sectionDiv{
         font-size: 40px;
     }
-
     .section2{
         width: 100%;
         margin-top: 20px;
-
         h3{
             width: 100%;
             max-width: 550px;
             font-size: 40px;
             font-weight: 400;
         }
-
         h2{
             width: 100%;
             margin: 10px 0px 0px 0px;
         }
         
     }
-
     .section3{
         margin-top: 20px;
         width: 100%;
         flex-direction: row;
         gap: 20px;
     }
-
     .section4{
         width: 100%;
         max-width: 975px;
         height: 500px;
-
         .title{
             color: white;
             width: 100%;
             max-width: 700px;
             font-size: 40px;
         }
-
         .depoDiv{
             margin-top: 35px;
             display: flex;
             justify-content: center;
             width: 100%;
         }
-
         .depo{
             border-radius: 60px;
             width: 680px;
@@ -318,11 +300,9 @@ const ArticleDiv = styled.article`
             gap: 30px;
             padding: 0px 30px;
             position: relative;
-
             .divBackNPic{
                 position: relative;
             }
-
             .picDiv{
                 background-size: cover;
                 background-position: center;
@@ -335,7 +315,6 @@ const ArticleDiv = styled.article`
                 z-index: 4;
                 position: inherit;
             }
-
             .picBack{
                 background-color: #6e7473;
                 width: 15vw;
@@ -349,14 +328,12 @@ const ArticleDiv = styled.article`
                 top: 3px;
                 left: 5px;
             }
-
             .text{
                 font-size: min(3vw, 20px);
                 max-width: 440px;
                 line-height: 25px;
                 font-style: italic;
             }
-
             .invComma{
                 position: absolute;
                 width: 5vw;
@@ -369,21 +346,17 @@ const ArticleDiv = styled.article`
                 left: 0px;
                 top: 0px;
             }
-
             .down{
                 right: 0px;
                 bottom: 0px;
             }
-
             .invCommaDiv{
                 position: relative;
                 padding: min(5vw, 45px) 0px min(5vw, 45px) 0px;
                 
             }
-
         }
     }
-
     .section5{
         height: auto;
         margin: 0px;
@@ -393,42 +366,35 @@ const ArticleDiv = styled.article`
         font-weight: 400;
         line-height: 42px;
         font-size: 32px;
-
         h2{
             margin: 30px 0px 25px 0px;
             font-size: 16px;
             line-height: 26px;
             width: 451px;
         }
-
         .budgetDesc{
             font-size: 22px;
             max-width: 500px;
             line-height: normal;
             margin-top: 5px;
         }
-
         h3{
             margin-top: 40px;
             width: 100%;
             font-size: 40px;
             font-weight: 400;
         }
-
         h2{
             width: 100%;
             margin: 10px 0px 0px 0px;
         }
-
         .form{
             width: 100%;
             padding-bottom: 50px;
             display: flex;
             justify-content: space-around;
         }
-
     }
-
     .section6{
         width: 100%;
         max-width: 975px;
@@ -441,7 +407,6 @@ const ArticleDiv = styled.article`
         line-height: 42px;
         font-size: 32px;
         justify-content: center;
-
         .talkDirectTitle{
             color: #38bc94;
             width: auto;
@@ -461,16 +426,13 @@ const ArticleDiv = styled.article`
             right: 0px;
             z-index: 0;
         }
-
         .formEmail{
             z-index: 1;
             position: inherit;
         }
-
         .flex{
             display: flex;
         }
-
         .whatsappBtn{
             position: absolute;
             right: 110px;
@@ -481,32 +443,26 @@ const ArticleDiv = styled.article`
     @media (max-width: 975px) {
         
         flex-direction: column;
-
         .down{
             right: 30px !important;
             bottom: 0px;
         }
-
         .depo{
             height: auto !important;
             box-sizing: content-box !important;
             padding: 10px 25px !important;
         }
-
         .text{
             width: auto !important;
             line-height: 3vw !important;
         }
-
         .sectionDiv{
             width: 90%;
             margin-bottom: 25px;
         }
-
         .section2, .section4, .section5, .asideDiv{
             width: 90%;
         }
-
         .section3{
             width: 90%;
             align-items: center;
@@ -517,49 +473,39 @@ const ArticleDiv = styled.article`
         h1{
             width: 100%;
         }
-
         .imgAside{
             display: none;
         }
-
         h2{
             width: 100% !important;
         }
-
         .form{
             flex-direction: column;
         }
-
         .article5{
             width: 100% !important;
             align-items: center !important;
         }
-
         .section6{
             width: 90%;
         }
-
         .backMuden{
             width: 400px !important;
             height: 400px !important;
             position: absolute;
             right: 0px;
         }
-
         .arm{
            display: none;
         }
-
         .flex{
             flex-direction: column;
         }
-
         .talkDirectDesc{
             margin-top: 10px !important;
             line-height: normal;
         }
     }
-
 `
 const SectionDiv = styled.section`
     display: flex;
@@ -569,7 +515,6 @@ const SectionDiv = styled.section`
     line-height: 42px;
     font-size: 32px;
     justify-content: center;
-
     h2{
         margin: 30px 0px 25px 0px;
         font-size: 16px;
@@ -598,7 +543,6 @@ const Footer = styled.footer`
     background-color: #38bc94;
     display: flex;
     justify-content: center;
-
     .footerDiv{
         height: 100%;
         width: 100%;
@@ -607,28 +551,23 @@ const Footer = styled.footer`
         align-items: center;
         justify-content: space-between;
     }
-
     .footerIconsDiv{
         display: flex;
         align-items: center;
         gap: 10px;
     }
-
     .footerIcon{
         color: white;
         font-size: 40px;
         cursor: pointer;
     }
-
     @media (max-width: 975px) {
         .footer{
             width: 100% !important;
         }
-
         .footerDiv{
             width: 90% !important;
         }
-
         .footerIcon{
             font-size: 5vw;
         }
