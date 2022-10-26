@@ -34,7 +34,7 @@ export default function Home(){
     function setData(event){
         event.preventDefault();
         console.log(contactData);
-        axios.post("http://54.207.77.153:5000/sendemail", contactData)
+        axios.post("http://localhost:5000/sendemail", contactData)
         .then((response)=>{
             console.log(response.data)
             showPopUp();
@@ -60,7 +60,7 @@ export default function Home(){
                     <h1 className="bold">Olá, nós somos a <span className="greenMuden">Muden</span></h1>
                     <h2>Feita para pessoas que entendem que o tempo é precioso! Que precisamos investi-lo com o que importa. <br/> <span className="bold">Com quem realmente importa!</span></h2>
                     <Link activeClass="active" className="test2" to="test2" spy={true} smooth={true} duration={500} offset={-50}>
-                        <Button width={"250px"} color={"#38bc94"} colorFont={"white"}>Solicitar orçamento</Button>
+                        <Button width={"250px"} color={"#38bc94"} colorFont={"white"}>Cadastre-se</Button>
                     </Link>
                 </SectionDiv>
                 <AsideDiv className="asideDiv">
@@ -112,13 +112,16 @@ export default function Home(){
                             <Input label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, name: e.target.value})} value={contactData.name}></Input>
                             <Input label={"Telefone (WhatsApp)"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, tel: e.target.value})} value={contactData.tel}></Input>
                             <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
-                            <Input label={"Quando pretende se mudar"} placeholder={"xx/xx/xxxx"} type={"date"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, date: e.target.value})} value={contactData.date}></Input>
-                        </div>
-                        <div className="formDiv">
-                            <Input label={"Cidade (origem)"} placeholder={"Exemplo: São Paulo"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, originCity: e.target.value})} value={contactData.originCity}></Input>
-                            <Input label={"Estado (origem)"} placeholder={"Exemplo: São Paulo"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, originState: e.target.value})} value={contactData.originState}></Input>
-                            <Input label={"Cidade (destino)"} placeholder={"Exemplo: Campinas"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, destinationCity: e.target.value})} value={contactData.destinationCity}></Input>
-                            <Input label={"Estado (destino)"} placeholder={"Exemplo: São Paulo"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, destinationState: e.target.value})} value={contactData.destinationState}></Input>
+                            <div className="dropdown">
+                                <label for="days" className="dropLabel">Pretende se mudar?</label>
+                                <select name="days" id="days" required={true} className="dropInput" onChange={(e)=>setContactData({ ...contactData, date: e.target.value})} value={contactData.date}>
+                                    <option value="" disabled selected>Escolha uma opção</option>
+                                    <option value="dentro de 30 dias">Sim, nos próximos 30 dias</option>
+                                    <option value="dentro de 60 dias">Sim, nos próximos 60 dias</option>
+                                    <option value="dentro de 90 dias">Sim, nos próximos 90 dias</option>
+                                    <option value="Não pretende">Não vou me mudar, por hora</option>
+                                </select>
+                            </div>
                             <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "budget"})}>Enviar</Button>
                         </div>
                     </form>
@@ -127,9 +130,9 @@ export default function Home(){
             <ArticleDiv className="article5">
                 <Element className="section6" name="test3">
                     <div className="formEmail">
-                        <h4 className="talkDirectTitle">Fale diretamente conosco</h4>
+                        <h4 className="talkDirectTitle">Seja nosso parceiro</h4>
                         <h6 className="talkDirectTitle white">Vamos conversar!</h6>
-                        <h6 className="talkDirectDesc white">Deixe aqui suas dúvidas, faça sugestões ou nos chame no WhatsApp e nos conte do que você precisa!</h6>
+                        <h6 className="talkDirectDesc white">Deixe aqui seu contato e interesse, para que possamos fechar uma parceria</h6>
                     </div>
                     <div className="formEmail flex" onSubmit={setData}>
                         <form>
@@ -137,12 +140,6 @@ export default function Home(){
                             <Input label={"Mensagem"} placeholder={"Escreva aqui a sua mensagem"} type={"text"} height={"250px"} width={"400px"} textarea={true} set={(e) => setContactData({ ...contactData, message: e.target.value})} value={contactData.message}></Input>
                             <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"text"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "contact"})}>Enviar</Button>
                         </form>
-                        <div className="arm">
-                            <ImgArm src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676721/muden/braco_balao_h9i2ld.png" className="arm"></ImgArm>
-                            <div className="whatsappBtn">
-                                <Button width={"260px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={()=>{whatsappMessage()}}> Envie sua mensagem &nbsp; <ion-icon name="logo-whatsapp"></ion-icon></Button>
-                            </div>
-                        </div>
                     </div>
                     <img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676723/muden/Ativo_1_dpdkc1.png" className="backMuden"></img>
                 </Element>
@@ -183,6 +180,7 @@ const PopUp = styled.div`
     border-color: white;
     border-radius: 10px;
     border-style: solid;
+    z-index: 5;
     .popUpBtn{
         position: absolute;
         right: 10px;
@@ -392,7 +390,29 @@ const ArticleDiv = styled.article`
             width: 100%;
             padding-bottom: 50px;
             display: flex;
-            justify-content: space-around;
+            justify-content: flex-start;
+            .dropdown{
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                .dropLabel{
+                    font-size: 19px;
+                    color: #38bc94;
+                    font-weight: bold;
+                    margin-bottom: -5px;
+                }
+                .dropInput{
+                    width: 400px;
+                    border-radius: 20px;
+                    border: none;
+                    height: 35px;
+                    padding: 0px 15px;
+                    font-size: 15px;
+                    font-style: italic;
+                    font-family: 'Poppins';
+                    background-color: white;
+                }
+            }
         }
     }
     .section6{

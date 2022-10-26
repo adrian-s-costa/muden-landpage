@@ -32,10 +32,16 @@ export default function Header(){
                 <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41} onClick={()=>{scroll.scrollToTop()}}></ImgLogo>
                 <LinkHead className="header">
                     <Link activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-280}>
-                        <div className="link">Nossos serviços</div>
+                        <div className="link">Serviços</div>
                     </Link>
                     <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
-                        <div className="link">Fale conosco</div>
+                        <div className="link">Contato</div>
+                    </Link>
+                    <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
+                        <div className="link">Dúvidas</div>
+                    </Link>
+                    <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
+                        <div className="link">Seja um parceiro</div>
                     </Link>
                     <div className="btn"><Button width={"auto"} color={"white"} colorFont={"#38bc94"}>Agende sua mudança</Button></div>
                 </LinkHead>
@@ -46,11 +52,19 @@ export default function Header(){
                     <div className="displayNone linksList">
                         <Link className="divLink" activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-360} onClick={()=>{toggle()}}>
                             <ion-icon name="storefront-outline"></ion-icon>
-                            <span className="linkSide">Nossos serviços</span>
+                            <span className="linkSide">Serviços</span>
                         </Link>
                         <Link className="divLink" activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70} onClick={()=>{toggle()}}>
                             <ion-icon name="people-outline"></ion-icon>
-                            <span className="linkSide">Fale conosco</span>
+                            <span className="linkSide">Contato</span>
+                        </Link>
+                        <Link className="divLink" activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70} onClick={()=>{toggle()}}>
+                            <ion-icon name="people-outline"></ion-icon>
+                            <span className="linkSide">Dúvidas</span>
+                        </Link>
+                        <Link className="divLink" activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70} onClick={()=>{toggle()}}>
+                            <ion-icon name="people-outline"></ion-icon>
+                            <span className="linkSide">Seja um parceiro</span>
                         </Link>
                         <div>
                             <ion-icon name="calendar-number-outline"></ion-icon>
@@ -139,7 +153,7 @@ const Head = styled.header`
         height: 100%;
         padding: 0px 15px;
         width: auto;
-        font-size: 20px;
+        font-size: 18px;
         color: white;
         font-weight: bold;
         :hover{
