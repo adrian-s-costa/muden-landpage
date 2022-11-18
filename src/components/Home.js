@@ -411,6 +411,9 @@ const ArticleDiv = styled.article`
                     font-style: italic;
                     font-family: 'Poppins';
                     background-color: white;
+                    @media (max-width: 975px) {
+                        width: 100%;
+                    }
                 }
             }
         }

@@ -59,5 +59,4 @@ const Label = styled.span`
     font-size: 19px;
     color: #38bc94;
     font-weight: bold;
-    margin-bottom: -5px;
 `
