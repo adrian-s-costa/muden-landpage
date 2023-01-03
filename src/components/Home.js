@@ -189,7 +189,44 @@ export default function Home(){
             </ArticleDiv>
             <ArticleDiv className="article5">
                 <Element className="section6" name="test3">
-                    <div className="formEmail">
+                    <h6 className="faq">FAQ</h6>
+                    <div className="allFaq">
+                        <div className="faqColumn">
+                            <div className="faqBlock">
+                                <span className="faqTitle">Como realizar um orçamento?</span> <br/>
+                                <span className="faqDesc">Basta clicar no canto superior direito onde está escrito “Quero me mudar”, e preencher seus dados, entra- remos em contato com você via Whats App em até 12 horas, nosso processo de orçamento é bem rápido, só precisaremos de algumas informações que nossos atendentes irão solicitar, como origem e destino da mudança, o tamanho da residência, quantos cômo- dos, e quais serão os moveis que precisarão do serviço de montagem, após isso o resto é conosco.</span>
+                                <br/>
+                            </div>
+                            <div className="faqBlock">
+                                <span className="faqTitle">Posso contratar apenas um dos serviços?</span><br/>
+                                <span className="faqDesc">dos serviços? Claro que sim, aqui na muden você pode personalizar e deixar a sua mudança composta da forma que preferir, você pode escolher qualquer serviço de forma isolada, basta sinalizar no momento da real- ização do orçamento.</span>
+                                <br/>                            
+                            </div>
+                            <div className="faqBlock">
+                                <span className="faqTitle">Como efetuar o cancelamento?</span><br/>
+                                <span className="faqDesc">O cancelamento deve ser feito até 12 horas antes do dia e horário agendado para a mudança, cancelando no prazo, nenhuma taxa será cobrada e o valor será reembolsado em até 72 horas.</span>
+                                <br/>
+                            </div>
+                        </div>
+                        <div className="faqColumn">
+                            <div className="faqBlock">
+                                <span className="faqTitle">Recebi o orçamento e agendei minha mudança, e agora!?</span><br/>
+                                <span className="faqDesc">Agora chegamos na etapa de realizar o pagamento no método escolhido até 12 horas antes do dia e horário que sua mudança foi agendada, após isso é só esperar o dia chegar e estaremos no local, com toda nossa equipe para entregar uma mudança tran- quila e sem estresse.</span>
+                                <br/>
+                            </div>
+                            <div className="faqBlock">
+                                <span className="faqTitle">Posso parcelar o valor da minha mudança?</span><br/>
+                                <span className="faqDesc">Sim, aqui na Muden você pode escolher qual a melhor forma de pagamento para você, realizamos par- celamentos no crédito em até 12x sem juros, débito, TED e até Pix, você escolhe.</span>
+                                <br/>
+                            </div>
+                            <div className="faqBlock">
+                                <span className="faqTitle">Devo fazer alguma coisa durante o processo de mudança?</span><br/>
+                                <span className="faqDesc">Nossa equipe cuida de tudo, a única coisa que você precisará fazer é relaxar e aproveitar seu dia, é impor- tante que fique atento ao celular caso saia da residência, para que nossa equipe consiga tirar dúvi- das simples como, por exemplo: “Em que parede você prefere que o guarda-roupa seja montado”.</span>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <div className="formEmail">
                         <h4 className="talkDirectTitle">Seja nosso parceiro</h4>
                         <h6 className="talkDirectTitle white">Vamos conversar!</h6>
                         <h6 className="talkDirectDesc white">Deixe aqui seu contato e interesse, para que possamos fechar uma parceria</h6>
@@ -200,8 +237,8 @@ export default function Home(){
                             <Input label={"Mensagem"} placeholder={"Escreva aqui a sua mensagem"} type={"text"} height={"250px"} width={"400px"} textarea={true} set={(e) => setContactData({ ...contactData, message: e.target.value})} value={contactData.message}></Input>
                             <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"text"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "contact"})}>Enviar</Button>
                         </form>
-                    </div>
-                    <img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676723/muden/Ativo_1_dpdkc1.png" className="backMuden"></img>
+                    </div> */}
+                    <img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672780668/muden/muden_simbolo_branco-03_uukgpk_1_2_qvn3q1.png" className="backMuden"></img>
                 </Element>
             </ArticleDiv>
             <Footer className="footer">
@@ -410,12 +447,19 @@ const MainDiv = styled.main`
         }
     }
     .article5{
+        
         margin-top: 0px;
         height: auto;
+        min-height: 700px;
         background-image: linear-gradient(to right, #1f2928, #1f2928) !important;
         padding-bottom: 60px;
         display: flex;
         justify-content: center !important;
+        z-index: 1;
+        margin-bottom: 90px;
+        border-bottom-left-radius: 200px;
+        border-top-right-radius: 180px;
+        position: relative;
     }
 
     .article8{
@@ -694,16 +738,42 @@ const ArticleDiv = styled.article`
     }
     .section6{
         width: 100%;
+        height: 100% !important;
         max-width: 975px;
-        padding-top: 50px;
-        position: relative;
-        z-index: 1;
         display: flex;
         flex-direction: column;
-        font-weight: 400;
-        line-height: 42px;
-        font-size: 32px;
-        justify-content: center;
+
+        .faq{
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            z-index: 10 !important;
+            margin-bottom: 30px;
+        }
+
+        .allFaq{
+            display: flex;
+            z-index: 10;
+            color: white;
+            justify-content: space-between;
+            text-align: justify;
+        }
+
+        .faqColumn{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 470px;
+        }
+
+
+        .faqTitle{
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
         .talkDirectTitle{
             color: #38bc94;
             width: auto;
@@ -717,10 +787,11 @@ const ArticleDiv = styled.article`
         }
         
         .backMuden{
-            width: 500px;
-            height: 500px;
+            width: 700px;
+            height: 700px;
             position: absolute;
-            right: 0px;
+            right: 200px;
+            top: 0px;
             z-index: 0;
         }
         .formEmail{
@@ -836,17 +907,22 @@ const ImgArm = styled.img`
 `
 const Footer = styled.footer`
     width: 100%;
-    height: 80px;
+    height: 300px;
     background-color: #38bc94;
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    z-index: 0;
+
     .footerDiv{
         height: 100%;
         width: 100%;
         max-width: 975px;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: space-between;
+        padding-bottom: 20px;
     }
     .footerIconsDiv{
         display: flex;
