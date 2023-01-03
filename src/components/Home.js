@@ -64,7 +64,7 @@ export default function Home(){
                     </Link>
                 </SectionDiv>
                 <AsideDiv className="asideDiv">
-                    <Img className="imgAside" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672255477/muden/homem_caixa_fbbldo.png"></Img>
+                    <Img className="imgAside" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785135/muden/template_primary_1_ctybyu.png"></Img>
                 </AsideDiv>
             </ArticleDiv>
             <ArticleDiv className="article2">
@@ -122,6 +122,7 @@ export default function Home(){
                         </div>
                     </div>
                 </SectionDiv>
+                <div className="triangulo-para-baixo quarto"></div>
             </ArticleDiv>
                 {/* <SectionDiv className="section4">
                     <div className="title">
@@ -354,6 +355,13 @@ const MainDiv = styled.main`
         flex-direction: column;
         background-image: none;
         background-color: white;
+        position: relative;
+
+        .quarto{
+            z-index: 1;
+            border-top: 25px solid white;
+        }
+
         .section7{
             height: auto;
             width: 100%;
@@ -428,9 +436,12 @@ const MainDiv = styled.main`
     .article4{
         margin-top: 0px;
         width: 100%;
+        height: auto;
+        min-height: 600px;
         background-image: linear-gradient(to right, #e2e2e2, #e2e2e2) !important;
         position: relative !important;
         .terceiro{
+            z-index: 1;
             border-top: 25px solid #e2e2e2;
         }
         .section8{
@@ -438,6 +449,7 @@ const MainDiv = styled.main`
             width: 100%;
             max-width: 975px;
             align-items: center;
+            margin-top: 50px;
 
             .formTruck{
                 margin-top: 50px;
@@ -447,7 +459,6 @@ const MainDiv = styled.main`
         }
     }
     .article5{
-        
         margin-top: 0px;
         height: auto;
         min-height: 700px;
@@ -525,7 +536,7 @@ const MainDiv = styled.main`
                 font-size: 25px;
                 font-style: italic;
                 position: absolute;
-                right: 500px;
+                right: 28vw;
                 bottom: 100px;
             }
         }
@@ -697,7 +708,7 @@ const ArticleDiv = styled.article`
         h3{
             margin-top: 40px;
             width: 100%;
-            font-size: 40px;
+            font-size: 35px;
             font-weight: 400;
         }
         h2{

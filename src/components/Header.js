@@ -29,7 +29,7 @@ export default function Header(){
     return(
         <Head>
             <div className="headerDiv">
-                <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41} onClick={()=>{scroll.scrollToTop()}}></ImgLogo>
+                <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785402/muden/muden-logo-principal-branco_mrbzit_oblp0y.png" width={170} height={41} onClick={()=>{scroll.scrollToTop()}}></ImgLogo>
                 <LinkHead className="header">
                     <Links>
                         <Link activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-280}>
