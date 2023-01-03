@@ -58,31 +58,39 @@ export default function Home(){
             <ArticleDiv>
                 <SectionDiv className="sectionDiv">
                     <h1 className="bold">Olá, nós somos a <span className="greenMuden">Muden</span></h1>
-                    <h2>Feita para pessoas que entendem que o tempo é precioso! Que precisamos investi-lo com o que importa. <br/> <span className="bold">Com quem realmente importa!</span></h2>
+                    <h2>Feita para pessoas que entendem o quanto o tempo é precioso! Invista seu tempo com o que realmente importa, <span className="bold">e com quem importa!!</span></h2>
                     <Link activeClass="active" className="test2" to="test2" spy={true} smooth={true} duration={500} offset={-50}>
-                        <Button width={"250px"} color={"#38bc94"} colorFont={"white"}>Cadastre-se</Button>
+                        <Button width={"250px"} fontSize={"25px"} color={"#38bc94"} colorFont={"white"}>Quero me mudar!</Button>
                     </Link>
                 </SectionDiv>
                 <AsideDiv className="asideDiv">
-                    <Img className="imgAside" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665678577/muden/drilldown_1_cvdv2w.png"></Img>
+                    <Img className="imgAside" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672255477/muden/homem_caixa_fbbldo.png"></Img>
                 </AsideDiv>
             </ArticleDiv>
             <ArticleDiv className="article2">
                 <SectionDiv className="section2">
                     <h3 className="bold">A empresa de mudanças que <span className="greenMuden">cuida de tudo</span></h3>
-                    <h2>Viemos para <span className="bold">revolucionar</span> o setor de mudanças e serviços com o uso da <span className="bold">tecnologia</span>. Oferecemos aos nossos clientes <span className="bold">comodidade e otimização</span> de tempo, realizando todo o processo de mudança.  Temos uma equipe <span className="bold">especializada e experiente</span> que cuida de todo o <span className="bold">planejamento estratégico</span> para que você não precise se preocupar com absolutamente nada. <span className="bold greenMuden">Recomece do seu jeito</span></h2>
+                    <h2>A muden é um serviço de mudanças que tem como objetivo transformar um momento cansativo e frustrante em algo simples e sem stress. Temos equipes especializadas e experientes que cuidam de todo o planejamento da mudança para que você não precise se preocupar com nada. Agora mudar não é mais um problema, <span className="bold greenMuden">recomece do seu jeito!</span></h2>
+                    <div className="triangulo-para-baixo"></div>                
                 </SectionDiv>
             </ArticleDiv>
-            <Element name="test1">
-                <ArticleDiv className="article2">
-                    <SectionDiv className="section3">
-                        <Card color1={"#04b891"} color2={"#079a83"} cardTitle={"Carreto"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676717/muden/3d-render-fleet-delivery-vehicles_ucpkll.jpg"}></Card>
-                        <Card color1={"#3fc966"} color2={"#3fb866"} cardTitle={"Montagem"} cardDesc={"Com os profissionais treinados e capacitados, montamos e desmontamos os seus móveis com o padrão de qualidade Muden, preservando a vida útil dos produtos."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676863/muden/foreman-in-yellow-hardhat-holding-hammer-on-shoulder-and-toolbox-in-hand-dreamily-looking-in-camera-in-workshop_1_mrqleu.jpg"}></Card>
-                        <Card color1={"#04ca8d"} color2={"#04ca8d"} cardTitle={"Organizer"} cardDesc={"Temos parceria com a melhor equipe de organizer que vão cuidar de cada detalhe da sua casa nova, deixando tudo muito bem arrumado para você e sua família"} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665676868/muden/full-shot-woman-checking-wardrobe_1_l0ko8i.jpg"}></Card>
-                        <Card color1={"#1f2928"} color2={"#1f3628"} cardTitle={"Limpeza"} cardDesc={"No final do dia da mudança a casa vira uma baderna. Nós temos uma equipe de limpeza especializada pronta para te atender e limpar cada detalhe de sua nova casa"} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677273/muden/drilldown_w8guml.jpg"}></Card>
-                    </SectionDiv>
-                </ArticleDiv>
-            </Element>
+            <ArticleDiv className="article6">
+                <SectionDiv className="section2">
+                    <h6>Serviços oferecidos:</h6>
+                </SectionDiv>
+                <SectionDiv className="section3">
+                    <Card type={"left"} bgcolor={"white"} fontColor={"#38bc94"} color1={"#04b891"} color2={"#079a83"} cardTitle={"Carreto"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672758083/muden/caminhao-removebg-preview_rplocz_puatqz.png"}></Card>                    
+                    <Card color1={"#04b891"} bgcolor={"#38bc94"} titleMarginRight={"30px"} fontColor={"white"} color2={"#079a83"} cardTitle={"Organizer"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766565/muden/orga_wqrusq_1_feufsm.png"}></Card>             
+               </SectionDiv>
+               <SectionDiv className="section3">
+                    <Card color1={"#04b891"} bgcolor={"#38bc94"} fontColor={"white"} titleMarginRight={"30px"} color2={"#079a83"} cardTitle={"Faxina"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672764818/muden/faxina-removebg-preview_ga3yoq.png"}></Card>                    
+                    <Card type={"left"} color1={"#04b891"} bgcolor={"white"} fontColor={"#38bc94"} color2={"#079a83"} cardTitle={"Instalação"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766184/muden/instalador-removebg-preview_tpnn2z.png"}></Card>             
+               </SectionDiv>
+               <SectionDiv className="section3">
+                    <Card type={"left"} color1={"#04b891"} bgcolor={"white"} fontColor={"#38bc94"} color2={"#079a83"} cardTitle={"Desmontagem e montagem"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766144/muden/ferramenta-removebg-preview_uedzvv.png"}></Card>                    
+                    <Card color1={"#04b891"} bgcolor={"#38bc94"} fontColor={"white"} titleMarginRight={"30px"} color2={"#079a83"} cardTitle={"Embalagem"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766222/muden/emb-removebg-preview_lp9kcj.png"}></Card>             
+               </SectionDiv>
+            </ArticleDiv>
             <ArticleDiv className="article3">
                 <SectionDiv className="section4">
                     <div className="title">
@@ -218,6 +226,22 @@ const MainDiv = styled.main`
         color: #38bc94;
         font-weight: bold;
     }
+
+    .article6{
+        width: 100%;
+        max-width: none !important;
+        background-color: #202c2c;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        min-height: 600px;
+    }
+
+    .article2{
+        position: relative;
+    }
+
     .article3, .article4, .article5{
         width: 100%;
         max-width: none;
@@ -245,15 +269,34 @@ const ArticleDiv = styled.article`
     display: flex;
     width: 100%;
     max-width: 975px;
-    margin: 20px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     justify-content: space-between;
     align-items: center;
+
+    .triangulo-para-baixo {
+        width: 0; 
+        height: 0; 
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 25px solid white;
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        
+    }
+
     .sectionDiv{
         font-size: 40px;
     }
     .section2{
         width: 100%;
+        max-width: 975px;
+        display: flex;
+        justify-content: center;
         margin-top: 20px;
+        margin-bottom: 50px;
         h3{
             width: 100%;
             max-width: 550px;
@@ -262,15 +305,23 @@ const ArticleDiv = styled.article`
         }
         h2{
             width: 100%;
+            max-width: 850px;
             margin: 10px 0px 0px 0px;
+        }
+        h6{
+            width: 100%;
+            font-size: 33px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
         }
         
     }
     .section3{
-        margin-top: 20px;
+        margin-top: 10px;
         width: 100%;
         flex-direction: row;
-        gap: 20px;
+        gap: 10px;
     }
     .section4{
         width: 100%;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function Button(props){
     return(
-        <Btn width={props.width} color={props.color} colorFont={props.colorFont} type={props.type} marginTop={props.marginTop} onClick={props.set}>{props.children}</Btn>
+        <Btn width={props.width} color={props.color} colorFont={props.colorFont} type={props.type} marginTop={props.marginTop} onClick={props.set} fontSize={props.fontSize}>{props.children}</Btn>
     )
 }
 
@@ -16,7 +16,7 @@ const Btn = styled.button`
     border-width: 0px;
     color: ${(props) => props.colorFont};
     font-weight: bold;
-    font-size: 20px;
+    font-size: ${(props) => props.fontSize};;
     margin-top: ${(props) => props.marginTop};
     display: flex;
     align-items: center;
@@ -27,5 +27,7 @@ const Btn = styled.button`
         transition: 0.5s;
         color: ${(props) => props.colorFont};
         background-color: #1f2928;
+        border-color: #38bc94;
+        border-width: 1px;
     }
 `

@@ -31,19 +31,18 @@ export default function Header(){
             <div className="headerDiv">
                 <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41} onClick={()=>{scroll.scrollToTop()}}></ImgLogo>
                 <LinkHead className="header">
-                    <Link activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-280}>
-                        <div className="link">Serviços</div>
-                    </Link>
-                    <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
-                        <div className="link">Contato</div>
-                    </Link>
-                    <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
-                        <div className="link">Dúvidas</div>
-                    </Link>
-                    <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
-                        <div className="link">Seja um parceiro</div>
-                    </Link>
-                    <div className="btn"><Button width={"auto"} color={"white"} colorFont={"#38bc94"}>Agende sua mudança</Button></div>
+                    <Links>
+                        <Link activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-280}>
+                            <div className="link">Serviços</div>
+                        </Link>
+                        <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
+                            <div className="link">Fale conosco</div>
+                        </Link>
+                        <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
+                            <div className="link">FAQ</div>
+                        </Link>
+                    </Links>
+                    <div className="btn"><Button width={"240px"} fontSize={"18px"} color={"#38bc94"} colorFont={"white"}>Seja um parceiro</Button></div>
                 </LinkHead>
                 <div className="icon" onClick={()=>{toggle()}}>
                     <ion-icon name="menu-outline"></ion-icon>
@@ -81,9 +80,15 @@ export default function Header(){
 const LinkHead = styled.div`
     display: flex;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 20px;
     position: relative;
     height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 50px;
+`
+const Links = styled.div`
+    display: flex;
     width: auto;
 `
 
@@ -91,10 +96,10 @@ const Head = styled.header`
     position: fixed;
     width: 100%;
     height: 80px;
-    box-shadow: 0 0 3px 0 silver;
+    box-shadow: 0 0 3px 0 black;
     display: flex;
     align-items: center;
-    background-color: #38bc94;
+    background-color: #202c2c;
     justify-content: center;
     z-index: 10;
 

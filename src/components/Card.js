@@ -1,59 +1,59 @@
 import styled from "styled-components";
 
 export default function Card(props){
-    return(
-        <CardDiv color1={props.color1} color2={props.color2} img={props.img}>
-            <div className="cardImgDiv"/>
-            <div className="cardTextDiv">
-                <h5 className="cardTitle">{props.cardTitle}</h5>
-                <h6 className="cardDesc">{props.cardDesc}</h6>
-            </div>
-        </CardDiv>
-    )
+    if (props.type == "left"){
+        return(
+            <CardDiv color1={props.color1} color2={props.color2} img={props.img} bgcolor={props.bgcolor} fontColor={props.fontColor} titleMarginRight={props.titleMarginRight}>
+                <div className="cardTextDiv">
+                    <h5 className="cardTitle">{props.cardTitle}</h5>
+                </div>
+                <img className="cardImgDiv" src={props.img}/>
+            </CardDiv>
+        )
+    }else{
+        return(
+            <CardDiv color1={props.color1} color2={props.color2} img={props.img} bgcolor={props.bgcolor} fontColor={props.fontColor} titleMarginRight={props.titleMarginRight}>
+                <img className="cardImgDiv" src={props.img}/>
+                <div className="cardTextDiv">
+                    <h5 className="cardTitle">{props.cardTitle}</h5>
+                </div>
+            </CardDiv>
+        )
+    }
 }
 
 const CardDiv = styled.div`
-    padding: 6px 6px;
-    border-radius: 30px;
-    width: 216px;
-    height: 320px;
+    padding: 6px 0px;
+    border-radius: 8px;
+    width: 400px;
+    height: 90px;
     display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to right, ${(props) => props.color1}, ${(props) => props.color2});
+    background-color: ${(props) => props.bgcolor};
     box-sizing: content-box;
-
+    justify-content: space-between;
+    align-items: center;
     .cardTitle{
-        font-size: 18px;
+        font-size: 25px;
         line-height: 24px;
-        margin-top: 10px;
-        color: white;
+        color: ${(props) => props.fontColor};
         font-weight: bold;
         display: flex;
         width: 100%;
-        display: flex;
-        justify-content: center;
+        margin-left: 40px;
+        margin-right: ${(props) => props.titleMarginRight};
     }
-
     .cardImgDiv{
-        height: 450px;
-        background-image: url(${(props) => props.img});
+        height: 102px;
+        width: auto;
+        border-radius: 8px;
         background-size: cover;
-        background-position: center;
         display: flex;
         align-items: center;
-        background-color: #f0f0f0;
-        border-radius: 25px 25px 0px 0px;
     }
-
     .cardTextDiv{
-        height: 100%;
-        width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
         align-items: center;
     }
-
     .cardDesc{
         width: 95%;
         margin-top: 5px;
