@@ -123,7 +123,7 @@ export default function Home(){
                     </div>
                 </SectionDiv>
             </ArticleDiv>
-                <SectionDiv className="section4">
+                {/* <SectionDiv className="section4">
                     <div className="title">
                         <h5>Veja alguns <span className="bold white">depoimentos</span> dos nossos clientes</h5>
                     </div>
@@ -135,12 +135,12 @@ export default function Home(){
                             </div>    
                             <div className="invCommaDiv">
                                 <img className="invComma up" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677679/muden/2022-10-13_12-14_g9nxzj.png"/>
-                                <h6 className="text"> Jamais imaginei que uma mudança podia ser tão tranquila. Eu não precisei fazer absolutamente nada, eles cuidaram. Melhor empresa de mudanças que já vi!</h6>
+                                <h6 className="text"> Jamais imaginei que uma mudança podia ser tão tranquila. Eu não precisei fazer abso- lutamente nada, eles cuidaram. Melhor empresa de mudanças que já vi!</h6>
                                 <img className="invComma down" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677749/muden/template_primary_hr8owj.png"/>
                             </div>
                         </div>
                     </div>
-                </SectionDiv>
+                </SectionDiv> */}
             <ArticleDiv className="article4">
                 <SectionDiv className="section8">
                     <Element className="section5" name="test2">
@@ -167,6 +167,24 @@ export default function Home(){
                         </form>
                     </Element>
                     <img className="formTruck" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672774011/muden/2023-01-03_15-23_phicz6.png"/>
+                </SectionDiv>
+                <div className="triangulo-para-baixo terceiro"></div>
+            </ArticleDiv>
+            <ArticleDiv className="article8">
+                <SectionDiv className="section9">
+                    <h3>Veja alguns depoimentos dos <strong className="bold">nossos clientes:</strong></h3>
+                    <div className="depoimentoDiv">
+                        {/* <div className="ionIcon esq">
+                            <ion-icon name="caret-back-outline"></ion-icon>
+                        </div> */}
+                        <img className="aspasCima" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677679/muden/2022-10-13_12-14_g9nxzj.png"></img>
+                        <h6 className="depoimento">Jamais imaginei que uma mudança podia ser tão tranquila. Eu não precisei fazer absolutamente nada, eles cuidaram. Melhor empresa de mudanças que já vi!</h6>
+                        <img className="aspasBaixo" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677749/muden/template_primary_hr8owj.png"></img>
+                        {/* <div className="ionIcon dir">
+                            <ion-icon name="caret-forward-outline"></ion-icon>
+                        </div> */}
+                    </div>
+                    <h6 className="cliente">-Martha Oliveira</h6>
                 </SectionDiv>
             </ArticleDiv>
             <ArticleDiv className="article5">
@@ -374,6 +392,10 @@ const MainDiv = styled.main`
         margin-top: 0px;
         width: 100%;
         background-image: linear-gradient(to right, #e2e2e2, #e2e2e2) !important;
+        position: relative !important;
+        .terceiro{
+            border-top: 25px solid #e2e2e2;
+        }
         .section8{
             flex-direction: row;
             width: 100%;
@@ -394,6 +416,75 @@ const MainDiv = styled.main`
         padding-bottom: 60px;
         display: flex;
         justify-content: center !important;
+    }
+
+    .article8{
+        width: 100%;
+        max-width: none;
+        display: flex;
+        flex-direction: column;
+        background-image: none;
+        background-color: white !important;
+        height: auto;
+        min-height: 650px;
+        position: relative;
+
+        .section9{
+            margin-top: 100px;
+            display: flex;
+            width: 100%;
+            max-width: 975px;
+            flex-direction: column;
+
+            .ionIcon{
+                margin-top: 30px;
+                font-size: 60px;
+                color: #1f2928;
+            }
+
+            .depoimento{
+                line-height: 30px;
+                width: 550px;
+                font-size: min(3vw, 25px);
+                font-style: italic;
+            }
+
+            .aspasCima, .aspasBaixo{
+                width: 5vw;
+                height: 4vw;
+                max-height: 80px;
+                max-width: 96px
+            }
+
+            .aspasCima{
+                margin-top: -35px;
+                margin-right: 30px;
+            }
+
+            .aspasBaixo{
+                margin-top: 80px;
+            }
+
+            .depoimentoDiv{
+                display: flex;
+                margin-top: 110px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            h3{
+                font-size: 40px;
+                width: 600px;
+            }
+            
+            .cliente{
+                font-size: 25px;
+                font-style: italic;
+                position: absolute;
+                right: 500px;
+                bottom: 100px;
+            }
+        }
     }
 `
 
