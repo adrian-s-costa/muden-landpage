@@ -91,7 +91,38 @@ export default function Home(){
                     <Card color1={"#04b891"} bgcolor={"#38bc94"} fontColor={"white"} titleMarginRight={"30px"} color2={"#079a83"} cardTitle={"Embalagem"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766222/muden/emb-removebg-preview_lp9kcj.png"}></Card>             
                </SectionDiv>
             </ArticleDiv>
-            <ArticleDiv className="article3">
+            <ArticleDiv className="article7">
+                <TriangleDiv><div className="triangulo-para-baixo segundo"></div></TriangleDiv>
+                <SectionDiv className="section7">
+                    <title className="motivos">Motivos para se mudar com a gente:</title>
+                    <div className="iconsMotivos">
+                        <div className="upIcons">
+                            <div className="iconDiv">
+                                <img className="icon" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771194/muden/2023-01-03_14-21_vstubs.png"/>
+                                <span className="iconDesc">Sua casa pronta em até 24 horas</span>    
+                            </div>    
+                            <div className="iconDiv">
+                                <img className="icon menor" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771194/muden/2023-01-03_14-21_1_f2ggto.png"/>
+                                <span className="iconDesc">Amiga do Meio Ambiente</span>
+                            </div>
+                            <div className="iconDiv">
+                                <img className="icon menor" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771193/muden/2023-01-03_14-21_2_xpcvxh.png"/>
+                                <span className="iconDesc">Mudança sem dor de cabeça</span>
+                            </div>
+                        </div>
+                        <div className="downIcons">
+                            <div className="iconDiv downLef">
+                                <img className="icon" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771193/muden/2023-01-03_14-22_qb3apn.png"/>
+                                <span className="iconDesc">Cuidamos de todas as etapas de sua mudança</span>
+                            </div>
+                            <div className="iconDiv downRig">
+                                <img className="icon" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771194/muden/2023-01-03_14-22_1_w9gjoz.png"/>
+                                <span className="iconDesc">Orçamento que cabe no seu bolso</span>
+                            </div>
+                        </div>
+                    </div>
+                </SectionDiv>
+            </ArticleDiv>
                 <SectionDiv className="section4">
                     <div className="title">
                         <h5>Veja alguns <span className="bold white">depoimentos</span> dos nossos clientes</h5>
@@ -110,30 +141,33 @@ export default function Home(){
                         </div>
                     </div>
                 </SectionDiv>
-            </ArticleDiv>
             <ArticleDiv className="article4">
-                <Element className="section5" name="test2">
-                    <h3>Vamos fazer um <span className="bold">orçamento</span>?</h3>
-                    <h6 className="budgetDesc">Preencha o formulário abaixo, nossa equipe já <span className="bold">entrará em contato</span> com você.</h6>
-                    <form className="form" onSubmit={setData}>
-                        <div className="formDiv">
-                            <Input label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, name: e.target.value})} value={contactData.name}></Input>
-                            <Input label={"Telefone (WhatsApp)"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, tel: e.target.value})} value={contactData.tel}></Input>
-                            <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
-                            <div className="dropdown">
-                                <label for="days" className="dropLabel">Pretende se mudar?</label>
-                                <select name="days" id="days" required={true} className="dropInput" onChange={(e)=>setContactData({ ...contactData, date: e.target.value})} value={contactData.date}>
-                                    <option value="" disabled selected>Escolha uma opção</option>
-                                    <option value="dentro de 30 dias">Sim, nos próximos 30 dias</option>
-                                    <option value="dentro de 60 dias">Sim, nos próximos 60 dias</option>
-                                    <option value="dentro de 90 dias">Sim, nos próximos 90 dias</option>
-                                    <option value="Não pretende">Não vou me mudar, por hora</option>
-                                </select>
+                <SectionDiv className="section8">
+                    <Element className="section5" name="test2">
+                        <h3>Vamos fazer um <span className="bold">orçamento</span>?</h3>
+                        <h6 className="budgetDesc">Preencha o formulário abaixo, nossa equipe já <span className="bold">entrará em contato</span> com você.</h6>
+                        <form className="form" onSubmit={setData}>
+                            <div className="formDiv">
+                                <Input label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, name: e.target.value})} value={contactData.name}></Input>
+                                <Input label={"Telefone (WhatsApp)"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, tel: e.target.value})} value={contactData.tel}></Input>
+                                <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
+                                <Input label={"Quando pretende se mudar?"} type={"date"} height={"35px"} width={"400px"} set={(e)=>setContactData({ ...contactData, date: e.target.value})} value={contactData.date}></Input>
+                                {/* <div className="dropdown">
+                                    <label for="days" className="dropLabel">Quando pretende se mudar?</label>
+                                    <select name="days" id="days" required={true} className="dropInput" onChange={(e)=>setContactData({ ...contactData, date: e.target.value})} value={contactData.date}>
+                                        <option value="" disabled selected>Escolha uma opção</option>
+                                        <option value="dentro de 30 dias">Sim, nos próximos 30 dias</option>
+                                        <option value="dentro de 60 dias">Sim, nos próximos 60 dias</option>
+                                        <option value="dentro de 90 dias">Sim, nos próximos 90 dias</option>
+                                        <option value="Não pretende">Não vou me mudar, por hora</option>
+                                    </select>
+                                </div> */}
+                                <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "budget"})}>Enviar</Button>
                             </div>
-                            <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "budget"})}>Enviar</Button>
-                        </div>
-                    </form>
-                </Element>
+                        </form>
+                    </Element>
+                    <img className="formTruck" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672774011/muden/2023-01-03_15-23_phicz6.png"/>
+                </SectionDiv>
             </ArticleDiv>
             <ArticleDiv className="article5">
                 <Element className="section6" name="test3">
@@ -174,6 +208,16 @@ export default function Home(){
         </MainDiv>
     )
 }
+
+const TriangleDiv = styled.div`
+    width: 100%;
+    height: 20px;
+    background-color: #2cb58e;
+    position: relative;
+    .segundo{
+        border-top: 25px solid #2cb58e !important;
+    }
+`
 
 const PopUp = styled.div`
     width: 280px;
@@ -241,8 +285,8 @@ const MainDiv = styled.main`
     .article2{
         position: relative;
     }
-
-    .article3, .article4, .article5{
+    
+    .article3, .article4, .article5, .article7{
         width: 100%;
         max-width: none;
         background-color: #2db88f;
@@ -250,10 +294,98 @@ const MainDiv = styled.main`
         justify-content: center;
         background-image: linear-gradient(to right, #04b891 , #079a83);
     }
+
+    .article7{
+        flex-direction: column;
+        background-image: none;
+        background-color: white;
+        .section7{
+            height: auto;
+            width: 100%;
+            max-width: 975px;
+            min-height: 650px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .motivos{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                font-size: 40px;
+                color: #38bc94;
+                font-weight: bold;
+                width: 500px ;
+            }
+            .iconsMotivos{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 30px;
+                align-items: center;
+
+                .upIcons, .downIcons{
+                    display: flex;
+                    width: 80%;
+                    justify-content: space-around;
+                
+                    .iconDiv{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: 20px;
+
+                        /* .downRig{
+                            margin-right: 100px !important;
+                        }
+
+                        .downLef{
+                            margin-left: 30px;
+                        } */
+
+                        .menor{
+                            margin-top: -20px;
+                            margin-left: 20px;
+                            height: 120px !important;
+                            width: 120px !important;
+                        }
+
+                        .iconDesc{
+                            margin-top: 10px;
+                            font-size: 22px;
+                            width: 220px;
+                            line-height: 20px;
+                            text-align: center;
+                        }
+                        
+                        .icon{
+                            height: 100px;
+                            width: 100px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
     .article4{
         margin-top: 0px;
         width: 100%;
         background-image: linear-gradient(to right, #e2e2e2, #e2e2e2) !important;
+        .section8{
+            flex-direction: row;
+            width: 100%;
+            max-width: 975px;
+            align-items: center;
+
+            .formTruck{
+                margin-top: 50px;
+                width: 450px;
+                height: 350px;
+            }
+        }
     }
     .article5{
         margin-top: 0px;
