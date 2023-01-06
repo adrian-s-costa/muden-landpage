@@ -62,14 +62,14 @@ export default function Header(){
                             <span className="linkSide">Serviços</span>
                         </Link>
                         <Link className="divLink" activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70} onClick={()=>{toggle()}}>
-                            <ion-icon name="people-outline"></ion-icon>
+                            <ion-icon name="chatbox-outline"></ion-icon>
                             <span className="linkSide">Fale conosco</span>
                         </Link>
                         <Link className="divLink" activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70} onClick={()=>{toggle()}}>
-                            <ion-icon name="people-outline"></ion-icon>
+                        <ion-icon name="alert-outline"></ion-icon>
                             <span className="linkSide">FAQ</span>
                         </Link>
-                        <Link className="divLink" activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70} onClick={()=>{toggle()}}>
+                        <Link className="divLink" onClick={()=>{scrollTop("/services")}}>
                             <ion-icon name="people-outline"></ion-icon>
                             <span className="linkSide">Seja um parceiro</span>
                         </Link>

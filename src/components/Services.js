@@ -64,7 +64,7 @@ export default function Services(){
                             </div>
                         </form>
                     </Element>
-                    <img className="formTruck" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672948844/muden/colabo_d9xpdv.png"/>
+                    <img className="formTruck displayNone" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672948844/muden/colabo_d9xpdv.png"/>
                     <div className="triangulo-para-baixo terceiro"></div>
                 </ArticleDiv>
                 <ArticleDiv className="article2">
@@ -75,12 +75,12 @@ export default function Services(){
                                 <img className="icon rocket" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672958537/muden/template_primary_4_wlp3zk.png"></img>
                                 <h4 className="iconDesc">Aumente sua demanda de trabalho</h4>
                             </div>
-                            <Bar/>
+                            <Bar className="displayNone"/>
                             <div className="iconDiv">
                                 <img className="icon" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672958539/muden/template_primary_2_eaih8m.png"></img>
                                 <h4 className="iconDesc">100% do valor de seu orçamento é seu</h4>
                             </div>
-                            <Bar/>
+                            <Bar className="displayNone"/>
                             <div className="iconDiv">
                                 <img className="icon" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672958538/muden/template_primary_3_l6hrjv.png"></img>
                                 <h4 className="iconDesc">Recebe propostas direto em seu Whatsapp</h4>
@@ -97,7 +97,7 @@ export default function Services(){
                                 <h2 className="espDesc">Você efetua o cadastro e recebe propostas de serviço de acordo com a sua localidade, você só precisa avaliar e enviar o seu orça- mento caso se interesse.</h2>
                                 <img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672962336/muden/template_primary_5_san4ue.png" className="iconBot"/>
                             </div>
-                            <Bar/>
+                            <Bar className="displayNone"/>
                             <div className="espDiv">
                                 <h4 className="espTitle">Quanto custa?</h4>
                                 <h2 className="espDesc">Zero. Somos eficientes para você não ter que pagar tarifas.</h2>
@@ -129,6 +129,7 @@ const Bar = styled.div`
     border-color: gray;
     border-style: solid;
 `
+
 
 const MainDiv = styled.main`
     
@@ -202,6 +203,12 @@ const MainDiv = styled.main`
                 display: flex;
                 justify-content: space-evenly; 
                 margin-top: 60px;
+
+                @media (max-width: 975px) {
+                    flex-direction: column;
+                    gap: 40px;
+                    margin-bottom: 50px;
+                }
             }
 
             h5{
@@ -209,6 +216,10 @@ const MainDiv = styled.main`
                 text-align: center;
                 font-weight: bold;
                 margin-top: 30px;
+
+                @media (max-width: 975px) {
+                   width: 100%;
+                }
             }
         }
 
@@ -224,9 +235,21 @@ const MainDiv = styled.main`
             height: auto;
             min-height: 600px;
 
+            @media (max-width: 975px) {
+                margin-top: 50px;
+                width: 90% !important;
+            }
+
             .esp{
                 display: flex;
                 justify-content: space-between;
+
+                @media (max-width: 975px) {
+                    flex-direction: column;
+                    gap: 40px;
+                    margin-bottom: 50px;
+                    justify-content: none;
+                }
 
                 .espDiv{
                     display: flex;
@@ -289,6 +312,10 @@ const ArticleDiv = styled.article`
         font-weight: 400;
         position: relative;
 
+        @media (max-width: 975px) {
+            width: 90% !important;
+        }
+
         h2{
             margin: 30px 0px 25px 0px;
             font-size: 16px;
@@ -310,6 +337,10 @@ const ArticleDiv = styled.article`
             font-weight: 400;
             color: #202c2c;
             line-height: 40px;
+
+            @media (max-width: 975px) {
+                width: 100%;
+            }
         }
         h2{
             width: 100%;
@@ -320,6 +351,11 @@ const ArticleDiv = styled.article`
             padding-bottom: 50px;
             display: flex;
             justify-content: flex-start;
+
+            @media (max-width: 975px) {
+                width: 100% !important;
+            }
+
             .dropdown{
                 margin-top: 10px;
                 display: flex;
@@ -341,7 +377,7 @@ const ArticleDiv = styled.article`
                     font-family: 'Poppins';
                     background-color: white;
                     @media (max-width: 975px) {
-                        width: 100%;
+                        width: 100% !important;
                     }
                 }
             }
