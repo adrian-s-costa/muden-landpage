@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function Card(props){
     if (props.type == "left"){
         return(
-            <CardDiv color1={props.color1} color2={props.color2} img={props.img} bgcolor={props.bgcolor} fontColor={props.fontColor} titleMarginRight={props.titleMarginRight}>
+            <CardDiv color1={props.color1} color2={props.color2} img={props.img} bgcolor={props.bgcolor} fontColor={props.fontColor} titleMarginRight={props.titleMarginRight} fontSize={props.fontSize}>
                 <div className="cardTextDiv">
                     <h5 className="cardTitle">{props.cardTitle}</h5>
                 </div>
@@ -12,7 +12,7 @@ export default function Card(props){
         )
     }else{
         return(
-            <CardDiv color1={props.color1} color2={props.color2} img={props.img} bgcolor={props.bgcolor} fontColor={props.fontColor} titleMarginRight={props.titleMarginRight}>
+            <CardDiv color1={props.color1} color2={props.color2} img={props.img} bgcolor={props.bgcolor} fontColor={props.fontColor} titleMarginRight={props.titleMarginRight} fontSize={props.fontSize}>
                 <img className="cardImgDiv" src={props.img}/>
                 <div className="cardTextDiv">
                     <h5 className="cardTitle">{props.cardTitle}</h5>
@@ -33,7 +33,7 @@ const CardDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     .cardTitle{
-        font-size: 25px;
+        font-size: ${(props) => props.fontSize};
         line-height: 24px;
         color: ${(props) => props.fontColor};
         font-weight: bold;

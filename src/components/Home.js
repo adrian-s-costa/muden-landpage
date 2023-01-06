@@ -82,16 +82,16 @@ export default function Home(){
                         <h6>Serviços oferecidos:</h6>
                     </SectionDiv>
                     <SectionDiv className="section3">
-                        <Card type={"left"} bgcolor={"white"} fontColor={"#38bc94"} color1={"#04b891"} color2={"#079a83"} cardTitle={"Carreto"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672758083/muden/caminhao-removebg-preview_rplocz_puatqz.png"}></Card>                    
+                        <Card fontSize={"25px"} type={"left"} bgcolor={"white"} fontColor={"#38bc94"} color1={"#04b891"} color2={"#079a83"} cardTitle={"Carreto"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672758083/muden/caminhao-removebg-preview_rplocz_puatqz.png"}></Card>                    
                         <Card color1={"#04b891"} bgcolor={"#38bc94"} titleMarginRight={"30px"} fontColor={"white"} color2={"#079a83"} cardTitle={"Organizer"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766565/muden/orga_wqrusq_1_feufsm.png"}></Card>             
                     </SectionDiv>
                     <SectionDiv className="section3">
-                        <Card color1={"#04b891"} bgcolor={"#38bc94"} fontColor={"white"} titleMarginRight={"30px"} color2={"#079a83"} cardTitle={"Faxina"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672764818/muden/faxina-removebg-preview_ga3yoq.png"}></Card>                    
-                        <Card type={"left"} color1={"#04b891"} bgcolor={"white"} fontColor={"#38bc94"} color2={"#079a83"} cardTitle={"Instalação"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766184/muden/instalador-removebg-preview_tpnn2z.png"}></Card>             
+                        <Card fontSize={"25px"} color1={"#04b891"} bgcolor={"#38bc94"} fontColor={"white"} titleMarginRight={"30px"} color2={"#079a83"} cardTitle={"Faxina"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672764818/muden/faxina-removebg-preview_ga3yoq.png"}></Card>                    
+                        <Card fontSize={"25px"} type={"left"} color1={"#04b891"} bgcolor={"white"} fontColor={"#38bc94"} color2={"#079a83"} cardTitle={"Instalação"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766184/muden/instalador-removebg-preview_tpnn2z.png"}></Card>             
                     </SectionDiv>
                     <SectionDiv className="section3">
-                        <Card type={"left"} color1={"#04b891"} bgcolor={"white"} fontColor={"#38bc94"} color2={"#079a83"} cardTitle={"Desmontagem e montagem"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766144/muden/ferramenta-removebg-preview_uedzvv.png"}></Card>                    
-                        <Card color1={"#04b891"} bgcolor={"#38bc94"} fontColor={"white"} titleMarginRight={"30px"} color2={"#079a83"} cardTitle={"Embalagem"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766222/muden/emb-removebg-preview_lp9kcj.png"}></Card>             
+                        <Card fontSize={"20px"} type={"left"} color1={"#04b891"} bgcolor={"white"} fontColor={"#38bc94"} color2={"#079a83"} cardTitle={"Desmontagem e montagem"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766144/muden/ferramenta-removebg-preview_uedzvv.png"}></Card>                    
+                        <Card fontSize={"25px"} color1={"#04b891"} bgcolor={"#38bc94"} fontColor={"white"} titleMarginRight={"30px"} color2={"#079a83"} cardTitle={"Embalagem"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766222/muden/emb-removebg-preview_lp9kcj.png"}></Card>             
                     </SectionDiv>
                 </ArticleDiv>
                 <ArticleDiv className="article7">
@@ -199,35 +199,35 @@ export default function Home(){
                         <div className="allFaq">
                             <div className="faqColumn">
                                 <div className="faqBlock">
-                                    <span className="faqTitle">Como realizar um orçamento?</span> <br/>
-                                    <span className="faqDesc">Basta clicar no canto superior direito onde está escrito “Quero me mudar”, e preencher seus dados, entra- remos em contato com você via Whats App em até 12 horas, nosso processo de orçamento é bem rápido, só precisaremos de algumas informações que nossos atendentes irão solicitar, como origem e destino da mudança, o tamanho da residência, quantos cômo- dos, e quais serão os moveis que precisarão do serviço de montagem, após isso o resto é conosco.</span>
+                                    <h6 className="faqTitle">Como realizar um orçamento?</h6> <br/>
+                                    <h6 className="faqDesc">Basta clicar no canto superior direito onde está escrito “Quero me mudar”, e preencher seus dados, entra- remos em contato com você via Whats App em até 12 horas, nosso processo de orçamento é bem rápido, só precisaremos de algumas informações que nossos atendentes irão solicitar, como origem e destino da mudança, o tamanho da residência, quantos cômo- dos, e quais serão os moveis que precisarão do serviço de montagem, após isso o resto é conosco.</h6>
                                     <br/>
                                 </div>
                                 <div className="faqBlock">
-                                    <span className="faqTitle">Posso contratar apenas um dos serviços?</span><br/>
-                                    <span className="faqDesc">dos serviços? Claro que sim, aqui na muden você pode personalizar e deixar a sua mudança composta da forma que preferir, você pode escolher qualquer serviço de forma isolada, basta sinalizar no momento da real- ização do orçamento.</span>
+                                    <h6 className="faqTitle">Posso contratar apenas um dos serviços?</h6><br/>
+                                    <h6 className="faqDesc">dos serviços? Claro que sim, aqui na muden você pode personalizar e deixar a sua mudança composta da forma que preferir, você pode escolher qualquer serviço de forma isolada, basta sinalizar no momento da real- ização do orçamento.</h6>
                                     <br/>                            
                                 </div>
                                 <div className="faqBlock">
-                                    <span className="faqTitle">Como efetuar o cancelamento?</span><br/>
-                                    <span className="faqDesc">O cancelamento deve ser feito até 12 horas antes do dia e horário agendado para a mudança, cancelando no prazo, nenhuma taxa será cobrada e o valor será reembolsado em até 72 horas.</span>
+                                    <h6 className="faqTitle">Como efetuar o cancelamento?</h6><br/>
+                                    <h6 className="faqDesc">O cancelamento deve ser feito até 12 horas antes do dia e horário agendado para a mudança, cancelando no prazo, nenhuma taxa será cobrada e o valor será reembolsado em até 72 horas.</h6>
                                     <br/>
                                 </div>
                             </div>
                             <div className="faqColumn">
                                 <div className="faqBlock">
-                                    <span className="faqTitle">Recebi o orçamento e agendei minha mudança, e agora!?</span><br/>
-                                    <span className="faqDesc">Agora chegamos na etapa de realizar o pagamento no método escolhido até 12 horas antes do dia e horário que sua mudança foi agendada, após isso é só esperar o dia chegar e estaremos no local, com toda nossa equipe para entregar uma mudança tran- quila e sem estresse.</span>
+                                    <h6 className="faqTitle">Recebi o orçamento e agendei minha mudança, e agora!?</h6><br/>
+                                    <h6 className="faqDesc">Agora chegamos na etapa de realizar o pagamento no método escolhido até 12 horas antes do dia e horário que sua mudança foi agendada, após isso é só esperar o dia chegar e estaremos no local, com toda nossa equipe para entregar uma mudança tran- quila e sem estresse.</h6>
                                     <br/>
                                 </div>
                                 <div className="faqBlock">
-                                    <span className="faqTitle">Posso parcelar o valor da minha mudança?</span><br/>
-                                    <span className="faqDesc">Sim, aqui na Muden você pode escolher qual a melhor forma de pagamento para você, realizamos par- celamentos no crédito em até 12x sem juros, débito, TED e até Pix, você escolhe.</span>
+                                    <h6 className="faqTitle">Posso parcelar o valor da minha mudança?</h6><br/>
+                                    <h6 className="faqDesc">Sim, aqui na Muden você pode escolher qual a melhor forma de pagamento para você, realizamos par- celamentos no crédito em até 12x sem juros, débito, TED e até Pix, você escolhe.</h6>
                                     <br/>
                                 </div>
                                 <div className="faqBlock">
-                                    <span className="faqTitle">Devo fazer alguma coisa durante o processo de mudança?</span><br/>
-                                    <span className="faqDesc">Nossa equipe cuida de tudo, a única coisa que você precisará fazer é relaxar e aproveitar seu dia, é impor- tante que fique atento ao celular caso saia da residência, para que nossa equipe consiga tirar dúvi- das simples como, por exemplo: “Em que parede você prefere que o guarda-roupa seja montado”.</span>
+                                    <h6 className="faqTitle">Devo fazer alguma coisa durante o processo de mudança?</h6><br/>
+                                    <h6 className="faqDesc">Nossa equipe cuida de tudo, a única coisa que você precisará fazer é relaxar e aproveitar seu dia, é impor- tante que fique atento ao celular caso saia da residência, para que nossa equipe consiga tirar dúvi- das simples como, por exemplo: “Em que parede você prefere que o guarda-roupa seja montado”.</h6>
                                     <br/>
                                 </div>
                             </div>
@@ -807,6 +807,7 @@ const ArticleDiv = styled.article`
         max-width: 975px;
         display: flex;
         flex-direction: column;
+        padding-top: 30px;
 
         .faq{
             color: white;
@@ -814,7 +815,7 @@ const ArticleDiv = styled.article`
             font-weight: bold;
             text-align: center;
             z-index: 10 !important;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
 
             @media (max-width: 975px) {
                 margin-top: 50px;
@@ -831,14 +832,14 @@ const ArticleDiv = styled.article`
             @media (max-width: 975px) {
                 flex-direction: column;
                 width: 100% !important;
-                gap: 20px;
             }
         }
 
         .faqColumn{
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            width: 450px !important;
+
             @media (max-width: 975px) {
                 width: 100% !important;
             }
@@ -848,9 +849,10 @@ const ArticleDiv = styled.article`
         .faqTitle{
             font-size: 24px;
             font-weight: bold;
-            margin-bottom: 10px;
             @media (max-width: 975px) {
                 width: 100% !important;
+                margin-bottom: 10px;
+                text-align: start;
             }
         }
 
