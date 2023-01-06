@@ -29,10 +29,15 @@ export default function Header(){
     //     })
     // }
 
+    function scrollTop(nav){
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        navigate(nav);
+    }
+
     return(
         <Head>
             <div className="headerDiv">
-                <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785402/muden/muden-logo-principal-branco_mrbzit_oblp0y.png" width={170} height={41} onClick={()=>{navigate("/")}}></ImgLogo>
+                <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785402/muden/muden-logo-principal-branco_mrbzit_oblp0y.png" width={170} height={41} onClick={()=>{scrollTop("/")}}></ImgLogo>
                 <LinkHead className="header">
                     <Links>
                         <Link activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-280}>
@@ -45,7 +50,7 @@ export default function Header(){
                             <div className="link">FAQ</div>
                         </Link>
                     </Links>
-                    <div className="btn"><Button width={"240px"} fontSize={"18px"} color={"#04b891"} colorFont={"white"} set={()=>navigate("/services")}>Seja um parceiro</Button></div>
+                    <div className="btn"><Button width={"240px"} fontSize={"18px"} color={"#04b891"} colorFont={"white"} set={()=>scrollTop("/services")}>Seja um parceiro</Button></div>
                 </LinkHead>
                 <div className="icon" onClick={()=>{toggle()}}>
                     <ion-icon name="menu-outline"></ion-icon>
@@ -58,11 +63,11 @@ export default function Header(){
                         </Link>
                         <Link className="divLink" activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70} onClick={()=>{toggle()}}>
                             <ion-icon name="people-outline"></ion-icon>
-                            <span className="linkSide">Contato</span>
+                            <span className="linkSide">Fale conosco</span>
                         </Link>
                         <Link className="divLink" activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70} onClick={()=>{toggle()}}>
                             <ion-icon name="people-outline"></ion-icon>
-                            <span className="linkSide">Dúvidas</span>
+                            <span className="linkSide">FAQ</span>
                         </Link>
                         <Link className="divLink" activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70} onClick={()=>{toggle()}}>
                             <ion-icon name="people-outline"></ion-icon>
@@ -136,7 +141,7 @@ const Head = styled.header`
 
                 :hover{
                     transition: 0.5s;
-                    color: black;
+                    color: #202c2c;
                 }
             }
         }
@@ -192,7 +197,7 @@ const Head = styled.header`
 
             :hover{
                 transition: 0.5s;
-                color: black;
+                color: #38bc94;
             }
         }
 

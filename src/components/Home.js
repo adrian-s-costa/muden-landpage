@@ -84,15 +84,15 @@ export default function Home(){
                     <SectionDiv className="section3">
                         <Card type={"left"} bgcolor={"white"} fontColor={"#38bc94"} color1={"#04b891"} color2={"#079a83"} cardTitle={"Carreto"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672758083/muden/caminhao-removebg-preview_rplocz_puatqz.png"}></Card>                    
                         <Card color1={"#04b891"} bgcolor={"#38bc94"} titleMarginRight={"30px"} fontColor={"white"} color2={"#079a83"} cardTitle={"Organizer"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766565/muden/orga_wqrusq_1_feufsm.png"}></Card>             
-                </SectionDiv>
-                <SectionDiv className="section3">
+                    </SectionDiv>
+                    <SectionDiv className="section3">
                         <Card color1={"#04b891"} bgcolor={"#38bc94"} fontColor={"white"} titleMarginRight={"30px"} color2={"#079a83"} cardTitle={"Faxina"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672764818/muden/faxina-removebg-preview_ga3yoq.png"}></Card>                    
                         <Card type={"left"} color1={"#04b891"} bgcolor={"white"} fontColor={"#38bc94"} color2={"#079a83"} cardTitle={"Instalação"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766184/muden/instalador-removebg-preview_tpnn2z.png"}></Card>             
-                </SectionDiv>
-                <SectionDiv className="section3">
+                    </SectionDiv>
+                    <SectionDiv className="section3">
                         <Card type={"left"} color1={"#04b891"} bgcolor={"white"} fontColor={"#38bc94"} color2={"#079a83"} cardTitle={"Desmontagem e montagem"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766144/muden/ferramenta-removebg-preview_uedzvv.png"}></Card>                    
                         <Card color1={"#04b891"} bgcolor={"#38bc94"} fontColor={"white"} titleMarginRight={"30px"} color2={"#079a83"} cardTitle={"Embalagem"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766222/muden/emb-removebg-preview_lp9kcj.png"}></Card>             
-                </SectionDiv>
+                    </SectionDiv>
                 </ArticleDiv>
                 <ArticleDiv className="article7">
                     <TriangleDiv><div className="triangulo-para-baixo segundo"></div></TriangleDiv>
@@ -170,7 +170,7 @@ export default function Home(){
                                 </div>
                             </form>
                         </Element>
-                        <img className="formTruck" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672774011/muden/2023-01-03_15-23_phicz6.png"/>
+                        <img className="formTruck displayNone" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672774011/muden/2023-01-03_15-23_phicz6.png"/>
                     </SectionDiv>
                     <div className="triangulo-para-baixo terceiro"></div>
                 </ArticleDiv>
@@ -341,6 +341,10 @@ const MainDiv = styled.main`
         justify-content: center;
         height: auto;
         min-height: 600px;
+
+        @media (max-width: 975px) {
+            padding-bottom: 50px;
+        }
     }
 
     .article2{
@@ -384,7 +388,12 @@ const MainDiv = styled.main`
                 font-size: 40px;
                 color: #38bc94;
                 font-weight: bold;
-                width: 500px ;
+                width: 500px;
+
+                @media (max-width: 975px) {
+                    width: 100% !important;
+                    margin-top: 50px;
+                }
             }
             .iconsMotivos{
                 display: flex;
@@ -393,10 +402,19 @@ const MainDiv = styled.main`
                 margin-top: 30px;
                 align-items: center;
 
+                @media (max-width: 975px) {
+                    margin-bottom: 50px;
+                }
+
                 .upIcons, .downIcons{
                     display: flex;
                     width: 80%;
                     justify-content: space-around;
+                    
+                    @media (max-width: 975px) {
+                        flex-direction: column;
+                        gap: 20px;
+                    }
                 
                     .iconDiv{
                         display: flex;
@@ -434,6 +452,10 @@ const MainDiv = styled.main`
                     }
 
                 }
+            }
+
+            @media (max-width: 975px) {
+                width: 90% !important;
             }
         }
     }
@@ -544,6 +566,16 @@ const MainDiv = styled.main`
                 margin-top: 9vh;
                 margin-right: 7vw;
             }
+
+            @media (max-width: 975px) {
+            
+                width: 90% !important;
+
+                h3{
+                    width: 100% !important;
+                }
+            
+            }
         }
     }
 `
@@ -606,6 +638,10 @@ const ArticleDiv = styled.article`
             color: white;
             text-align: center;
             font-weight: bold;
+
+            @media (max-width: 975px) {
+                margin-top: 50px;
+            }
         }
         
     }
@@ -614,6 +650,10 @@ const ArticleDiv = styled.article`
         width: 100%;
         flex-direction: row;
         gap: 10px;
+
+        @media (max-width: 975px) {
+            gap: 10px !important;
+        }
     }
     .section4{
         width: 100%;
@@ -775,6 +815,10 @@ const ArticleDiv = styled.article`
             text-align: center;
             z-index: 10 !important;
             margin-bottom: 30px;
+
+            @media (max-width: 975px) {
+                margin-top: 50px;
+            }
         }
 
         .allFaq{
@@ -783,13 +827,21 @@ const ArticleDiv = styled.article`
             color: white;
             justify-content: space-between;
             text-align: justify;
+
+            @media (max-width: 975px) {
+                flex-direction: column;
+                width: 100% !important;
+                gap: 20px;
+            }
         }
 
         .faqColumn{
             display: flex;
             flex-direction: column;
             gap: 20px;
-            width: 470px;
+            @media (max-width: 975px) {
+                width: 100% !important;
+            }
         }
 
 
@@ -797,6 +849,9 @@ const ArticleDiv = styled.article`
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 10px;
+            @media (max-width: 975px) {
+                width: 100% !important;
+            }
         }
 
         .talkDirectTitle{
