@@ -273,6 +273,9 @@ const MainDiv = styled.main`
                         margin-top: 15px;
                         line-height: normal;
                         width: 400px;
+                        @media (max-width: 975px) {
+                            width: 100%
+                        }
                     }
 
                     .iconBot{
@@ -436,7 +439,7 @@ const Footer = styled.footer`
     .footerIconsDiv{
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
     }
     .footerIcon{
         color: white;
