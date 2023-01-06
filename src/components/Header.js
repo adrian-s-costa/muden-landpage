@@ -3,8 +3,11 @@ import Button from "./Button";
 import Scroll from "react-scroll";
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Header(){
+
+    const navigate = useNavigate();
 
     let [visu, setVisu] = useState(1);
 
@@ -29,7 +32,7 @@ export default function Header(){
     return(
         <Head>
             <div className="headerDiv">
-                <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785402/muden/muden-logo-principal-branco_mrbzit_oblp0y.png" width={170} height={41} onClick={()=>{scroll.scrollToTop()}}></ImgLogo>
+                <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785402/muden/muden-logo-principal-branco_mrbzit_oblp0y.png" width={170} height={41} onClick={()=>{navigate("/")}}></ImgLogo>
                 <LinkHead className="header">
                     <Links>
                         <Link activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-280}>
@@ -42,7 +45,7 @@ export default function Header(){
                             <div className="link">FAQ</div>
                         </Link>
                     </Links>
-                    <div className="btn"><Button width={"240px"} fontSize={"18px"} color={"#38bc94"} colorFont={"white"}>Seja um parceiro</Button></div>
+                    <div className="btn"><Button width={"240px"} fontSize={"18px"} color={"#04b891"} colorFont={"white"} set={()=>navigate("/services")}>Seja um parceiro</Button></div>
                 </LinkHead>
                 <div className="icon" onClick={()=>{toggle()}}>
                     <ion-icon name="menu-outline"></ion-icon>
@@ -85,7 +88,7 @@ const LinkHead = styled.div`
     height: 100%;
     width: 100%;
     justify-content: space-between;
-    margin-left: 50px;
+    margin-left: 30px;
 `
 const Links = styled.div`
     display: flex;

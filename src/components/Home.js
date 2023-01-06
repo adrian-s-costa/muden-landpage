@@ -6,6 +6,7 @@ import { FaFacebookF, FaTiktok, FaLinkedinIn, FaInstagram, FaWhatsapp} from "rea
 import axios from "axios";
 import { useState } from "react";
 import { Element, Link } from 'react-scroll'
+import Header from "./Header";
 
 export default function Home(){
 
@@ -54,214 +55,218 @@ export default function Home(){
     }    
 
     return(
-        <MainDiv>
-            <ArticleDiv>
-                <SectionDiv className="sectionDiv">
-                    <h1 className="bold">Olá, nós somos a <span className="greenMuden">Muden</span></h1>
-                    <h2>Feita para pessoas que entendem o quanto o tempo é precioso! Invista seu tempo com o que realmente importa, <span className="bold">e com quem importa!!</span></h2>
-                    <Link activeClass="active" className="test2" to="test2" spy={true} smooth={true} duration={500} offset={-50}>
-                        <Button width={"250px"} fontSize={"25px"} color={"#38bc94"} colorFont={"white"}>Quero me mudar!</Button>
-                    </Link>
-                </SectionDiv>
-                <AsideDiv className="asideDiv">
-                    <Img className="imgAside" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785135/muden/template_primary_1_ctybyu.png"></Img>
-                </AsideDiv>
-            </ArticleDiv>
-            <ArticleDiv className="article2">
-                <SectionDiv className="section2">
-                    <h3 className="bold">A empresa de mudanças que <span className="greenMuden">cuida de tudo</span></h3>
-                    <h2>A muden é um serviço de mudanças que tem como objetivo transformar um momento cansativo e frustrante em algo simples e sem stress. Temos equipes especializadas e experientes que cuidam de todo o planejamento da mudança para que você não precise se preocupar com nada. Agora mudar não é mais um problema, <span className="bold greenMuden">recomece do seu jeito!</span></h2>
-                    <div className="triangulo-para-baixo"></div>                
-                </SectionDiv>
-            </ArticleDiv>
-            <ArticleDiv className="article6">
-                <SectionDiv className="section2">
-                    <h6>Serviços oferecidos:</h6>
+        <>
+            <Header/>
+            <MainDiv>
+                <ArticleDiv>
+                    <SectionDiv className="sectionDiv">
+                        <h1 className="bold">Olá, nós somos a <span className="greenMuden">Muden</span></h1>
+                        <h2>Feita para pessoas que entendem o quanto o tempo é precioso! Invista seu tempo com o que realmente importa, <span className="bold">e com quem importa!!</span></h2>
+                        <Link activeClass="active" className="test2" to="test2" spy={true} smooth={true} duration={500} offset={-50}>
+                            <Button width={"250px"} fontSize={"25px"} color={"#38bc94"} colorFont={"white"}>Quero me mudar!</Button>
+                        </Link>
+                    </SectionDiv>
+                    <AsideDiv className="asideDiv">
+                        <Img className="imgAside" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785135/muden/template_primary_1_ctybyu.png"></Img>
+                    </AsideDiv>
+                </ArticleDiv>
+                <ArticleDiv className="article2">
+                    <SectionDiv className="section2">
+                        <h3 className="bold">A empresa de mudanças que <span className="greenMuden">cuida de tudo</span></h3>
+                        <h2>A muden é um serviço de mudanças que tem como objetivo transformar um momento cansativo e frustrante em algo simples e sem stress. Temos equipes especializadas e experientes que cuidam de todo o planejamento da mudança para que você não precise se preocupar com nada. Agora mudar não é mais um problema, <span className="bold greenMuden">recomece do seu jeito!</span></h2>
+                        <div className="triangulo-para-baixo"></div>                
+                    </SectionDiv>
+                </ArticleDiv>
+                <ArticleDiv className="article6">
+                    <SectionDiv className="section2 servicos">
+                        <h6>Serviços oferecidos:</h6>
+                    </SectionDiv>
+                    <SectionDiv className="section3">
+                        <Card type={"left"} bgcolor={"white"} fontColor={"#38bc94"} color1={"#04b891"} color2={"#079a83"} cardTitle={"Carreto"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672758083/muden/caminhao-removebg-preview_rplocz_puatqz.png"}></Card>                    
+                        <Card color1={"#04b891"} bgcolor={"#38bc94"} titleMarginRight={"30px"} fontColor={"white"} color2={"#079a83"} cardTitle={"Organizer"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766565/muden/orga_wqrusq_1_feufsm.png"}></Card>             
                 </SectionDiv>
                 <SectionDiv className="section3">
-                    <Card type={"left"} bgcolor={"white"} fontColor={"#38bc94"} color1={"#04b891"} color2={"#079a83"} cardTitle={"Carreto"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672758083/muden/caminhao-removebg-preview_rplocz_puatqz.png"}></Card>                    
-                    <Card color1={"#04b891"} bgcolor={"#38bc94"} titleMarginRight={"30px"} fontColor={"white"} color2={"#079a83"} cardTitle={"Organizer"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766565/muden/orga_wqrusq_1_feufsm.png"}></Card>             
-               </SectionDiv>
-               <SectionDiv className="section3">
-                    <Card color1={"#04b891"} bgcolor={"#38bc94"} fontColor={"white"} titleMarginRight={"30px"} color2={"#079a83"} cardTitle={"Faxina"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672764818/muden/faxina-removebg-preview_ga3yoq.png"}></Card>                    
-                    <Card type={"left"} color1={"#04b891"} bgcolor={"white"} fontColor={"#38bc94"} color2={"#079a83"} cardTitle={"Instalação"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766184/muden/instalador-removebg-preview_tpnn2z.png"}></Card>             
-               </SectionDiv>
-               <SectionDiv className="section3">
-                    <Card type={"left"} color1={"#04b891"} bgcolor={"white"} fontColor={"#38bc94"} color2={"#079a83"} cardTitle={"Desmontagem e montagem"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766144/muden/ferramenta-removebg-preview_uedzvv.png"}></Card>                    
-                    <Card color1={"#04b891"} bgcolor={"#38bc94"} fontColor={"white"} titleMarginRight={"30px"} color2={"#079a83"} cardTitle={"Embalagem"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766222/muden/emb-removebg-preview_lp9kcj.png"}></Card>             
-               </SectionDiv>
-            </ArticleDiv>
-            <ArticleDiv className="article7">
-                <TriangleDiv><div className="triangulo-para-baixo segundo"></div></TriangleDiv>
-                <SectionDiv className="section7">
-                    <title className="motivos">Motivos para se mudar com a gente:</title>
-                    <div className="iconsMotivos">
-                        <div className="upIcons">
-                            <div className="iconDiv">
-                                <img className="icon" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771194/muden/2023-01-03_14-21_vstubs.png"/>
-                                <span className="iconDesc">Sua casa pronta em até 24 horas</span>    
-                            </div>    
-                            <div className="iconDiv">
-                                <img className="icon menor" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771194/muden/2023-01-03_14-21_1_f2ggto.png"/>
-                                <span className="iconDesc">Amiga do Meio Ambiente</span>
-                            </div>
-                            <div className="iconDiv">
-                                <img className="icon menor" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771193/muden/2023-01-03_14-21_2_xpcvxh.png"/>
-                                <span className="iconDesc">Mudança sem dor de cabeça</span>
-                            </div>
-                        </div>
-                        <div className="downIcons">
-                            <div className="iconDiv downLef">
-                                <img className="icon" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771193/muden/2023-01-03_14-22_qb3apn.png"/>
-                                <span className="iconDesc">Cuidamos de todas as etapas de sua mudança</span>
-                            </div>
-                            <div className="iconDiv downRig">
-                                <img className="icon" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771194/muden/2023-01-03_14-22_1_w9gjoz.png"/>
-                                <span className="iconDesc">Orçamento que cabe no seu bolso</span>
-                            </div>
-                        </div>
-                    </div>
+                        <Card color1={"#04b891"} bgcolor={"#38bc94"} fontColor={"white"} titleMarginRight={"30px"} color2={"#079a83"} cardTitle={"Faxina"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672764818/muden/faxina-removebg-preview_ga3yoq.png"}></Card>                    
+                        <Card type={"left"} color1={"#04b891"} bgcolor={"white"} fontColor={"#38bc94"} color2={"#079a83"} cardTitle={"Instalação"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766184/muden/instalador-removebg-preview_tpnn2z.png"}></Card>             
                 </SectionDiv>
-                <div className="triangulo-para-baixo quarto"></div>
-            </ArticleDiv>
-                {/* <SectionDiv className="section4">
-                    <div className="title">
-                        <h5>Veja alguns <span className="bold white">depoimentos</span> dos nossos clientes</h5>
-                    </div>
-                    <div className="depoDiv">
-                        <div className="depo">
-                            <div className="divBackNPic">
-                                <div className="picBack"/>
-                                <div className="picDiv"/>
-                            </div>    
-                            <div className="invCommaDiv">
-                                <img className="invComma up" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677679/muden/2022-10-13_12-14_g9nxzj.png"/>
-                                <h6 className="text"> Jamais imaginei que uma mudança podia ser tão tranquila. Eu não precisei fazer abso- lutamente nada, eles cuidaram. Melhor empresa de mudanças que já vi!</h6>
-                                <img className="invComma down" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677749/muden/template_primary_hr8owj.png"/>
+                <SectionDiv className="section3">
+                        <Card type={"left"} color1={"#04b891"} bgcolor={"white"} fontColor={"#38bc94"} color2={"#079a83"} cardTitle={"Desmontagem e montagem"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766144/muden/ferramenta-removebg-preview_uedzvv.png"}></Card>                    
+                        <Card color1={"#04b891"} bgcolor={"#38bc94"} fontColor={"white"} titleMarginRight={"30px"} color2={"#079a83"} cardTitle={"Embalagem"} cardDesc={"Temos carretos de diversos tamanhos, que irão, além de transportar, também tomar todo o cuidado com os seus pertences."} img={"https://res.cloudinary.com/dmo7nzytn/image/upload/v1672766222/muden/emb-removebg-preview_lp9kcj.png"}></Card>             
+                </SectionDiv>
+                </ArticleDiv>
+                <ArticleDiv className="article7">
+                    <TriangleDiv><div className="triangulo-para-baixo segundo"></div></TriangleDiv>
+                    <SectionDiv className="section7">
+                        <title className="motivos">Motivos para se mudar com a gente:</title>
+                        <div className="iconsMotivos">
+                            <div className="upIcons">
+                                <div className="iconDiv">
+                                    <img className="icon" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771194/muden/2023-01-03_14-21_vstubs.png"/>
+                                    <span className="iconDesc">Sua casa pronta em até 24 horas</span>    
+                                </div>    
+                                <div className="iconDiv">
+                                    <img className="icon menor" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771194/muden/2023-01-03_14-21_1_f2ggto.png"/>
+                                    <span className="iconDesc">Amiga do Meio Ambiente</span>
+                                </div>
+                                <div className="iconDiv">
+                                    <img className="icon menor" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771193/muden/2023-01-03_14-21_2_xpcvxh.png"/>
+                                    <span className="iconDesc">Mudança sem dor de cabeça</span>
+                                </div>
+                            </div>
+                            <div className="downIcons">
+                                <div className="iconDiv downLef">
+                                    <img className="icon" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771193/muden/2023-01-03_14-22_qb3apn.png"/>
+                                    <span className="iconDesc">Cuidamos de todas as etapas de sua mudança</span>
+                                </div>
+                                <div className="iconDiv downRig">
+                                    <img className="icon" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672771194/muden/2023-01-03_14-22_1_w9gjoz.png"/>
+                                    <span className="iconDesc">Orçamento que cabe no seu bolso</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </SectionDiv> */}
-            <ArticleDiv className="article4">
-                <SectionDiv className="section8">
-                    <Element className="section5" name="test2">
-                        <h3>Vamos fazer um <span className="bold">orçamento</span>?</h3>
-                        <h6 className="budgetDesc">Preencha o formulário abaixo, nossa equipe já <span className="bold">entrará em contato</span> com você.</h6>
-                        <form className="form" onSubmit={setData}>
-                            <div className="formDiv">
-                                <Input label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, name: e.target.value})} value={contactData.name}></Input>
-                                <Input label={"Telefone (WhatsApp)"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, tel: e.target.value})} value={contactData.tel}></Input>
-                                <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
-                                <Input label={"Quando pretende se mudar?"} type={"date"} height={"35px"} width={"400px"} set={(e)=>setContactData({ ...contactData, date: e.target.value})} value={contactData.date}></Input>
-                                {/* <div className="dropdown">
-                                    <label for="days" className="dropLabel">Quando pretende se mudar?</label>
-                                    <select name="days" id="days" required={true} className="dropInput" onChange={(e)=>setContactData({ ...contactData, date: e.target.value})} value={contactData.date}>
-                                        <option value="" disabled selected>Escolha uma opção</option>
-                                        <option value="dentro de 30 dias">Sim, nos próximos 30 dias</option>
-                                        <option value="dentro de 60 dias">Sim, nos próximos 60 dias</option>
-                                        <option value="dentro de 90 dias">Sim, nos próximos 90 dias</option>
-                                        <option value="Não pretende">Não vou me mudar, por hora</option>
-                                    </select>
+                    </SectionDiv>
+                    <div className="triangulo-para-baixo quarto"></div>
+                </ArticleDiv>
+                    {/* <SectionDiv className="section4">
+                        <div className="title">
+                            <h5>Veja alguns <span className="bold white">depoimentos</span> dos nossos clientes</h5>
+                        </div>
+                        <div className="depoDiv">
+                            <div className="depo">
+                                <div className="divBackNPic">
+                                    <div className="picBack"/>
+                                    <div className="picDiv"/>
+                                </div>    
+                                <div className="invCommaDiv">
+                                    <img className="invComma up" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677679/muden/2022-10-13_12-14_g9nxzj.png"/>
+                                    <h6 className="text"> Jamais imaginei que uma mudança podia ser tão tranquila. Eu não precisei fazer abso- lutamente nada, eles cuidaram. Melhor empresa de mudanças que já vi!</h6>
+                                    <img className="invComma down" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677749/muden/template_primary_hr8owj.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </SectionDiv> */}
+                <ArticleDiv className="article4">
+                    <SectionDiv className="section8">
+                        <Element className="section5" name="test2">
+                            <h3>Vamos fazer um <span className="bold">orçamento</span>?</h3>
+                            <h6 className="budgetDesc">Preencha o formulário abaixo, nossa equipe já <span className="bold">entrará em contato</span> com você.</h6>
+                            <form className="form" onSubmit={setData}>
+                                <div className="formDiv">
+                                    <Input label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, name: e.target.value})} value={contactData.name}></Input>
+                                    <Input label={"Telefone (WhatsApp)"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, tel: e.target.value})} value={contactData.tel}></Input>
+                                    <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
+                                    <Input label={"Quando pretende se mudar?"} type={"date"} height={"35px"} width={"400px"} set={(e)=>setContactData({ ...contactData, date: e.target.value})} value={contactData.date}></Input>
+                                    {/* <div className="dropdown">
+                                        <label for="days" className="dropLabel">Quando pretende se mudar?</label>
+                                        <select name="days" id="days" required={true} className="dropInput" onChange={(e)=>setContactData({ ...contactData, date: e.target.value})} value={contactData.date}>
+                                            <option value="" disabled selected>Escolha uma opção</option>
+                                            <option value="dentro de 30 dias">Sim, nos próximos 30 dias</option>
+                                            <option value="dentro de 60 dias">Sim, nos próximos 60 dias</option>
+                                            <option value="dentro de 90 dias">Sim, nos próximos 90 dias</option>
+                                            <option value="Não pretende">Não vou me mudar, por hora</option>
+                                        </select>
+                                    </div> */}
+                                    <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "budget"})}>Enviar</Button>
+                                </div>
+                            </form>
+                        </Element>
+                        <img className="formTruck" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672774011/muden/2023-01-03_15-23_phicz6.png"/>
+                    </SectionDiv>
+                    <div className="triangulo-para-baixo terceiro"></div>
+                </ArticleDiv>
+                <ArticleDiv className="article8">
+                    <SectionDiv className="section9">
+                        <h3>Veja alguns depoimentos dos <strong className="bold">nossos clientes:</strong></h3>
+                        <div>
+                            <div className="depoimentoDiv">
+                                {/* <div className="ionIcon esq">
+                                    <ion-icon name="caret-back-outline"></ion-icon>
                                 </div> */}
-                                <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "budget"})}>Enviar</Button>
+                                <img className="aspasCima" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677679/muden/2022-10-13_12-14_g9nxzj.png"></img>
+                                <h6 className="depoimento">Jamais imaginei que uma mudança podia ser tão tranquila. Eu não precisei fazer absolutamente nada, eles cuidaram. Melhor empresa de mudanças que já vi!</h6>
+                                <img className="aspasBaixo" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677749/muden/template_primary_hr8owj.png"></img>
+                                {/* <div className="ionIcon dir">
+                                    <ion-icon name="caret-forward-outline"></ion-icon>
+                                </div> */}
                             </div>
-                        </form>
+                            <h6 className="cliente">-Martha Oliveira</h6>
+                        </div>
+                    </SectionDiv>
+                </ArticleDiv>
+                <ArticleDiv className="article5">
+                    <Element className="section6" name="test3">
+                        <h6 className="faq">FAQ</h6>
+                        <div className="allFaq">
+                            <div className="faqColumn">
+                                <div className="faqBlock">
+                                    <span className="faqTitle">Como realizar um orçamento?</span> <br/>
+                                    <span className="faqDesc">Basta clicar no canto superior direito onde está escrito “Quero me mudar”, e preencher seus dados, entra- remos em contato com você via Whats App em até 12 horas, nosso processo de orçamento é bem rápido, só precisaremos de algumas informações que nossos atendentes irão solicitar, como origem e destino da mudança, o tamanho da residência, quantos cômo- dos, e quais serão os moveis que precisarão do serviço de montagem, após isso o resto é conosco.</span>
+                                    <br/>
+                                </div>
+                                <div className="faqBlock">
+                                    <span className="faqTitle">Posso contratar apenas um dos serviços?</span><br/>
+                                    <span className="faqDesc">dos serviços? Claro que sim, aqui na muden você pode personalizar e deixar a sua mudança composta da forma que preferir, você pode escolher qualquer serviço de forma isolada, basta sinalizar no momento da real- ização do orçamento.</span>
+                                    <br/>                            
+                                </div>
+                                <div className="faqBlock">
+                                    <span className="faqTitle">Como efetuar o cancelamento?</span><br/>
+                                    <span className="faqDesc">O cancelamento deve ser feito até 12 horas antes do dia e horário agendado para a mudança, cancelando no prazo, nenhuma taxa será cobrada e o valor será reembolsado em até 72 horas.</span>
+                                    <br/>
+                                </div>
+                            </div>
+                            <div className="faqColumn">
+                                <div className="faqBlock">
+                                    <span className="faqTitle">Recebi o orçamento e agendei minha mudança, e agora!?</span><br/>
+                                    <span className="faqDesc">Agora chegamos na etapa de realizar o pagamento no método escolhido até 12 horas antes do dia e horário que sua mudança foi agendada, após isso é só esperar o dia chegar e estaremos no local, com toda nossa equipe para entregar uma mudança tran- quila e sem estresse.</span>
+                                    <br/>
+                                </div>
+                                <div className="faqBlock">
+                                    <span className="faqTitle">Posso parcelar o valor da minha mudança?</span><br/>
+                                    <span className="faqDesc">Sim, aqui na Muden você pode escolher qual a melhor forma de pagamento para você, realizamos par- celamentos no crédito em até 12x sem juros, débito, TED e até Pix, você escolhe.</span>
+                                    <br/>
+                                </div>
+                                <div className="faqBlock">
+                                    <span className="faqTitle">Devo fazer alguma coisa durante o processo de mudança?</span><br/>
+                                    <span className="faqDesc">Nossa equipe cuida de tudo, a única coisa que você precisará fazer é relaxar e aproveitar seu dia, é impor- tante que fique atento ao celular caso saia da residência, para que nossa equipe consiga tirar dúvi- das simples como, por exemplo: “Em que parede você prefere que o guarda-roupa seja montado”.</span>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                        {/* <div className="formEmail">
+                            <h4 className="talkDirectTitle">Seja nosso parceiro</h4>
+                            <h6 className="talkDirectTitle white">Vamos conversar!</h6>
+                            <h6 className="talkDirectDesc white">Deixe aqui seu contato e interesse, para que possamos fechar uma parceria</h6>
+                        </div>
+                        <div className="formEmail flex" onSubmit={setData}>
+                            <form>
+                                <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
+                                <Input label={"Mensagem"} placeholder={"Escreva aqui a sua mensagem"} type={"text"} height={"250px"} width={"400px"} textarea={true} set={(e) => setContactData({ ...contactData, message: e.target.value})} value={contactData.message}></Input>
+                                <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"text"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "contact"})}>Enviar</Button>
+                            </form>
+                        </div> */}
+                        <img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672780668/muden/muden_simbolo_branco-03_uukgpk_1_2_qvn3q1.png" className="backMuden"></img>
                     </Element>
-                    <img className="formTruck" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672774011/muden/2023-01-03_15-23_phicz6.png"/>
-                </SectionDiv>
-                <div className="triangulo-para-baixo terceiro"></div>
-            </ArticleDiv>
-            <ArticleDiv className="article8">
-                <SectionDiv className="section9">
-                    <h3>Veja alguns depoimentos dos <strong className="bold">nossos clientes:</strong></h3>
-                    <div className="depoimentoDiv">
-                        {/* <div className="ionIcon esq">
-                            <ion-icon name="caret-back-outline"></ion-icon>
-                        </div> */}
-                        <img className="aspasCima" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677679/muden/2022-10-13_12-14_g9nxzj.png"></img>
-                        <h6 className="depoimento">Jamais imaginei que uma mudança podia ser tão tranquila. Eu não precisei fazer absolutamente nada, eles cuidaram. Melhor empresa de mudanças que já vi!</h6>
-                        <img className="aspasBaixo" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677749/muden/template_primary_hr8owj.png"></img>
-                        {/* <div className="ionIcon dir">
-                            <ion-icon name="caret-forward-outline"></ion-icon>
-                        </div> */}
-                    </div>
-                    <h6 className="cliente">-Martha Oliveira</h6>
-                </SectionDiv>
-            </ArticleDiv>
-            <ArticleDiv className="article5">
-                <Element className="section6" name="test3">
-                    <h6 className="faq">FAQ</h6>
-                    <div className="allFaq">
-                        <div className="faqColumn">
-                            <div className="faqBlock">
-                                <span className="faqTitle">Como realizar um orçamento?</span> <br/>
-                                <span className="faqDesc">Basta clicar no canto superior direito onde está escrito “Quero me mudar”, e preencher seus dados, entra- remos em contato com você via Whats App em até 12 horas, nosso processo de orçamento é bem rápido, só precisaremos de algumas informações que nossos atendentes irão solicitar, como origem e destino da mudança, o tamanho da residência, quantos cômo- dos, e quais serão os moveis que precisarão do serviço de montagem, após isso o resto é conosco.</span>
-                                <br/>
-                            </div>
-                            <div className="faqBlock">
-                                <span className="faqTitle">Posso contratar apenas um dos serviços?</span><br/>
-                                <span className="faqDesc">dos serviços? Claro que sim, aqui na muden você pode personalizar e deixar a sua mudança composta da forma que preferir, você pode escolher qualquer serviço de forma isolada, basta sinalizar no momento da real- ização do orçamento.</span>
-                                <br/>                            
-                            </div>
-                            <div className="faqBlock">
-                                <span className="faqTitle">Como efetuar o cancelamento?</span><br/>
-                                <span className="faqDesc">O cancelamento deve ser feito até 12 horas antes do dia e horário agendado para a mudança, cancelando no prazo, nenhuma taxa será cobrada e o valor será reembolsado em até 72 horas.</span>
-                                <br/>
-                            </div>
-                        </div>
-                        <div className="faqColumn">
-                            <div className="faqBlock">
-                                <span className="faqTitle">Recebi o orçamento e agendei minha mudança, e agora!?</span><br/>
-                                <span className="faqDesc">Agora chegamos na etapa de realizar o pagamento no método escolhido até 12 horas antes do dia e horário que sua mudança foi agendada, após isso é só esperar o dia chegar e estaremos no local, com toda nossa equipe para entregar uma mudança tran- quila e sem estresse.</span>
-                                <br/>
-                            </div>
-                            <div className="faqBlock">
-                                <span className="faqTitle">Posso parcelar o valor da minha mudança?</span><br/>
-                                <span className="faqDesc">Sim, aqui na Muden você pode escolher qual a melhor forma de pagamento para você, realizamos par- celamentos no crédito em até 12x sem juros, débito, TED e até Pix, você escolhe.</span>
-                                <br/>
-                            </div>
-                            <div className="faqBlock">
-                                <span className="faqTitle">Devo fazer alguma coisa durante o processo de mudança?</span><br/>
-                                <span className="faqDesc">Nossa equipe cuida de tudo, a única coisa que você precisará fazer é relaxar e aproveitar seu dia, é impor- tante que fique atento ao celular caso saia da residência, para que nossa equipe consiga tirar dúvi- das simples como, por exemplo: “Em que parede você prefere que o guarda-roupa seja montado”.</span>
-                                <br/>
-                            </div>
-                        </div>
-                    </div>
-                    {/* <div className="formEmail">
-                        <h4 className="talkDirectTitle">Seja nosso parceiro</h4>
-                        <h6 className="talkDirectTitle white">Vamos conversar!</h6>
-                        <h6 className="talkDirectDesc white">Deixe aqui seu contato e interesse, para que possamos fechar uma parceria</h6>
-                    </div>
-                    <div className="formEmail flex" onSubmit={setData}>
-                        <form>
-                            <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
-                            <Input label={"Mensagem"} placeholder={"Escreva aqui a sua mensagem"} type={"text"} height={"250px"} width={"400px"} textarea={true} set={(e) => setContactData({ ...contactData, message: e.target.value})} value={contactData.message}></Input>
-                            <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"text"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "contact"})}>Enviar</Button>
-                        </form>
-                    </div> */}
-                    <img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672780668/muden/muden_simbolo_branco-03_uukgpk_1_2_qvn3q1.png" className="backMuden"></img>
-                </Element>
-            </ArticleDiv>
-            <Footer className="footer">
-                <div className="footerDiv">
-                    <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41}></ImgLogo>
-                    <div className="footerIconsDiv">
-                        <FaFacebookF className="footerIcon"/>
-                        <FaTiktok className="footerIcon"/>
-                        <FaInstagram className="footerIcon"/>
-                        <FaWhatsapp className="footerIcon"/>
-                        <FaLinkedinIn className="footerIcon"/>
-                    </div> 
-                </div>  
-                             
-            </Footer>
+                </ArticleDiv>
+                <Footer className="footer">
+                    <div className="footerDiv">
+                        <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41}></ImgLogo>
+                        <div className="footerIconsDiv">
+                            <FaFacebookF className="footerIcon"/>
+                            <FaTiktok className="footerIcon"/>
+                            <FaInstagram className="footerIcon"/>
+                            <FaWhatsapp className="footerIcon"/>
+                            <FaLinkedinIn className="footerIcon"/>
+                        </div> 
+                    </div>        
+                </Footer>
 
-            <PopUp className={`${sent ? "" : "displayNone"}`}> 
-                Mensagem enviada com sucesso! ✅
-                <button className="popUpBtn" width={"10px"} height={"0px"} onClick={()=>{closePopUp()}}>x</button>
-            </PopUp>
+                <PopUp className={`${sent ? "" : "displayNone"}`}> 
+                    Mensagem enviada com sucesso! ✅
+                    <button className="popUpBtn" width={"10px"} height={"0px"} onClick={()=>{closePopUp()}}>x</button>
+                </PopUp>
 
-        </MainDiv>
+            </MainDiv>
+        </>
     )
 }
 
@@ -505,15 +510,15 @@ const MainDiv = styled.main`
             }
 
             .aspasCima, .aspasBaixo{
-                width: 5vw;
-                height: 4vw;
-                max-height: 80px;
-                max-width: 96px
+                width: 7vw;
+                height: 6vw;
+                max-height: 64px;
+                max-width: 80px
             }
 
             .aspasCima{
-                margin-top: -35px;
-                margin-right: 30px;
+                margin-top: -4vh;
+                margin-right: 2vw;
             }
 
             .aspasBaixo{
@@ -533,11 +538,11 @@ const MainDiv = styled.main`
             }
             
             .cliente{
-                font-size: 25px;
+                font-size: min(3vw, 25px);
                 font-style: italic;
-                position: absolute;
-                right: 28vw;
-                bottom: 100px;
+                text-align: end;
+                margin-top: 9vh;
+                margin-right: 7vw;
             }
         }
     }
@@ -568,13 +573,20 @@ const ArticleDiv = styled.article`
     .sectionDiv{
         font-size: 40px;
     }
+
+    .servicos{
+        margin-bottom: 40px !important;
+        margin-top: 0px !important;
+    }
+
     .section2{
         width: 100%;
         max-width: 975px;
         display: flex;
         justify-content: center;
-        margin-top: 20px;
-        margin-bottom: 50px;
+        margin-top: 80px;
+        margin-bottom: 100px;
+
         h3{
             width: 100%;
             max-width: 550px;
@@ -583,7 +595,9 @@ const ArticleDiv = styled.article`
         }
         h2{
             width: 100%;
-            max-width: 850px;
+            font-size: 18px;
+            //max-width: 850px;
+            text-align: justify;
             margin: 10px 0px 0px 0px;
         }
         h6{
