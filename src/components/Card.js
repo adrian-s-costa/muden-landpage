@@ -32,6 +32,13 @@ const CardDiv = styled.div`
     box-sizing: content-box;
     justify-content: space-between;
     align-items: center;
+    
+    :hover{
+        .cardImgDiv{
+            width: 1000px;
+        }
+    }
+
     .cardTitle{
         font-size: ${(props) => props.fontSize};
         line-height: 24px;

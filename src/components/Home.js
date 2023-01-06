@@ -1015,7 +1015,7 @@ const Footer = styled.footer`
         color: white;
         font-size: 40px;
         cursor: pointer;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
     }
     @media (max-width: 975px) {
         .footer{

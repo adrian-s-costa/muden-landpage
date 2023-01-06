@@ -139,10 +139,14 @@ const MainDiv = styled.main`
     align-items: center;
     padding-top: 120px;
     position: relative;
-    
-    .displayNone{
-        display: none !important;
+
+    @media (max-width: 975px) {
+        .displayNone{
+            display: none !important;
+        }
     }
+    
+
     .bold{
         font-weight: bold;
     }
