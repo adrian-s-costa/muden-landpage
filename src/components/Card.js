@@ -37,22 +37,21 @@ const CardDiv = styled.div`
     position: relative;
 
     :hover{
-
-        @media (min-width: 975px){
-            .cardImgDiv{
-                transition: transform 1.5s ease-in-out;
-                transform: ${(props) => props.translate};
-            }
+        
+        .cardImgDiv, .cardImgDiv1{
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(${(props) => props.translate});
         }
+        
 
         @media (max-width: 975px){
             .cardImgDiv{
-                transition: transform 1.5s ease-in-out;
-                transform: translateX(200px);
+                transition: transform 1.5s ease-in-out !important;
+                transform: translateX(200px) !important;
             }
             .cardImgDiv1{
-                transition: transform 1.5s ease-in-out;
-                transform: translateX(-200px);
+                transition: transform 1.5s ease-in-out !important;
+                transform: translateX(-200px) !important;
             }
         }
 
