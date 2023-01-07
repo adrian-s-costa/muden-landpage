@@ -7,7 +7,7 @@ export default function Card(props){
                 <div className="cardTextDiv">
                     <h5 className="cardTitle">{props.cardTitle}</h5>
                 </div>
-                <img className="cardImgDiv" src={props.img}/>
+                <img className="cardImgDiv1" src={props.img}/>
                 <h6 className="cardDesc" style={{color: "#04b891", right: "20px"}}>{props.cardDesc}</h6>
             </CardDiv>
         )
@@ -37,9 +37,23 @@ const CardDiv = styled.div`
     position: relative;
 
     :hover{
-        .cardImgDiv{
-            transition: transform 1.5s ease-in-out;
-            transform: translateX(${(props) => props.translate});
+
+        @media (min-width: 975px){
+            .cardImgDiv{
+                transition: transform 1.5s ease-in-out;
+                transform: ${(props) => props.translate};
+            }
+        }
+
+        @media (max-width: 975px){
+            .cardImgDiv{
+                transition: transform 1.5s ease-in-out;
+                transform: translateX(200px);
+            }
+            .cardImgDiv1{
+                transition: transform 1.5s ease-in-out;
+                transform: translateX(-200px);
+            }
         }
 
         .cardTitle{
@@ -63,7 +77,7 @@ const CardDiv = styled.div`
         margin-left: 40px;
         margin-right: ${(props) => props.titleMarginRight};
     }
-    .cardImgDiv{
+    .cardImgDiv, .cardImgDiv1{
         height: 102px;
         width: auto;
         border-radius: 8px;
@@ -85,5 +99,10 @@ const CardDiv = styled.div`
         color: #f0f0f0;
         text-align: center;
         opacity: 0;
+
+        @media (max-width: 975px) {
+            font-size: 10px;
+            width: 150px;
+        }
     }
 `
