@@ -3,20 +3,22 @@ import styled from "styled-components";
 export default function Card(props){
     if (props.type == "left"){
         return(
-            <CardDiv color1={props.color1} color2={props.color2} img={props.img} bgcolor={props.bgcolor} fontColor={props.fontColor} titleMarginRight={props.titleMarginRight} fontSize={props.fontSize}>
+            <CardDiv color1={props.color1} color2={props.color2} img={props.img} bgcolor={props.bgcolor} fontColor={props.fontColor} titleMarginRight={props.titleMarginRight} fontSize={props.fontSize} translate={props.translate}>
                 <div className="cardTextDiv">
                     <h5 className="cardTitle">{props.cardTitle}</h5>
                 </div>
                 <img className="cardImgDiv" src={props.img}/>
+                <h6 className="cardDesc" style={{color: "#04b891", right: "20px"}}>{props.cardDesc}</h6>
             </CardDiv>
         )
     }else{
         return(
-            <CardDiv color1={props.color1} color2={props.color2} img={props.img} bgcolor={props.bgcolor} fontColor={props.fontColor} titleMarginRight={props.titleMarginRight} fontSize={props.fontSize}>
+            <CardDiv color1={props.color1} color2={props.color2} img={props.img} bgcolor={props.bgcolor} fontColor={props.fontColor} titleMarginRight={props.titleMarginRight} fontSize={props.fontSize} translate={props.translate}>
                 <img className="cardImgDiv" src={props.img}/>
                 <div className="cardTextDiv">
                     <h5 className="cardTitle">{props.cardTitle}</h5>
                 </div>
+                <h6 className="cardDesc" style={{color: "white", left: "20px"}}>{props.cardDesc}</h6>
             </CardDiv>
         )
     }
@@ -32,10 +34,22 @@ const CardDiv = styled.div`
     box-sizing: content-box;
     justify-content: space-between;
     align-items: center;
-    
+    position: relative;
+
     :hover{
         .cardImgDiv{
-            width: 1000px;
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(${(props) => props.translate});
+        }
+
+        .cardTitle{
+            transition: 1.5s;
+            opacity: 0;
+        }
+
+        .cardDesc{
+            transition: 2s;
+            opacity: 100;
         }
     }
 
@@ -62,11 +76,14 @@ const CardDiv = styled.div`
         align-items: center;
     }
     .cardDesc{
-        width: 95%;
+        font-weight: bold;
+        position: absolute;
+        width: 200px;
         margin-top: 5px;
         font-size: 12px;
         line-height: 12px;
         color: #f0f0f0;
         text-align: center;
+        opacity: 0;
     }
 `
