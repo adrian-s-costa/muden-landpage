@@ -428,6 +428,8 @@ const MainDiv = styled.main`
                 @media (max-width: 975px) {
                     width: 100% !important;
                     margin-top: 50px;
+                    font-size: 22px;
+                    line-height: 30px;
                 }
             }
             .iconsMotivos{
@@ -447,7 +449,8 @@ const MainDiv = styled.main`
                     justify-content: space-around;
                     
                     @media (max-width: 975px) {
-                        flex-direction: column;
+                        flex-direction: row;
+                        flex-wrap: wrap;
                         gap: 20px;
                     }
                 
@@ -470,6 +473,12 @@ const MainDiv = styled.main`
                             margin-left: 20px;
                             height: 120px !important;
                             width: 120px !important;
+
+                            @media (max-width: 975px) {
+                                margin-top: 0px;
+                                height: 60px !important;
+                                width: 59px !important;
+                            }
                         }
 
                         .iconDesc{
@@ -478,11 +487,19 @@ const MainDiv = styled.main`
                             width: 220px;
                             line-height: 20px;
                             text-align: center;
+                            @media (max-width: 975px) {
+                                font-size: 13px;
+                                width: 100px;
+                            }
                         }
                         
                         .icon{
                             height: 100px;
                             width: 100px;
+                            @media (max-width: 975px) {
+                                height: 60px !important;
+                                width: 60px !important;
+                            }
                         }
                     }
 
@@ -752,6 +769,7 @@ const ArticleDiv = styled.article`
 
             @media (max-width: 975px) {
                 margin-top: 50px;
+                font-size: 25px;
             }
         }
         
@@ -1122,6 +1140,10 @@ const Footer = styled.footer`
         display: flex;
         align-items: center;
         gap: 10px;
+
+        @media (max-width: 975px) {
+            margin-bottom: -5px;
+        }
     }
     .footerIcon{
         color: white;
@@ -1143,4 +1165,8 @@ const Footer = styled.footer`
 `
 const ImgLogo = styled.img`
     cursor: pointer;
+    @media (max-width: 975px) {
+        width: 130px;
+        height: 31px;
+    }
 `

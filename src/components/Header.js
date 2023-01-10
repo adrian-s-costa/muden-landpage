@@ -28,7 +28,7 @@ export default function Header(){
     return(
         <Head>
             <div className="headerDiv">
-                <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785402/muden/muden-logo-principal-branco_mrbzit_oblp0y.png" width={170} height={41} onClick={()=>{scrollTop("/", 0)}}></ImgLogo>
+                <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785402/muden/muden-logo-principal-branco_mrbzit_oblp0y.png" width={171} height={40} onClick={()=>{scrollTop("/", 0)}}></ImgLogo>
                 <LinkHead className="header">
                     <Links>
                         <a href="http://muden-landpage.vercel.app/#sobre-nos" style={{textDecoration: "none"}}>
@@ -232,4 +232,8 @@ const Head = styled.header`
 `
 const ImgLogo = styled.img`
     cursor: pointer;
+    @media (max-width: 975px) {
+        width: 130px;
+        height: 31px;
+    }
 `

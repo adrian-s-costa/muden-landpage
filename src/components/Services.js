@@ -200,6 +200,18 @@ const MainDiv = styled.main`
                 text-align: center;
                 width: 270px;
                 margin-top: 20px;
+
+                @media (max-width: 975px) {
+                    font-size: 13px;
+                    width: 120px;
+                }
+            }
+
+            .icon{
+                @media (max-width: 975px) {
+                    width: 75px !important;
+                    height: 93px !important;
+                }
             }
 
             .iconService{
@@ -208,7 +220,8 @@ const MainDiv = styled.main`
                 margin-top: 60px;
 
                 @media (max-width: 975px) {
-                    flex-direction: column;
+                    flex-direction: row;
+                    flex-wrap: wrap;
                     gap: 40px;
                     margin-bottom: 50px;
                 }
@@ -222,6 +235,7 @@ const MainDiv = styled.main`
 
                 @media (max-width: 975px) {
                    width: 100%;
+                   font-size: 25px;
                 }
             }
         }
@@ -261,6 +275,11 @@ const MainDiv = styled.main`
 
                     .preco{
                         padding-top: 50px;
+                        @media (max-width: 975px) {
+                            padding-top: 0px;
+                            width: 230px;
+                            height: 73px;
+                        }
                     }
 
                     .espTitle{
@@ -269,6 +288,9 @@ const MainDiv = styled.main`
                         color: #04b891;
                         font-size: 40px;
                         font-weight: bold;
+                        @media (max-width: 975px) {
+                            font-size: 25px;
+                        }
                     }
 
                     .espDesc{
@@ -277,13 +299,18 @@ const MainDiv = styled.main`
                         line-height: normal;
                         width: 400px;
                         @media (max-width: 975px) {
-                            width: 100%
+                            width: 100%;
+                            font-size: 13px;
                         }
                     }
 
                     .iconBot{
                         width: 300px;
                         height: 100px;
+                        @media (max-width: 975px) {
+                            width: 230px;
+                            height: 85px;
+                        }
                     }
                 }
             }
@@ -331,10 +358,14 @@ const ArticleDiv = styled.article`
         }
         .budgetDesc{
             font-size: 34px;
-            margin-top: 50px;
+            margin-top: 30px;
             font-weight: bold;
             color: #04b891;
             margin-bottom: 20px;
+
+            @media (max-width: 975px) {
+                font-size: 25px;
+            }
         }
 
         h3{
@@ -346,6 +377,8 @@ const ArticleDiv = styled.article`
 
             @media (max-width: 975px) {
                 width: 100%;
+                font-size: 20px;
+                line-height: normal;
             }
         }
         h2{
@@ -463,4 +496,8 @@ const Footer = styled.footer`
 `
 const ImgLogo = styled.img`
     cursor: pointer;
+    @media (max-width: 975px) {
+        width: 130px;
+        height: 31px;
+    }
 `

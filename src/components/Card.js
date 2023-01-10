@@ -75,6 +75,9 @@ const CardDiv = styled.div`
         width: 100%;
         margin-left: 40px;
         margin-right: ${(props) => props.titleMarginRight};
+        @media (max-width: 975px) {
+            font-size: 20px !important;
+        }
     }
     .cardImgDiv, .cardImgDiv1{
         height: 102px;

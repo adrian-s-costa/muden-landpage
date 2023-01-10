@@ -68,4 +68,7 @@ const Label = styled.span`
     font-weight: bold;
     margin-top: ${(props) => props.marginTop};
     margin-bottom: ${(props) => props.marginBot};
+    @media (max-width: 975px) {
+        font-size: 15px;
+    }
 `
