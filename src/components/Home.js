@@ -633,7 +633,7 @@ const MainDiv = styled.main`
 
 
                 @media (max-width: 975px){
-                    margin-top: 70px;
+                    margin-top: 40px;
                 }
             }
         
@@ -672,7 +672,9 @@ const MainDiv = styled.main`
                 width: 600px;
 
                 @media (max-width: 975px){
-                    font-size: 30px;
+                    font-size: 20px;
+                    line-height: 25px;
+                    margin-bottom: 0px;
                 }
             }
             
@@ -887,12 +889,21 @@ const ArticleDiv = styled.article`
             max-width: 500px;
             line-height: normal;
             margin-top: 5px;
+            @media (max-width: 975px) {
+                font-size: 18px;
+            }
         }
         h3{
             margin-top: 40px;
             width: 100%;
             font-size: 35px;
             font-weight: 400;
+            line-height: 29px;
+            @media (max-width: 975px) {
+                font-size: 25px;
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
         }
         h2{
             width: 100%;

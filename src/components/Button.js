@@ -23,7 +23,7 @@ const Btn = styled.button`
     justify-content: center;
 
     @media (max-width: 975px){
-        font-size: 20px;
+        font-size: 15px;
     }
 
     :hover{
