@@ -62,22 +62,22 @@ export default function Home(){
                     <SectionDiv className="sectionDiv">
                         <h1 className="bold">Olá, nós somos a <span className="greenMuden">Muden</span></h1>
                         <h2>Feita para pessoas que entendem o quanto o tempo é precioso! Invista seu tempo com o que realmente importa, <span className="bold">e com quem importa!!</span></h2>
-                        <Link activeClass="active" className="test2" to="test2" spy={true} smooth={true} duration={500} offset={-50}>
-                            <Button width={"250px"} fontSize={"25px"} color={"#38bc94"} colorFont={"white"}>Quero me mudar!</Button>
+                        <Link activeClass="active" className="test2" to="contato" spy={true} smooth={true} duration={500} offset={-50}>
+                            <Button width={"250px"} fontSize={"23px"} color={"#38bc94"} colorFont={"white"}>Quero me mudar!</Button>
                         </Link>
                     </SectionDiv>
                     <AsideDiv className="asideDiv">
                         <Img className="imgAside" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785135/muden/template_primary_1_ctybyu.png"></Img>
                     </AsideDiv>
                 </ArticleDiv>
-                <ArticleDiv className="article2">
+                <ArticleDiv className="article2" id="sobre-nos">
                     <SectionDiv className="section2">
                         <h3 className="bold">A empresa de mudanças que <span className="greenMuden">cuida de tudo</span></h3>
                         <h2>A muden é um serviço de mudanças que tem como objetivo transformar um momento cansativo e frustrante em algo simples e sem stress. Temos equipes especializadas e experientes que cuidam de todo o planejamento da mudança para que você não precise se preocupar com nada. Agora mudar não é mais um problema, <span className="bold greenMuden">recomece do seu jeito!</span></h2>
                         <div className="triangulo-para-baixo"></div>                
                     </SectionDiv>
                 </ArticleDiv>
-                <ArticleDiv className="article6">
+                <ArticleDiv className="article6" id="servicos">
                     <SectionDiv className="section2 servicos">
                         <h6>Serviços oferecidos:</h6>
                     </SectionDiv>
@@ -145,9 +145,9 @@ export default function Home(){
                             </div>
                         </div>
                     </SectionDiv> */}
-                <ArticleDiv className="article4">
+                <ArticleDiv className="article4" id="contato">
                     <SectionDiv className="section8">
-                        <Element className="section5" name="test2">
+                        <Element className="section5">
                             <h3>Vamos fazer um <span className="bold">orçamento</span>?</h3>
                             <h6 className="budgetDesc">Preencha o formulário abaixo, nossa equipe já <span className="bold">entrará em contato</span> com você.</h6>
                             <form className="form" onSubmit={setData}>
@@ -174,7 +174,7 @@ export default function Home(){
                     </SectionDiv>
                     <div className="triangulo-para-baixo terceiro"></div>
                 </ArticleDiv>
-                <ArticleDiv className="article8">
+                <ArticleDiv className="article8"  id="depoimentos">
                     <SectionDiv className="section9">
                         <h3>Veja alguns depoimentos dos <strong className="bold">nossos clientes:</strong></h3>
                         <div className="depoimentoDiv">
@@ -229,8 +229,8 @@ export default function Home(){
                         </div>
                     </SectionDiv>
                 </ArticleDiv>
-                <ArticleDiv className="article5">
-                    <Element className="section6" name="test3">
+                <ArticleDiv className="article5" id="faq">
+                    <Element className="section6">
                         <h6 className="faq">FAQ</h6>
                         <div className="allFaq">
                             <div className="faqColumn">

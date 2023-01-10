@@ -15,74 +15,69 @@ export default function Header(){
         setVisu(visu * -1)
     }
 
-    var scroll = Scroll.animateScroll;
-    
-    // var scroller = Scroll.scroller;
 
-    // const a = ()=>{
-    //     scroller.scrollTo('myScrollToElement', {
-    //         duration: 1500,
-    //         delay: 100,
-    //         smooth: true,
-    //         containerId: 'teste',
-    //         offset: 50
-    //     })
-    // }
-
-    function scrollTop(nav){
-        window.scrollTo({top: 0, behavior: 'smooth'});
+    function scrollTop(nav, px){
         navigate(nav);
+        window.scrollTo({top: px, behavior: 'smooth'});
+    }
+
+    function changeColor(e, color){
+        e.target.style.color = color
     }
 
     return(
         <Head>
             <div className="headerDiv">
-                <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785402/muden/muden-logo-principal-branco_mrbzit_oblp0y.png" width={170} height={41} onClick={()=>{scrollTop("/")}}></ImgLogo>
+                <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785402/muden/muden-logo-principal-branco_mrbzit_oblp0y.png" width={170} height={41} onClick={()=>{scrollTop("/", 0)}}></ImgLogo>
                 <LinkHead className="header">
                     <Links>
-                        <Link activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-280}>
-                            <div className="link">Serviços</div>
-                        </Link>
-                        <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
-                            <div className="link">Contato</div>
-                        </Link>
-                        <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
+                        <a href="http://localhost:3000/#sobre-nos" style={{textDecoration: "none"}}>
                             <div className="link">Sobre nós</div>
-                        </Link>
-                        <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
+                        </a>
+                        <a href="http://localhost:3000/#servicos" style={{textDecoration: "none"}}>
+                            <div className="link">Serviços</div>
+                        </a>
+                        <a href="http://localhost:3000/#contato" style={{textDecoration: "none"}}>
+                            <div className="link">Contato</div>
+                        </a>
+                        <a href="http://localhost:3000/#depoimentos" style={{textDecoration: "none"}}>
                             <div className="link">Depoimentos</div>
-                        </Link>
-                        <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
+                        </a>
+                        <a href="http://localhost:3000/#faq" style={{textDecoration: "none"}}>
                             <div className="link">FAQ</div>
-                        </Link>
+                        </a>
                     </Links>
-                    <div className="btn"><Button width={"240px"} fontSize={"18px"} color={"#04b891"} colorFont={"white"} set={()=>scrollTop("/services")}>Seja um parceiro</Button></div>
+                    <div className="btn"><Button width={"240px"} fontSize={"18px"} color={"#04b891"} colorFont={"white"} set={()=>{scrollTop("/services", 0)}}>Seja um parceiro</Button></div>
                 </LinkHead>
                 <div className="icon" onClick={()=>{toggle()}}>
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
                 <div className={`teste ${visu == 1 ? "displayNone" : "displayShow"}`}>
                     <div className="displayNone linksList">
-                        <Link className="divLink" activeClass="active" to="test1" spy={true} smooth={true} duration={500} offset={-360} onClick={()=>{toggle()}}>
+                        <a className="divLink" href="http://localhost:3000/#sobre-nos" style={{textDecoration: "inherit", color: "white"}} onClick={()=>{toggle()}}>
                             <ion-icon name="storefront-outline"></ion-icon>
+                            <span className="linkSide">Sobre nós</span>
+                        </a>
+                        <a className="divLink" href="http://localhost:3000/#servicos" style={{textDecoration: "inherit", color: "white"}} onClick={()=>{toggle()}}>
+                            <ion-icon name="clipboard-outline"></ion-icon>
                             <span className="linkSide">Serviços</span>
-                        </Link>
-                        <Link className="divLink" activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70} onClick={()=>{toggle()}}>
+                        </a>
+                        <a className="divLink" href="http://localhost:3000/#contato" style={{textDecoration: "inherit", color: "white"}} onClick={()=>{toggle()}}>
                             <ion-icon name="chatbox-outline"></ion-icon>
-                            <span className="linkSide">Fale conosco</span>
-                        </Link>
-                        <Link className="divLink" activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70} onClick={()=>{toggle()}}>
-                        <ion-icon name="alert-outline"></ion-icon>
+                            <span className="linkSide">Contato</span>
+                        </a>
+                        <a className="divLink" href="http://localhost:3000/#depoimentos" style={{textDecoration: "inherit", color: "white"}} onClick={()=>{toggle()}}>
+                            <ion-icon name="person-outline"></ion-icon>
+                            <span className="linkSide">Depoimentos</span>
+                        </a>
+                        <a className="divLink" href="http://localhost:3000/#faq" style={{textDecoration: "inherit", color: "white"}} onClick={()=>{toggle()}}>
+                            <ion-icon name="alert-outline"></ion-icon>
                             <span className="linkSide">FAQ</span>
-                        </Link>
-                        <Link className="divLink" onClick={()=>{scrollTop("/services")}}>
+                        </a>
+                        <Link className="divLink" onClick={()=>{toggle(); scrollTop("/services", 0)}}>
                             <ion-icon name="people-outline"></ion-icon>
                             <span className="linkSide">Seja um parceiro</span>
                         </Link>
-                        <div>
-                            <ion-icon name="calendar-number-outline"></ion-icon>
-                            <span className="linkSide">Agende sua mudança</span>
-                        </div>
                     </div>
                 </div>
                 <div className={`teste2 ${visu == 1 ? "displayNone" : "displayShow"}`} onClick={()=>{toggle()}}></div>
@@ -146,8 +141,8 @@ const Head = styled.header`
                 cursor: pointer;
 
                 :hover{
-                    transition: 0.5s;
-                    color: #202c2c;
+                    transition: 0.5s !important;
+                    color: #202c2c !important;
                 }
             }
         }
