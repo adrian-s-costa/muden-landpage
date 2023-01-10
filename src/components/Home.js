@@ -170,7 +170,7 @@ export default function Home(){
                                 </div>
                             </form>
                         </Element>
-                        <img className="formTruck displayNone" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672774011/muden/2023-01-03_15-23_phicz6.png"/>
+                        <img className="formTruck displayNoneMedia" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672774011/muden/2023-01-03_15-23_phicz6.png"/>
                     </SectionDiv>
                     <div className="triangulo-para-baixo terceiro"></div>
                 </ArticleDiv>
@@ -512,6 +512,12 @@ const MainDiv = styled.main`
             max-width: 975px;
             align-items: center;
             margin-top: 50px;
+
+            @media (max-width: 975px){
+                .displayNoneMedia{
+                    display: none !important;
+                }
+            }
 
             .formTruck{
                 margin-top: 50px;

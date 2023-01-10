@@ -44,7 +44,13 @@ export default function Header(){
                             <div className="link">Serviços</div>
                         </Link>
                         <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
-                            <div className="link">Fale conosco</div>
+                            <div className="link">Contato</div>
+                        </Link>
+                        <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
+                            <div className="link">Sobre nós</div>
+                        </Link>
+                        <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
+                            <div className="link">Depoimentos</div>
                         </Link>
                         <Link activeClass="active" to="test3" spy={true} smooth={true} duration={500} offset={-70}>
                             <div className="link">FAQ</div>
@@ -166,7 +172,7 @@ const Head = styled.header`
         height: 100%;
         padding: 0px 15px;
         width: auto;
-        font-size: 18px;
+        font-size: 15px;
         color: white;
         font-weight: bold;
         :hover{
