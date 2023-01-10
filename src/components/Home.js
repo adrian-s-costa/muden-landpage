@@ -166,7 +166,7 @@ export default function Home(){
                                             <option value="Não pretende">Não vou me mudar, por hora</option>
                                         </select>
                                     </div> */}
-                                    <Button width={"100px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "budget"})}>Enviar</Button>
+                                    <Button fontSize={"18px"} width={"100px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "budget"})}>Enviar</Button>
                                 </div>
                             </form>
                         </Element>
@@ -177,19 +177,55 @@ export default function Home(){
                 <ArticleDiv className="article8">
                     <SectionDiv className="section9">
                         <h3>Veja alguns depoimentos dos <strong className="bold">nossos clientes:</strong></h3>
-                        <div>
-                            <div className="depoimentoDiv">
-                                {/* <div className="ionIcon esq">
-                                    <ion-icon name="caret-back-outline"></ion-icon>
-                                </div> */}
-                                <img className="aspasCima" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677679/muden/2022-10-13_12-14_g9nxzj.png"></img>
-                                <h6 className="depoimento">Jamais imaginei que uma mudança podia ser tão tranquila. Eu não precisei fazer absolutamente nada, eles cuidaram. Melhor empresa de mudanças que já vi!</h6>
-                                <img className="aspasBaixo" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677749/muden/template_primary_hr8owj.png"></img>
-                                {/* <div className="ionIcon dir">
-                                    <ion-icon name="caret-forward-outline"></ion-icon>
-                                </div> */}
+                        <div className="depoimentoDiv">
+                            <div>
+                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div className="depDiv">
+                                                <img className="aspasCima" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677679/muden/2022-10-13_12-14_g9nxzj.png"></img>
+                                                <h6 className="depoimento">Jamais imaginei que uma mudança podia ser tão tranquila. Eu não precisei fazer absolutamente nada, eles cuidaram. Melhor empresa de mudanças que já vi!</h6>
+                                                <div className="aspaDiv">
+                                                    <img className="aspasBaixo" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677749/muden/template_primary_hr8owj.png"></img>                                           
+                                                </div>
+                                            </div>
+                                            <h6 className="cliente">-Martha Oliveira</h6>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div className="depDiv">
+                                                <img className="aspasCima" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677679/muden/2022-10-13_12-14_g9nxzj.png"></img>
+                                                <h6 className="depoimento">Jamais imaginei que uma mudança podia ser tão tranquila. Eu não precisei fazer absolutamente nada, eles cuidaram. Melhor empresa de mudanças que já vi!</h6>
+                                                <div className="aspaDiv">
+                                                    <img className="aspasBaixo" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677749/muden/template_primary_hr8owj.png"></img>                                           
+                                                </div>
+                                            </div>
+                                            <h6 className="cliente">-Martha Oliveira</h6>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div className="depDiv">
+                                                <img className="aspasCima" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677679/muden/2022-10-13_12-14_g9nxzj.png"></img>
+                                                <h6 className="depoimento">Jamais imaginei que uma mudança podia ser tão tranquila. Eu não precisei fazer absolutamente nada, eles cuidaram. Melhor empresa de mudanças que já vi!</h6>
+                                                <div className="aspaDiv">
+                                                    <img className="aspasBaixo" src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665677749/muden/template_primary_hr8owj.png"></img>                                           
+                                                </div>
+                                            </div>
+                                            <h6 className="cliente">-Martha Oliveira</h6>
+                                        </div>
+                                    </div>
+                                    <div className="carouselIconArrow">
+                                        <ion-icon name="chevron-back-outline" href="#carouselExampleControls" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon border border-primary" aria-hidden="true"></span>
+                                            <span class="sr-only">Anterior</span>
+                                        </ion-icon>
+                                    </div>
+                                    <div className="carouselIconArrowNext">
+                                        <ion-icon name="chevron-forward-outline" href="#carouselExampleControls" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon border border-primary" aria-hidden="true"></span>
+                                            <span class="sr-only">Próximo</span>
+                                        </ion-icon>
+                                    </div>
+                                </div>
                             </div>
-                            <h6 className="cliente">-Martha Oliveira</h6>
                         </div>
                     </SectionDiv>
                 </ArticleDiv>
@@ -251,7 +287,6 @@ export default function Home(){
                     <div className="footerDiv">
                         <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41}></ImgLogo>
                         <div className="footerIconsDiv">
-                            <FaFacebookF className="footerIcon"/>
                             <FaTiktok className="footerIcon"/>
                             <FaInstagram className="footerIcon"/>
                             <FaWhatsapp className="footerIcon"/>
@@ -511,6 +546,10 @@ const MainDiv = styled.main`
         min-height: 650px;
         position: relative;
 
+        @media (max-width: 975px){
+            min-height: 0px !important;
+        }
+
         .section9{
             margin-top: 100px;
             display: flex;
@@ -529,6 +568,11 @@ const MainDiv = styled.main`
                 width: 550px;
                 font-size: min(3vw, 25px);
                 font-style: italic;
+
+                @media (max-width: 975px){
+                    width: 50vw;
+                    padding-right: 8vw;
+                }
             }
 
             .aspasCima, .aspasBaixo{
@@ -539,12 +583,17 @@ const MainDiv = styled.main`
             }
 
             .aspasCima{
-                margin-top: -4vh;
+                //margin-top: -4vh;
                 margin-right: 2vw;
             }
 
             .aspasBaixo{
-                margin-top: 80px;
+                margin-top: 60px;
+                @media (max-width: 975px){
+                    position: absolute;
+                    right: 0px;
+                    bottom: 0px;
+                }
             }
 
             .depoimentoDiv{
@@ -552,11 +601,56 @@ const MainDiv = styled.main`
                 margin-top: 110px;
                 width: 100%;
                 justify-content: center;
+                
+                .depDiv{
+                    display: flex;
+                    height: auto;
+                    position: relative;
+                }
+
+
+                @media (max-width: 975px){
+                    margin-top: 70px;
+                }
+            }
+        
+            .carouselHeigth{
+                height: auto;
+            }
+            
+            .carouselIconArrow, .carouselIconArrowNext{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                text-align: center;
+                cursor: pointer;
+
+                @media (max-width:975px) {
+                    top: 1px !important;
+                }
+            }
+
+            .carouselIconArrow{
+                left: -50px;
+            }
+
+            .carouselIconArrowNext{
+                right: -50px !important;
             }
 
             h3{
                 font-size: 40px;
                 width: 600px;
+
+                @media (max-width: 975px){
+                    font-size: 30px;
+                }
             }
             
             .cliente{
@@ -565,6 +659,11 @@ const MainDiv = styled.main`
                 text-align: end;
                 margin-top: 9vh;
                 margin-right: 7vw;
+
+                @media (max-width: 975px){
+                    margin-top: 20px;
+                    margin-bottom: 50px;
+                }
             }
 
             @media (max-width: 975px) {
@@ -624,6 +723,9 @@ const ArticleDiv = styled.article`
             max-width: 550px;
             font-size: 40px;
             font-weight: 400;
+            @media (max-width: 975px){
+                font-size: 30px;
+            }
         }
         h2{
             width: 100%;
@@ -631,6 +733,9 @@ const ArticleDiv = styled.article`
             //max-width: 850px;
             text-align: justify;
             margin: 10px 0px 0px 0px;
+            @media (max-width: 975px){
+                font-size: 15px;
+            }
         }
         h6{
             width: 100%;
@@ -832,6 +937,7 @@ const ArticleDiv = styled.article`
             @media (max-width: 975px) {
                 flex-direction: column;
                 width: 100% !important;
+                margin-bottom: 50px;
             }
         }
 

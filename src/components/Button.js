@@ -22,6 +22,10 @@ const Btn = styled.button`
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 975px){
+        font-size: 20px;
+    }
+
     :hover{
         cursor: pointer;
         transition: 0.5s;

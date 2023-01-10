@@ -110,7 +110,6 @@ export default function Services(){
                     <div className="footerDiv">
                         <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41}></ImgLogo>
                         <div className="footerIconsDiv">
-                            <FaFacebookF className="footerIcon"/>
                             <FaTiktok className="footerIcon"/>
                             <FaInstagram className="footerIcon"/>
                             <FaWhatsapp className="footerIcon"/>
