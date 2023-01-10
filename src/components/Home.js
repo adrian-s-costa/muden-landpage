@@ -580,6 +580,10 @@ const MainDiv = styled.main`
             max-width: 975px;
             flex-direction: column;
 
+            @media(max-width: 975px){
+                margin-top: 50px;
+            }
+
             .ionIcon{
                 margin-top: 30px;
                 font-size: 60px;
