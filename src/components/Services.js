@@ -74,7 +74,6 @@ export default function Services(){
                                             <option value="montador">Montador</option>
                                             <option value="faxineiro">Faxineiro</option>
                                             <option value="motorista">Motorista</option>
-                                            <option value="posteriormente">Pretendo me mudar posteriormente</option>
                                         </select>
                                     </div>
                                 <Button width={"100px"} color={"#04b891"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "contact"})}>Enviar</Button>
@@ -416,6 +415,7 @@ const ArticleDiv = styled.article`
                 margin-top: 10px;
                 display: flex;
                 flex-direction: column;
+
                 .dropLabel{
                     font-size: 19px;
                     color: #38bc94;
@@ -423,6 +423,7 @@ const ArticleDiv = styled.article`
                     margin-bottom: 10px;
                 }
                 .dropInput{
+                    background-color: #ececec;
                     width: 400px;
                     border-radius: 20px;
                     border: none;
@@ -431,7 +432,6 @@ const ArticleDiv = styled.article`
                     font-size: 15px;
                     font-style: italic;
                     font-family: 'Poppins';
-                    background-color: white;
                     @media (max-width: 975px) {
                         width: 100% !important;
                     }
@@ -481,6 +481,9 @@ const Footer = styled.footer`
     background-color: #38bc94;
     display: flex;
     justify-content: center;
+    @media (max-width: 975px) {
+        height: 100px;
+    }
     .footerDiv{
         height: 100%;
         width: 100%;
@@ -488,11 +491,22 @@ const Footer = styled.footer`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: 975px) {
+            margin-top: 0px;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 10px;
+        }
     }
     .footerIconsDiv{
         display: flex;
         align-items: center;
         gap: 10px;
+        @media (max-width: 975px) {
+            width: 130px;
+            justify-content: space-between;
+        }
     }
     .footerIcon{
         color: white;

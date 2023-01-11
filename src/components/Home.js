@@ -563,10 +563,6 @@ const MainDiv = styled.main`
         border-bottom-left-radius: 200px;
         border-top-right-radius: 180px;
         position: relative;
-
-        @media (max-width: 975px) {
-            margin-bottom: 100px;
-        }
     }
 
     .article8{
@@ -755,8 +751,13 @@ const ArticleDiv = styled.article`
         max-width: 975px;
         display: flex;
         justify-content: center;
-        margin-top: 80px;
+        margin-top: 40px;
         margin-bottom: 100px;
+
+        @media(max-width: 975px){
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
 
         h3{
             width: 100%;
@@ -1153,14 +1154,6 @@ const Footer = styled.footer`
     bottom: 0px;
     z-index: 0;
 
-    @media(max-width: 975px){
-       margin-bottom: -20px;
-    }
-    
-
-    /* @media(max-width: 975px){
-        height: 500px;
-    } */
 
     .footerDiv{
         height: 100%;
@@ -1168,22 +1161,22 @@ const Footer = styled.footer`
         max-width: 975px;
         display: flex;
         align-items: flex-end;
-        justify-content: flex-end;
-        gap: 10px;
+        justify-content: space-between;
         padding-bottom: 30px;
         @media (max-width: 975px) {
-            margin-top: 10px;
+            margin-top: 0px;
             flex-direction: column;
-            padding-bottom: 35px;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding-bottom: 10px;
+            gap: 10px;
         }
     }
     .footerIconsDiv{
         display: flex;
         align-items: center;
         gap: 10px;
-        
         @media (max-width: 975px) {
-            margin-bottom: -5px;
             width: 130px;
             justify-content: space-between;
         }
