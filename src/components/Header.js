@@ -49,7 +49,7 @@ export default function Header(){
                 </div>
                 <div className={`teste ${visu == 1 ? "displayNone" : "displayShow"}`}>
                     <div className="displayNone linksList">
-                        <a className="divLink" href="http://muden-landpage.vercel.app/#sobre-nos" style={{textDecoration: "inherit", color: "white"}} onClick={()=>{toggle()}}>
+                        <a className="divLink" style={{textDecoration: "inherit", color: "white"}} onClick={()=>{toggle();scrollTop("/", 0)}}>
                             <ion-icon name="storefront-outline"></ion-icon>
                             <span className="linkSide">Sobre nós</span>
                         </a>

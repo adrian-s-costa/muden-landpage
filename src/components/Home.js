@@ -80,7 +80,7 @@ export default function Home(){
                 </ArticleDiv>
                 <ArticleDiv className="article2" id="sobre-nos">
                     <SectionDiv className="section2">
-                        <h3 className="bold">A empresa de mudanças que <span className="greenMuden">cuida de tudo</span></h3>
+                        <h3 className="bold">A empresa de mudanças que <span className="greenMuden font29px">cuida de tudo</span></h3>
                         <h2>A muden é um serviço de mudanças que tem como objetivo transformar um momento cansativo e frustrante em algo simples e sem stress. Temos equipes especializadas e experientes que cuidam de todo o planejamento da mudança para que você não precise se preocupar com nada. Agora mudar não é mais um problema, <span className="bold greenMuden">recomece do seu jeito!</span></h2>
                         <div className="triangulo-para-baixo"></div>                
                     </SectionDiv>
@@ -372,6 +372,12 @@ const MainDiv = styled.main`
     .greenMuden{
         color: #38bc94;
         font-weight: bold;
+    }
+
+    .font29px{
+        @media (max-width: 975px) {
+            font-size: 29px !important;   
+        }
     }
 
     .article6{
@@ -739,6 +745,13 @@ const ArticleDiv = styled.article`
 
     .sectionDiv{
         font-size: 40px;
+
+        .test2{
+            @media (max-width: 975px) {
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
 
     .servicos{
@@ -766,6 +779,7 @@ const ArticleDiv = styled.article`
             font-weight: 400;
             @media (max-width: 975px){
                 font-size: 30px;
+                word-break: break-all;
             }
         }
         h2{
