@@ -15,14 +15,9 @@ export default function Header(){
         setVisu(visu * -1)
     }
 
-
     function scrollTop(nav, px){
         navigate(nav);
         window.scrollTo({top: px, behavior: 'smooth'});
-    }
-
-    function changeColor(e, color){
-        e.target.style.color = color
     }
 
     return(
@@ -31,7 +26,7 @@ export default function Header(){
                 <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672785402/muden/muden-logo-principal-branco_mrbzit_oblp0y.png" width={171} height={40} onClick={()=>{scrollTop("/", 0)}}></ImgLogo>
                 <LinkHead className="header">
                     <Links>
-                        <a href="http://muden-landpage.vercel.app/#sobre-nos" style={{textDecoration: "none"}}>
+                        <a href="http://muden-landpage.vercel.app/" style={{textDecoration: "none"}}>
                             <div className="link">Sobre nós</div>
                         </a>
                         <a href="http://muden-landpage.vercel.app/#servicos" style={{textDecoration: "none"}}>
@@ -47,7 +42,7 @@ export default function Header(){
                             <div className="link">FAQ</div>
                         </a>
                     </Links>
-                    <div className="btn"><Button width={"240px"} fontSize={"18px"} color={"#04b891"} colorFont={"white"} set={()=>{scrollTop("/services", 0)}}>Seja um parceiro</Button></div>
+                    <div className="btn"><Button width={"200px"} fontSize={"16px"} color={"#04b891"} colorFont={"white"} set={()=>{scrollTop("/services", 0)}}>Seja um parceiro</Button></div>
                 </LinkHead>
                 <div className="icon" onClick={()=>{toggle()}}>
                     <ion-icon name="menu-outline"></ion-icon>

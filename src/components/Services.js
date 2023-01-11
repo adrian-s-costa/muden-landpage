@@ -6,8 +6,16 @@ import axios from "axios";
 import { useState } from "react";
 import { Element, Link } from 'react-scroll'
 import Header from "./Header";
+import { useNavigate } from "react-router-dom";
 
 export default function Services(){
+
+    const navigate = useNavigate();
+
+    function scrollTop(nav, px){
+        navigate(nav);
+        window.scrollTo({top: px, behavior: 'smooth'});
+    }
 
     let [sent, setSent] = useState(false);
 
@@ -59,7 +67,16 @@ export default function Services(){
                                 <Input marginBot={"5px"} bgcolor={"#ececec"} label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, name: e.target.value})} value={contactData.name}></Input>
                                 <Input marginBot={"5px"} bgcolor={"#ececec"} label={"Telefone para contato"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, tel: e.target.value})} value={contactData.tel}></Input>
                                 <Input marginBot={"5px"} bgcolor={"#ececec"} label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
-                                <Input marginBot={"5px"} bgcolor={"#ececec"} label={"Serviço prestado"} placeholder={"Montador"} type={"text"} height={"35px"} width={"400px"} set={(e)=>setContactData({ ...contactData, servico: e.target.value})} value={contactData.servico}></Input>
+                                <div className="dropdown">
+                                        <label for="servico" className="dropLabel">Serviço prestado</label>
+                                        <select name="servico" id="servico" required={true} className="dropInput" onChange={(e)=>setContactData({ ...contactData, date: e.target.value})} value={contactData.date}>
+                                            <option value="" disabled selected>Escolha uma opção</option>
+                                            <option value="montador">Montador</option>
+                                            <option value="faxineiro">Faxineiro</option>
+                                            <option value="motorista">Motorista</option>
+                                            <option value="posteriormente">Pretendo me mudar posteriormente</option>
+                                        </select>
+                                    </div>
                                 <Button width={"100px"} color={"#04b891"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "contact"})}>Enviar</Button>
                             </div>
                         </form>
@@ -89,7 +106,7 @@ export default function Services(){
                     </SectionDiv>
                     <div className="triangulo-para-baixo segundo"></div>
                 </ArticleDiv>
-                <ArticleDiv className="article5" id="section2">
+                <ArticleDiv className="article5">
                     <SectionDiv className="section9">
                         <div className="esp">
                             <div className="espDiv">
@@ -108,7 +125,7 @@ export default function Services(){
                 </ArticleDiv>
                 <Footer className="footer">
                     <div className="footerDiv">
-                        <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41}></ImgLogo>
+                        <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41} onClick={()=>{scrollTop("/", 0)}}></ImgLogo>
                         <div className="footerIconsDiv">
                             <FaTiktok className="footerIcon"/>
                             <FaInstagram className="footerIcon"/>
@@ -403,7 +420,7 @@ const ArticleDiv = styled.article`
                     font-size: 19px;
                     color: #38bc94;
                     font-weight: bold;
-                    margin-bottom: -5px;
+                    margin-bottom: 10px;
                 }
                 .dropInput{
                     width: 400px;
@@ -460,7 +477,7 @@ const SectionDiv = styled.section`
 `
 const Footer = styled.footer`
     width: 100%;
-    height: 80px;
+    height: 120px;
     background-color: #38bc94;
     display: flex;
     justify-content: center;

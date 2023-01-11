@@ -7,6 +7,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Element, Link } from 'react-scroll'
 import Header from "./Header";
+import { useNavigate } from "react-router-dom";
 
 export default function Home(){
 
@@ -24,6 +25,13 @@ export default function Home(){
         message: "",
         type: ""
     });
+
+    const navigate = useNavigate();
+
+    function scrollTop(nav, px){
+        navigate(nav);
+        window.scrollTo({top: px, behavior: 'smooth'});
+    }
 
     function whatsappMessage(){
         const cel = "5567992214009"
@@ -63,7 +71,7 @@ export default function Home(){
                         <h1 className="bold">Olá, nós somos a <span className="greenMuden">Muden</span></h1>
                         <h2>Feita para pessoas que entendem o quanto o tempo é precioso! Invista seu tempo com o que realmente importa, <span className="bold">e com quem importa!!</span></h2>
                         <Link activeClass="active" className="test2" to="contato" spy={true} smooth={true} duration={500} offset={-50}>
-                            <Button width={"250px"} fontSize={"23px"} color={"#38bc94"} colorFont={"white"}>Quero me mudar!</Button>
+                            <Button width={"280px"} fontSize={"25px"} color={"#38bc94"} colorFont={"white"} marginTop={"15px"}>Quero me mudar!</Button>
                         </Link>
                     </SectionDiv>
                     <AsideDiv className="asideDiv">
@@ -145,7 +153,7 @@ export default function Home(){
                             </div>
                         </div>
                     </SectionDiv> */}
-                <ArticleDiv className="article4" id="contato">
+                <ArticleDiv className="article4">
                     <SectionDiv className="section8">
                         <Element className="section5">
                             <h3>Vamos fazer um <span className="bold">orçamento</span>?</h3>
@@ -155,17 +163,16 @@ export default function Home(){
                                     <Input label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, name: e.target.value})} value={contactData.name}></Input>
                                     <Input label={"Telefone (WhatsApp)"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, tel: e.target.value})} value={contactData.tel}></Input>
                                     <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
-                                    <Input label={"Quando pretende se mudar?"} type={"date"} height={"35px"} width={"400px"} set={(e)=>setContactData({ ...contactData, date: e.target.value})} value={contactData.date}></Input>
-                                    {/* <div className="dropdown">
+                                    <div className="dropdown">
                                         <label for="days" className="dropLabel">Quando pretende se mudar?</label>
                                         <select name="days" id="days" required={true} className="dropInput" onChange={(e)=>setContactData({ ...contactData, date: e.target.value})} value={contactData.date}>
                                             <option value="" disabled selected>Escolha uma opção</option>
                                             <option value="dentro de 30 dias">Sim, nos próximos 30 dias</option>
                                             <option value="dentro de 60 dias">Sim, nos próximos 60 dias</option>
                                             <option value="dentro de 90 dias">Sim, nos próximos 90 dias</option>
-                                            <option value="Não pretende">Não vou me mudar, por hora</option>
+                                            <option value="posteriormente">Pretendo me mudar posteriormente</option>
                                         </select>
-                                    </div> */}
+                                    </div>
                                     <Button fontSize={"18px"} width={"100px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "budget"})}>Enviar</Button>
                                 </div>
                             </form>
@@ -283,9 +290,9 @@ export default function Home(){
                         <img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672780668/muden/muden_simbolo_branco-03_uukgpk_1_2_qvn3q1.png" className="backMuden"></img>
                     </Element>
                 </ArticleDiv>
-                <Footer className="footer">
+                <Footer className="footer" id="contato">
                     <div className="footerDiv">
-                        <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41}></ImgLogo>
+                        <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41} onClick={()=>{scrollTop("/", 0)}}></ImgLogo>
                         <div className="footerIconsDiv">
                             <FaTiktok className="footerIcon"/>
                             <FaInstagram className="footerIcon"/>
@@ -552,10 +559,14 @@ const MainDiv = styled.main`
         display: flex;
         justify-content: center !important;
         z-index: 1;
-        margin-bottom: 90px;
+        margin-bottom: 110px;
         border-bottom-left-radius: 200px;
         border-top-right-radius: 180px;
         position: relative;
+
+        @media (max-width: 975px) {
+            margin-bottom: 100px;
+        }
     }
 
     .article8{
@@ -1142,22 +1153,39 @@ const Footer = styled.footer`
     bottom: 0px;
     z-index: 0;
 
+    @media(max-width: 975px){
+       margin-bottom: -20px;
+    }
+    
+
+    /* @media(max-width: 975px){
+        height: 500px;
+    } */
+
     .footerDiv{
         height: 100%;
         width: 100%;
         max-width: 975px;
         display: flex;
         align-items: flex-end;
-        justify-content: space-between;
-        padding-bottom: 20px;
+        justify-content: flex-end;
+        gap: 10px;
+        padding-bottom: 30px;
+        @media (max-width: 975px) {
+            margin-top: 10px;
+            flex-direction: column;
+            padding-bottom: 35px;
+        }
     }
     .footerIconsDiv{
         display: flex;
         align-items: center;
         gap: 10px;
-
+        
         @media (max-width: 975px) {
             margin-bottom: -5px;
+            width: 130px;
+            justify-content: space-between;
         }
     }
     .footerIcon{

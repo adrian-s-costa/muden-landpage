@@ -32,6 +32,5 @@ const Btn = styled.button`
         color: ${(props) => props.colorFont};
         background-color: #1f2928;
         border-color: #38bc94;
-        border-width: 1px;
     }
 `
