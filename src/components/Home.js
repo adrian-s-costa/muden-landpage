@@ -964,6 +964,7 @@ const ArticleDiv = styled.article`
                     font-style: italic;
                     font-family: 'Poppins';
                     background-color: white;
+                    color: #6e7473;
                     @media (max-width: 975px) {
                         width: 100%;
                     }

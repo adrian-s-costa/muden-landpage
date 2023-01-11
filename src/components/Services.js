@@ -424,6 +424,7 @@ const ArticleDiv = styled.article`
                 }
                 .dropInput{
                     background-color: #ececec;
+                    color: #6e7473;
                     width: 400px;
                     border-radius: 20px;
                     border: none;
