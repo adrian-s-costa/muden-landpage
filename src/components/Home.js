@@ -489,8 +489,8 @@ const MainDiv = styled.main`
 
                             @media (max-width: 975px) {
                                 margin-top: 0px;
-                                height: 60px !important;
-                                width: 59px !important;
+                                height: 80px !important;
+                                width: 80px !important;
                             }
                         }
 
@@ -510,8 +510,8 @@ const MainDiv = styled.main`
                             height: 100px;
                             width: 100px;
                             @media (max-width: 975px) {
-                                height: 60px !important;
-                                width: 60px !important;
+                                height: 70px !important;
+                                width: 70px !important;
                             }
                         }
                     }
