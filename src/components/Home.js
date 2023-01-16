@@ -153,7 +153,7 @@ export default function Home(){
                             </div>
                         </div>
                     </SectionDiv> */}
-                <ArticleDiv className="article4" id="contato">
+                <ArticleDiv className="article4">
                     <SectionDiv className="section8">
                         <Element className="section5">
                             <h3>Vamos fazer um <span className="bold">orçamento</span>?</h3>
@@ -290,7 +290,7 @@ export default function Home(){
                         <img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1672780668/muden/muden_simbolo_branco-03_uukgpk_1_2_qvn3q1.png" className="backMuden"></img>
                     </Element>
                 </ArticleDiv>
-                <Footer className="footer">
+                <Footer className="footer" id="contato">
                     <div className="footerDiv">
                         <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41} onClick={()=>{scrollTop("/", 0)}}></ImgLogo>
                         <div className="footerIconsDiv">
