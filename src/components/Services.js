@@ -35,7 +35,7 @@ export default function Services(){
     function setData(event){
         event.preventDefault();
         console.log(contactData);
-        axios.post("http://localhost:5000/sendemail", contactData)
+        axios.post("http://54.207.77.153:5000/sendemail", contactData)
         .then((response)=>{
             console.log(response.data)
             showPopUp();
@@ -69,7 +69,7 @@ export default function Services(){
                                 <Input marginBot={"5px"} bgcolor={"#ececec"} label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
                                 <div className="dropdown">
                                         <label for="servico" className="dropLabel">Serviço prestado</label>
-                                        <select name="servico" id="servico" required={true} className="dropInput" onChange={(e)=>setContactData({ ...contactData, date: e.target.value})} value={contactData.date}>
+                                        <select name="servico" id="servico" required={true} className="dropInput" onChange={(e)=>setContactData({ ...contactData, servico: e.target.value})} value={contactData.servico}>
                                             <option value="" disabled selected>Escolha uma opção</option>
                                             <option value="montador">Montador</option>
                                             <option value="faxineiro">Faxineiro</option>
