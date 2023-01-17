@@ -43,7 +43,7 @@ export default function Home(){
     function setData(event){
         event.preventDefault();
         console.log(contactData);
-        axios.post("http://54.207.77.153:5000/sendemail", contactData)
+        axios.post("https://muden-backend.up.railway.app/sendemail", contactData)
         .then((response)=>{
             console.log(response.data)
             showPopUp();
