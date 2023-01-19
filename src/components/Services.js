@@ -71,9 +71,15 @@ export default function Services(){
                                         <label for="servico" className="dropLabel">Serviço prestado</label>
                                         <select name="servico" id="servico" required={true} className="dropInput" onChange={(e)=>setContactData({ ...contactData, servico: e.target.value})} value={contactData.servico}>
                                             <option value="" disabled selected>Escolha uma opção</option>
-                                            <option value="montador">Montador</option>
-                                            <option value="faxineiro">Faxineiro</option>
-                                            <option value="motorista">Motorista</option>
+                                            <option value="carreto">Carreto</option>
+                                            <option value="diarista">Diarista</option>
+                                            <option value="eletricista">Eletricista</option>
+                                            <option value="encanador">Encanador</option>
+                                            <option value="instalador de ar condicionado">Instalador de ar condicionado</option>
+                                            <option value="montador de móveis">Montador de móveis</option>
+                                            <option value="pedreiro">Pedreiro</option>
+                                            <option value="personal organizer">Personal Organizer</option>
+                                            <option value="pintor">Pintor</option>
                                         </select>
                                     </div>
                                 <Button width={"100px"} color={"#04b891"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "contact"})}>Enviar</Button>

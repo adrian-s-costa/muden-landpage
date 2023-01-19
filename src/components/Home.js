@@ -71,7 +71,7 @@ export default function Home(){
                         <h1 className="bold">Olá, nós somos a <span className="greenMuden">Muden</span></h1>
                         <h2>Feita para pessoas que entendem o quanto o tempo é precioso! Invista seu tempo com o que realmente importa, <span className="bold">e com quem importa!!</span></h2>
                         <Link activeClass="active" className="test2" to="contato" spy={true} smooth={true} duration={500} offset={-50}>
-                            <Button width={"280px"} fontSize={"25px"} color={"#38bc94"} colorFont={"white"} marginTop={"15px"}>Quero me mudar!</Button>
+                            <Button width={"250px"} fontSize={"23px"} color={"#38bc94"} colorFont={"white"} marginTop={"15px"}>Quero me mudar!</Button>
                         </Link>
                     </SectionDiv>
                     <AsideDiv className="asideDiv">
@@ -243,12 +243,12 @@ export default function Home(){
                             <div className="faqColumn">
                                 <div className="faqBlock">
                                     <h6 className="faqTitle">Como realizar um orçamento?</h6> <br/>
-                                    <h6 className="faqDesc">Basta clicar no canto superior direito onde está escrito “Quero me mudar”, e preencher seus dados, entra- remos em contato com você via Whats App em até 12 horas, nosso processo de orçamento é bem rápido, só precisaremos de algumas informações que nossos atendentes irão solicitar, como origem e destino da mudança, o tamanho da residência, quantos cômo- dos, e quais serão os moveis que precisarão do serviço de montagem, após isso o resto é conosco.</h6>
+                                    <h6 className="faqDesc">Basta clicar no botão “Quero me mudar”, e preencher seus dados, entraremos em contato com você via Whatsapp em até 12 horas, nosso processo de orçamento é bem rápido, só precisaremos de algumas informações que nossos atendentes irão solicitar, como origem e destino da mudança, o tamanho da residência, quantos cômodos, e quais serão os móveis que precisam do serviço de montagem, após isso o resto é conosco.</h6>
                                     <br/>
                                 </div>
                                 <div className="faqBlock">
                                     <h6 className="faqTitle">Posso contratar apenas um dos serviços?</h6><br/>
-                                    <h6 className="faqDesc">dos serviços? Claro que sim, aqui na muden você pode personalizar e deixar a sua mudança composta da forma que preferir, você pode escolher qualquer serviço de forma isolada, basta sinalizar no momento da real- ização do orçamento.</h6>
+                                    <h6 className="faqDesc">Claro que sim, aqui você pode personalizar e deixar a sua mudança composta da forma que preferir, escolhendo qualquer serviço de forma isolada, basta sinalizar no momento da realização do orçamento.</h6>
                                     <br/>                            
                                 </div>
                                 <div className="faqBlock">
@@ -260,12 +260,12 @@ export default function Home(){
                             <div className="faqColumn">
                                 <div className="faqBlock">
                                     <h6 className="faqTitle">Recebi o orçamento e agendei minha mudança, e agora!?</h6><br/>
-                                    <h6 className="faqDesc">Agora chegamos na etapa de realizar o pagamento no método escolhido até 12 horas antes do dia e horário que sua mudança foi agendada, após isso é só esperar o dia chegar e estaremos no local, com toda nossa equipe para entregar uma mudança tran- quila e sem estresse.</h6>
+                                    <h6 className="faqDesc">Agora chegamos na etapa de realizar o pagamento no método escolhido até 12 horas antes do dia e horário que sua mudança foi agendada, após isso é só esperar o dia chegar e estaremos no local, com toda nossa equipe para entregar uma mudança tranquila e sem estresse.</h6>
                                     <br/>
                                 </div>
                                 <div className="faqBlock">
                                     <h6 className="faqTitle">Posso parcelar o valor da minha mudança?</h6><br/>
-                                    <h6 className="faqDesc">Sim, aqui na Muden você pode escolher qual a melhor forma de pagamento para você, realizamos par- celamentos no crédito em até 12x sem juros, débito, TED e até Pix, você escolhe.</h6>
+                                    <h6 className="faqDesc">Sim, você pode parcelar a sua mudança no crédito em até 12x sem juros.</h6>
                                     <br/>
                                 </div>
                                 <div className="faqBlock">
