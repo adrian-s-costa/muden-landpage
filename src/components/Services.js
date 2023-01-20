@@ -496,8 +496,10 @@ const Footer = styled.footer`
         width: 100%;
         max-width: 975px;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 7px;
         @media (max-width: 975px) {
             margin-top: 0px;
             flex-direction: column;
@@ -509,7 +511,7 @@ const Footer = styled.footer`
     .footerIconsDiv{
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 17px;
         @media (max-width: 975px) {
             width: 130px;
             justify-content: space-between;
@@ -517,7 +519,7 @@ const Footer = styled.footer`
     }
     .footerIcon{
         color: white;
-        font-size: 40px;
+        font-size: 30px;
         cursor: pointer;
     }
     @media (max-width: 975px) {

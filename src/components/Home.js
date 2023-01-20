@@ -70,7 +70,7 @@ export default function Home(){
                     <SectionDiv className="sectionDiv">
                         <h1 className="bold">Olá, nós somos a <span className="greenMuden">Muden</span></h1>
                         <h2>Feita para pessoas que entendem o quanto o tempo é precioso! Invista seu tempo com o que realmente importa, <span className="bold">e com quem importa!!</span></h2>
-                        <Link activeClass="active" className="test2" to="contato" spy={true} smooth={true} duration={500} offset={-50}>
+                        <Link activeClass="active" className="test2" to="contato2" spy={true} smooth={true} duration={500} offset={-50}>
                             <Button width={"250px"} fontSize={"23px"} color={"#38bc94"} colorFont={"white"} marginTop={"15px"}>Quero me mudar!</Button>
                         </Link>
                     </SectionDiv>
@@ -153,7 +153,7 @@ export default function Home(){
                             </div>
                         </div>
                     </SectionDiv> */}
-                <ArticleDiv className="article4">
+                <ArticleDiv className="article4" id="contato2">
                     <SectionDiv className="section8">
                         <Element className="section5">
                             <h3>Vamos fazer um <span className="bold">orçamento</span>?</h3>
@@ -1175,9 +1175,11 @@ const Footer = styled.footer`
         width: 100%;
         max-width: 975px;
         display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        padding-bottom: 30px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-bottom: 12px;
+        gap: 5px;
         @media (max-width: 975px) {
             margin-top: 0px;
             flex-direction: column;
@@ -1190,7 +1192,7 @@ const Footer = styled.footer`
     .footerIconsDiv{
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 16px;
         @media (max-width: 975px) {
             width: 130px;
             justify-content: space-between;
@@ -1198,9 +1200,9 @@ const Footer = styled.footer`
     }
     .footerIcon{
         color: white;
-        font-size: 40px;
+        font-size: 30px;
         cursor: pointer;
-        margin-bottom: 8px;
+        margin-bottom: 7px;
     }
     @media (max-width: 975px) {
         .footer{
