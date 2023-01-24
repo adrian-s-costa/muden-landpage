@@ -1184,7 +1184,7 @@ const Footer = styled.footer`
             margin-top: 0px;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: flex-start;
+            justify-content: flex-end;
             padding-bottom: 10px;
             gap: 10px;
         }
