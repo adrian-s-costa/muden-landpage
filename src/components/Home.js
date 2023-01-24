@@ -35,7 +35,7 @@ export default function Home(){
 
     function whatsappMessage(){
         const cel = "5511987612652"
-        let text = `Olá, gostaria de fazer um orçamento, por favor`
+        let text = `Olá. Seja bem vindo a Muden. Nossos operadores estão disponíveis para te atender.`
         text = window.encodeURIComponent(text)
         window.open("https://api.whatsapp.com/send?phone=" + cel + "&text=" + text, "_blank");
     }
