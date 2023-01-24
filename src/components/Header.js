@@ -69,10 +69,10 @@ export default function Header(){
                             <ion-icon name="alert-outline"></ion-icon>
                             <span className="linkSide">FAQ</span>
                         </a>
-                        <Link className="divLink" onClick={()=>{scrollTop("/services");toggle()}}>
+                        <a className="divLink" onClick={()=>{scrollTop("/services"); toggle()}}>
                             <ion-icon name="people-outline"></ion-icon>
                             <span className="linkSide">Seja um parceiro</span>
-                        </Link>
+                        </a>
                     </div>
                 </div>
                 <div className={`teste2 ${visu == 1 ? "displayNone" : "displayShow"}`} onClick={()=>{toggle()}}></div>
