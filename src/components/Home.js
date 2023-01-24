@@ -1183,8 +1183,8 @@ const Footer = styled.footer`
         @media (max-width: 975px) {
             margin-top: 0px;
             flex-direction: column;
-            align-items: flex-end;
-            justify-content: flex-end;
+            align-items: flex-start;
+            justify-content: flex-start;
             padding-bottom: 10px;
             gap: 10px;
         }
