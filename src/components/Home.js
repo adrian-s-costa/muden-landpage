@@ -34,8 +34,8 @@ export default function Home(){
     }
 
     function whatsappMessage(){
-        const cel = "5567992214009"
-        let text = `Olá, gostaria de tirar algumas dúvidas`
+        const cel = "5511987612652"
+        let text = `Olá, gostaria de fazer um orçamento, por favor`
         text = window.encodeURIComponent(text)
         window.open("https://api.whatsapp.com/send?phone=" + cel + "&text=" + text, "_blank");
     }
@@ -295,8 +295,8 @@ export default function Home(){
                         <ImgLogo src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1665060092/muden/muden-logo-principal-branco_mrbzit.webp" width={170} height={41} onClick={()=>{scrollTop("/", 0)}}></ImgLogo>
                         <div className="footerIconsDiv">
                             <FaTiktok className="footerIcon"/>
-                            <FaInstagram className="footerIcon"/>
-                            <FaWhatsapp className="footerIcon"/>
+                            <FaInstagram className="footerIcon" onClick={()=>{window.open("https://instagram.com/mudenoficial?igshid=MDM4ZDc5MmU=")}}/>
+                            <FaWhatsapp className="footerIcon" onClick={()=>{whatsappMessage()}}/>
                             <FaLinkedinIn className="footerIcon"/>
                         </div> 
                     </div>        
