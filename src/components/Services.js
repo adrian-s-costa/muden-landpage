@@ -503,7 +503,7 @@ const Footer = styled.footer`
         @media (max-width: 975px) {
             margin-top: 0px;
             flex-direction: column;
-            align-items: flex-end;
+            align-items: flex-start;
             justify-content: center;
             gap: 10px;
         }
