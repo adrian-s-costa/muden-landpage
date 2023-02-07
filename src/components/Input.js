@@ -6,14 +6,14 @@ export default function Input(props){
         return(
             <InputDiv>
                 <Label marginBot={props.marginBot} marginTop={props.marginTop}>{props.label}</Label>
-                <TextArea type={props.type} bgcolor={props.bgcolor} placeholder={props.placeholder} required={true} height={props.height} width={props.width} onChange={props.set} value={props.value}></TextArea>
+                <TextArea type={props.type} pattern={props.pattern} bgcolor={props.bgcolor} placeholder={props.placeholder} required={true} height={props.height} width={props.width} onChange={props.set} value={props.value}></TextArea>
             </InputDiv>
         )
     }else{
         return(
             <InputDiv>
                 <Label marginBot={props.marginBot} marginTop={props.marginTop}>{props.label}</Label>
-                <InputForm type={props.type} bgcolor={props.bgcolor} placeholder={props.placeholder} required={true} height={props.height} width={props.width} onChange={props.set} value={props.value}></InputForm>
+                <InputForm type={props.type} pattern={props.pattern} bgcolor={props.bgcolor} placeholder={props.placeholder} required={true} height={props.height} width={props.width} onChange={props.set} value={props.value}></InputForm>
             </InputDiv>
         )
     }

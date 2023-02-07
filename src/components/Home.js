@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Element, Link } from 'react-scroll'
 import Header from "./Header";
 import { useNavigate } from "react-router-dom";
+import dayjs from "dayjs";
 
 export default function Home(){
 
@@ -23,7 +24,9 @@ export default function Home(){
         destinationCity: "",
         destinationState: "",
         message: "",
-        type: ""
+        type: "",
+        code: "",
+        time: ""
     });
 
     const navigate = useNavigate();
@@ -42,14 +45,13 @@ export default function Home(){
 
     function setData(event){
         event.preventDefault();
-        console.log(contactData);
+        
         axios.post("https://muden-backend.up.railway.app/sendemail", contactData)
         .then((response)=>{
-            console.log(response.data)
             showPopUp();
         })
         .catch((response)=>{
-            console.log(response)
+            alert(response)
         })
     }
 
@@ -161,7 +163,7 @@ export default function Home(){
                             <form className="form" onSubmit={setData}>
                                 <div className="formDiv">
                                     <Input label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, name: e.target.value})} value={contactData.name}></Input>
-                                    <Input label={"Telefone (WhatsApp)"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, tel: e.target.value})} value={contactData.tel}></Input>
+                                    <Input label={"Telefone (WhatsApp)"} pattern={"[0-9]+"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, tel: e.target.value})} value={contactData.tel}></Input>
                                     <Input label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
                                     <div className="dropdown">
                                         <label for="days" className="dropLabel">Quando pretende se mudar?</label>
@@ -173,7 +175,8 @@ export default function Home(){
                                             <option value="posteriormente">Pretendo me mudar posteriormente</option>
                                         </select>
                                     </div>
-                                    <Button fontSize={"18px"} width={"100px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "budget"})}>Enviar</Button>
+                                    <Input label={"Código promocional"} placeholder={""} type={""} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, code: e.target.value})} value={contactData.code}></Input>
+                                    <Button fontSize={"18px"} width={"100px"} color={"#38bc94"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "budget", time: dayjs().format('HH:mm')})}>Enviar</Button>
                                 </div>
                             </form>
                         </Element>

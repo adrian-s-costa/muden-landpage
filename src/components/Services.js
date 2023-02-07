@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Element, Link } from 'react-scroll'
 import Header from "./Header";
 import { useNavigate } from "react-router-dom";
+import dayjs from "dayjs";
 
 export default function Services(){
 
@@ -29,7 +30,9 @@ export default function Services(){
         destinationCity: "",
         destinationState: "",
         servico: "",
-        type: ""
+        type: "",
+        code: "",
+        time: ""
     });
 
     function whatsappMessage(){
@@ -72,7 +75,7 @@ export default function Services(){
                         <form className="form" onSubmit={setData}>
                             <div className="formDiv">
                                 <Input marginBot={"5px"} bgcolor={"#ececec"} label={"Nome e sobrenome"} placeholder={"Joana Alves"} type={"text"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, name: e.target.value})} value={contactData.name}></Input>
-                                <Input marginBot={"5px"} bgcolor={"#ececec"} label={"Telefone para contato"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, tel: e.target.value})} value={contactData.tel}></Input>
+                                <Input marginBot={"5px"} bgcolor={"#ececec"} pattern={"[0-9]+"} label={"Telefone para contato"} placeholder={"(xx) XXXXX-XXXX"} type={"tel"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, tel: e.target.value})} value={contactData.tel}></Input>
                                 <Input marginBot={"5px"} bgcolor={"#ececec"} label={"Email"} placeholder={"exemplo@empresa.com"} type={"email"} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, email: e.target.value})} value={contactData.email}></Input>
                                 <div className="dropdown">
                                         <label for="servico" className="dropLabel">Serviço prestado</label>
@@ -89,7 +92,8 @@ export default function Services(){
                                             <option value="pintor">Pintor</option>
                                         </select>
                                     </div>
-                                <Button width={"100px"} color={"#04b891"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "contact"})}>Enviar</Button>
+                                <Input marginBot={"5px"} bgcolor={"#ececec"} label={"Codigo promocional"} placeholder={""} type={""} height={"35px"} width={"400px"} set={(e) => setContactData({ ...contactData, code: e.target.value})} value={contactData.code}></Input>
+                                <Button width={"100px"} color={"#04b891"} colorFont={"white"} type={"submit"} marginTop={"20px"} set={() => setContactData({ ...contactData, type: "contact", time: dayjs().format('HH:mm')})}>Enviar</Button>
                             </div>
                         </form>
                     </Element>
